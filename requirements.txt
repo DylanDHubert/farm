@@ -1,0 +1,8 @@
+# Core dependencies for the Farm-Themed PB&J Data Tools
+openai>=1.0.0
+pytest>=7.0.0
+ 
+# Optional dependencies for enhanced functionality
+# numpy>=1.21.0  # For future semantic search
+# scikit-learn>=1.0.0  # For future semantic search
+# sentence-transformers>=2.0.0  # For future semantic search 

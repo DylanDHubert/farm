@@ -1,0 +1,104 @@
+{
+  "processing_info": {
+    "processor": "Peanut (LlamaParse)",
+    "processing_time": "2025-06-26T17:36:24.074736",
+    "total_documents": 7,
+    "use_premium_mode": true,
+    "page_separator": "\n---\n"
+  },
+  "document_info": {
+    "source_pdf": "data/pb&j.pdf",
+    "parsed_files": [
+      "processed_documents/pb&j_20250626_173624/01_parsed_markdown/page_1.md",
+      "processed_documents/pb&j_20250626_173624/01_parsed_markdown/page_2.md",
+      "processed_documents/pb&j_20250626_173624/01_parsed_markdown/page_3.md",
+      "processed_documents/pb&j_20250626_173624/01_parsed_markdown/page_4.md",
+      "processed_documents/pb&j_20250626_173624/01_parsed_markdown/page_5.md",
+      "processed_documents/pb&j_20250626_173624/01_parsed_markdown/page_6.md",
+      "processed_documents/pb&j_20250626_173624/01_parsed_markdown/page_7.md"
+    ],
+    "total_characters": 5813
+  },
+  "folder_structure": {
+    "main_folder": "processed_documents/pb&j_20250626_173624",
+    "parsed_markdown_folder": "processed_documents/pb&j_20250626_173624/01_parsed_markdown"
+  },
+  "stages_completed": [
+    "enhancement",
+    "cleaning"
+  ],
+  "enhancement_info": {
+    "enhanced_at": "2025-06-26T17:37:20.164792",
+    "files_enhanced": 7,
+    "enhancement_summary": {
+      "page_5.md": [
+        "Restructured document for better organization"
+      ],
+      "page_1.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_4.md": [
+        "Restructured document for better organization"
+      ],
+      "page_3.md": [
+        "Restructured document for better organization"
+      ],
+      "page_7.md": [
+        "Restructured document for better organization"
+      ],
+      "page_6.md": [
+        "Restructured document for better organization"
+      ],
+      "page_2.md": [
+        "General formatting and structure improvements"
+      ]
+    },
+    "skipped_pages": []
+  },
+  "cleaning_info": {
+    "processed_at": "2025-06-26T17:38:28.064218",
+    "pages_processed": 7,
+    "total_tables_extracted": 5,
+    "unique_keywords": 33,
+    "processing_summary": {
+      "page_1": {
+        "title": "Which Sandwich?",
+        "tables": 0,
+        "keywords": 3
+      },
+      "page_2": {
+        "title": "NO_CONTENT_HERE",
+        "tables": 0,
+        "keywords": 0
+      },
+      "page_3": {
+        "title": "The Peanut Butter and Jelly Sandwich Metaphor for Software Engineering",
+        "tables": 0,
+        "keywords": 7
+      },
+      "page_4": {
+        "title": "Bodega Test Page 1: Instructions on Preparation of B.L.T. Sandwich",
+        "tables": 1,
+        "keywords": 6
+      },
+      "page_5": {
+        "title": "Bodega Test Page 2: Instructions on Preparation of Sandwich (P2)",
+        "tables": 1,
+        "keywords": 7
+      },
+      "page_6": {
+        "title": "Bodega Test Page 3 - Instructions on Preparation of Chips (P3)",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_7": {
+        "title": "Bodega Test Page 4 - Instructions on Preparation of Chips (P3)",
+        "tables": 2,
+        "keywords": 5
+      }
+    },
+    "skipped_pages": []
+  },
+  "pipeline_complete": true,
+  "final_output_ready": true
+}

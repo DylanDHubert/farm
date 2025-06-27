@@ -1,0 +1,72 @@
+{
+  "page_id": "page_4",
+  "title": "Bodega Test Page 1: Instructions on Preparation of B.L.T. Sandwich",
+  "summary": "This guide provides detailed instructions for the preparation of a B.L.T. (Bacon, Lettuce, Tomato) sandwich, including specific measurements for each ingredient based on the sandwich size.",
+  "keywords": [
+    "B.L.T. sandwich",
+    "preparation",
+    "bacon",
+    "lettuce",
+    "tomato",
+    "sandwich size"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "B.L.T. Sandwich Preparation Measurements",
+      "description": "This table provides the measurements in ounces for each ingredient (bacon, lettuce, tomato) required to prepare a B.L.T. sandwich, categorized by sandwich size (small, medium, large).",
+      "columns": [
+        "Sandwich Size",
+        "Bacon (Oz)",
+        "Lettuce (Oz)",
+        "Tomato (Oz)"
+      ],
+      "rows": [
+        [
+          "Small",
+          0.5,
+          1,
+          1
+        ],
+        [
+          "Medium",
+          1,
+          2,
+          2
+        ],
+        [
+          "Large",
+          2.5,
+          3,
+          2
+        ]
+      ],
+      "metadata": {
+        "row_count": 3,
+        "column_count": 4,
+        "data_types": [
+          "text",
+          "numeric",
+          "numeric",
+          "numeric"
+        ],
+        "units": [
+          "size",
+          "oz",
+          "oz",
+          "oz"
+        ],
+        "technical_category": "preparation measurements"
+      }
+    }
+  ],
+  "raw_content": "# Bodega Test Page 1\n## Instructions on Preparation of B.L.T. Sandwich\n\n*This guide is for the preparation of a B.L.T. (Bacon, Lettuce, Tomato) sandwich.*\n\n| Sandwich Size | Bacon (Oz) | Lettuce (Oz) | Tomato (Oz) |\n| ------------- | ---------- | ------------ | ----------- |\n| Small         | 0.5        | 1            | 1           |\n| Medium        | 1          | 2            | 2           |\n| Large         | 2.5        | 3            | 2           |\n\n**NOTE:** Mayo is optional.",
+  "processing_metadata": {
+    "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_4.md",
+    "processed_at": "2025-06-26T17:37:42.690347",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "pb&j_20250626_173624",
+    "stage": "03_cleaned_json"
+  }
+}

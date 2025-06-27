@@ -1,0 +1,482 @@
+{
+  "document_info": {
+    "document_id": "pb&j_20250626_173624",
+    "processed_at": "2025-06-26T17:38:28.062403",
+    "total_pages": 7,
+    "total_tables": 5,
+    "total_keywords": 33,
+    "processing_pipeline": [
+      "01_parsed_markdown",
+      "02_enhanced_markdown",
+      "03_cleaned_json"
+    ]
+  },
+  "document_summary": {
+    "combined_keywords": [
+      "code foundation",
+      "bacon",
+      "Mustard",
+      "Preparation of Chips",
+      "Club Sandwich",
+      "testing",
+      "coffee",
+      "other items",
+      "software engineering",
+      "dependencies",
+      "lettuce",
+      "sandwich size",
+      "Peanut Butter",
+      "logic layer",
+      "documentation",
+      "additional cost",
+      "Mayonnaise",
+      "chip brands",
+      "Sandwich Topping Compatibility",
+      "Jelly",
+      "Sandwich",
+      "PLACEHOLDER",
+      "Small-Sized Drinks",
+      "B.L.T. sandwich",
+      "preparation",
+      "Medium to Large-Sized Drinks",
+      "interface",
+      "Salt & Pepper",
+      "Ruben Sandwich",
+      "sandwich",
+      "tomato",
+      "Bodega Test Page 4",
+      "Bacon, Lettuce, Tomato (BLT)"
+    ],
+    "page_titles": [
+      "Which Sandwich?",
+      "NO_CONTENT_HERE",
+      "The Peanut Butter and Jelly Sandwich Metaphor for Software Engineering",
+      "Bodega Test Page 1: Instructions on Preparation of B.L.T. Sandwich",
+      "Bodega Test Page 2: Instructions on Preparation of Sandwich (P2)",
+      "Bodega Test Page 3 - Instructions on Preparation of Chips (P3)",
+      "Bodega Test Page 4 - Instructions on Preparation of Chips (P3)"
+    ],
+    "table_summary": [
+      {
+        "page_id": "page_1",
+        "page_title": "Which Sandwich?",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_2",
+        "page_title": "NO_CONTENT_HERE",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_3",
+        "page_title": "The Peanut Butter and Jelly Sandwich Metaphor for Software Engineering",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_4",
+        "page_title": "Bodega Test Page 1: Instructions on Preparation of B.L.T. Sandwich",
+        "table_count": 1,
+        "table_titles": [
+          "B.L.T. Sandwich Preparation Measurements"
+        ]
+      },
+      {
+        "page_id": "page_5",
+        "page_title": "Bodega Test Page 2: Instructions on Preparation of Sandwich (P2)",
+        "table_count": 1,
+        "table_titles": [
+          "Compatibility of Toppings with Different Types of Sandwiches"
+        ]
+      },
+      {
+        "page_id": "page_6",
+        "page_title": "Bodega Test Page 3 - Instructions on Preparation of Chips (P3)",
+        "table_count": 1,
+        "table_titles": [
+          "Compatibility of Chip Brands with Sandwich Toppings"
+        ]
+      },
+      {
+        "page_id": "page_7",
+        "page_title": "Bodega Test Page 4 - Instructions on Preparation of Chips (P3)",
+        "table_count": 2,
+        "table_titles": [
+          "Small-Sized Drinks and Their IDs",
+          "Medium to Large-Sized Drinks and Their IDs"
+        ]
+      }
+    ]
+  },
+  "pages": [
+    {
+      "page_id": "page_1",
+      "title": "Which Sandwich?",
+      "summary": "The document discusses the preference for a Peanut Butter Jelly sandwich.",
+      "keywords": [
+        "Sandwich",
+        "Peanut Butter",
+        "Jelly"
+      ],
+      "tables": [],
+      "raw_content": "# Which Sandwich?\n\nPeanut Butter Jelly!\n\nNote: The markdown content provided does not contain any tables to enhance. The text has been formatted for better readability.",
+      "processing_metadata": {
+        "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_1.md",
+        "processed_at": "2025-06-26T17:37:23.136063",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "pb&j_20250626_173624",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_2",
+      "title": "NO_CONTENT_HERE",
+      "summary": "No summary available due to lack of content.",
+      "keywords": [],
+      "tables": [],
+      "raw_content": "NO_CONTENT_HERE",
+      "processing_metadata": {
+        "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_2.md",
+        "processed_at": "2025-06-26T17:37:25.589787",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "pb&j_20250626_173624",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_3",
+      "title": "The Peanut Butter and Jelly Sandwich Metaphor for Software Engineering",
+      "summary": "This document uses the metaphor of a peanut butter and jelly sandwich to explain the principles of software engineering. It breaks down the sandwich into its components (bread, peanut butter, jelly, ingredients, bite test, and label) and relates each to a corresponding aspect of software engineering (foundation of code, logic layer, interface, dependencies, testing, and documentation).",
+      "keywords": [
+        "software engineering",
+        "code foundation",
+        "logic layer",
+        "interface",
+        "dependencies",
+        "testing",
+        "documentation"
+      ],
+      "tables": [],
+      "raw_content": "The provided markdown content does not contain any tables to enhance. However, the text has been formatted for better readability.\n\n---\n\n# The Peanut Butter and Jelly Sandwich Metaphor for Software Engineering\n\nA peanut butter and jelly sandwich is a small miracle. Simple, timeless, and universally recognizable, it somehow achieves harmony through contrast: salty and sweet, sticky and smooth, structured yet soft. Oddly enough, this balance is also what software engineers strive for when building clean codebases. The sandwich is more than food—it's a metaphor.\n\n## The Bread: Foundation of Code\n\nThe bread is the foundation. In code, this means the architecture, directory structure, and naming conventions that support everything else. Good bread doesn't call attention to itself, just as a well-designed project layout doesn't confuse contributors. When the foundation is right, the rest of the experience becomes intuitive.\n\n## Peanut Butter: The Logic Layer\n\nPeanut butter is the logic layer. It's the sticky part, the substance. This is where your domain knowledge lives—core functions, data transformations, decision-making rules. When applied poorly, peanut butter clumps up, hard to swallow, hard to digest. Likewise, unrefactored code becomes tangled, unreadable, and difficult to test. The solution isn't to remove the complexity but to spread it more evenly. Break things into smaller functions. Use meaningful names. Avoid nesting madness. Good peanut butter spreads thin and even.\n\n## Jelly: The Interface\n\nJelly is the interface—the output. It's what people see and taste first. Whether that's a UI, an API response, or logs, your jelly has to complement the logic without overpowering it. Too much jelly and the sandwich slips apart. Similarly, a beautiful front-end tied to messy back-end code is fragile. The key is containment: don't let jelly leak. Don't let interface concerns bleed into core logic.\n\n## Dependencies: The Ingredients\n\nDependencies are your ingredients. Just as not all jelly is created equal, not all packages are worth importing. Choose libraries that are well-maintained and well-documented. Trust is earned, even in a sandwich. And just as allergies exist, you must be aware of edge cases and security vulnerabilities in your stack. Don't blindly spread whatever's in the fridge.\n\n## Testing: The Bite Test\n\nTesting is the bite test. You pick up the sandwich and see if it falls apart. A good codebase survives a grip, a chew, a bit of shaking. It doesn't break under pressure. Write tests, not for 100% coverage, but for confidence. Test that the core works—that the peanut butter sticks and the jelly stays where it should.\n\n## Documentation: The Label on the Jar\n\nFinally, documentation is the label on the jar. When someone new opens the fridge (or your repo), they should know what they're reaching for. Clear READMEs, thoughtful comments, simple guides—they all ensure someone else can step in and build their own sandwich without confusion.\n\nBuilding clean code isn't about elegance for its own sake. It's about making something that works, is pleasurable to use, and that others can pick up and extend. Like a peanut butter and jelly sandwich, good code is timeless, satisfying, and best when shared. The goal isn't perfection—it's nourishment. Code like you sandwich: with care, balance, and a touch of joy.",
+      "processing_metadata": {
+        "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_3.md",
+        "processed_at": "2025-06-26T17:37:30.855750",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "pb&j_20250626_173624",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_4",
+      "title": "Bodega Test Page 1: Instructions on Preparation of B.L.T. Sandwich",
+      "summary": "This guide provides detailed instructions for the preparation of a B.L.T. (Bacon, Lettuce, Tomato) sandwich, including specific measurements for each ingredient based on the sandwich size.",
+      "keywords": [
+        "B.L.T. sandwich",
+        "preparation",
+        "bacon",
+        "lettuce",
+        "tomato",
+        "sandwich size"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "B.L.T. Sandwich Preparation Measurements",
+          "description": "This table provides the measurements in ounces for each ingredient (bacon, lettuce, tomato) required to prepare a B.L.T. sandwich, categorized by sandwich size (small, medium, large).",
+          "rows": [
+            {
+              "Sandwich Size": "Small",
+              "Bacon (Oz)": 0.5,
+              "Lettuce (Oz)": 1,
+              "Tomato (Oz)": 1
+            },
+            {
+              "Sandwich Size": "Medium",
+              "Bacon (Oz)": 1,
+              "Lettuce (Oz)": 2,
+              "Tomato (Oz)": 2
+            },
+            {
+              "Sandwich Size": "Large",
+              "Bacon (Oz)": 2.5,
+              "Lettuce (Oz)": 3,
+              "Tomato (Oz)": 2
+            }
+          ],
+          "metadata": {
+            "row_count": 3,
+            "column_count": 4,
+            "data_types": [
+              "text",
+              "numeric",
+              "numeric",
+              "numeric"
+            ],
+            "units": [
+              "size",
+              "oz",
+              "oz",
+              "oz"
+            ],
+            "technical_category": "preparation measurements"
+          }
+        }
+      ],
+      "raw_content": "# Bodega Test Page 1\n## Instructions on Preparation of B.L.T. Sandwich\n\n*This guide is for the preparation of a B.L.T. (Bacon, Lettuce, Tomato) sandwich.*\n\n| Sandwich Size | Bacon (Oz) | Lettuce (Oz) | Tomato (Oz) |\n| ------------- | ---------- | ------------ | ----------- |\n| Small         | 0.5        | 1            | 1           |\n| Medium        | 1          | 2            | 2           |\n| Large         | 2.5        | 3            | 2           |\n\n**NOTE:** Mayo is optional.",
+      "processing_metadata": {
+        "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_4.md",
+        "processed_at": "2025-06-26T17:37:42.690347",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "pb&j_20250626_173624",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_5",
+      "title": "Bodega Test Page 2: Instructions on Preparation of Sandwich (P2)",
+      "summary": "This document provides information about the compatibility of various toppings with different types of sandwiches including Bacon, Lettuce, Tomato (BLT), Club Sandwich, and Ruben Sandwich.",
+      "keywords": [
+        "Bacon, Lettuce, Tomato (BLT)",
+        "Club Sandwich",
+        "Ruben Sandwich",
+        "Mayonnaise",
+        "Mustard",
+        "Salt & Pepper",
+        "PLACEHOLDER"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Compatibility of Toppings with Different Types of Sandwiches",
+          "description": "This table provides information about the compatibility of various toppings with different types of sandwiches.",
+          "rows": [
+            {
+              "Topping/Sandwich Type": "Mayonnaise",
+              "Bacon, Lettuce, Tomato (BLT)": "TRUE",
+              "Club Sandwich": "TRUE",
+              "Ruben Sandwich": "TRUE"
+            },
+            {
+              "Topping/Sandwich Type": "Mustard",
+              "Bacon, Lettuce, Tomato (BLT)": "TRUE",
+              "Club Sandwich": "FALSE",
+              "Ruben Sandwich": "FALSE"
+            },
+            {
+              "Topping/Sandwich Type": "Salt & Pepper",
+              "Bacon, Lettuce, Tomato (BLT)": "TRUE",
+              "Club Sandwich": "TRUE",
+              "Ruben Sandwich": "FALSE"
+            },
+            {
+              "Topping/Sandwich Type": "[PLACEHOLDER]",
+              "Bacon, Lettuce, Tomato (BLT)": "TRUE",
+              "Club Sandwich": "TRUE",
+              "Ruben Sandwich": "TRUE"
+            }
+          ],
+          "metadata": {
+            "row_count": 4,
+            "column_count": 4,
+            "data_types": [
+              "text",
+              "boolean",
+              "boolean",
+              "boolean"
+            ],
+            "units": [
+              "NA",
+              "boolean",
+              "boolean",
+              "boolean"
+            ],
+            "technical_category": "compatibility"
+          }
+        }
+      ],
+      "raw_content": "# Bodega Test Page 2\n## Instructions on Preparation of Sandwich (P2)\n\n*This table provides information about the compatibility of various toppings with different types of sandwiches.*\n\n| Topping/Sandwich Type | Bacon, Lettuce, Tomato (BLT) | Club Sandwich | Ruben Sandwich |\n|-----------------------|------------------------------|---------------|----------------|\n| Mayonnaise            | TRUE                         | TRUE          | TRUE           |\n| Mustard               | TRUE                         | FALSE         | FALSE          |\n| Salt & Pepper         | TRUE                         | TRUE          | FALSE          |\n| [PLACEHOLDER]         | TRUE                         | TRUE          | TRUE           |\n\n**NOTE:** NA",
+      "processing_metadata": {
+        "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_5.md",
+        "processed_at": "2025-06-26T17:37:56.898229",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "pb&j_20250626_173624",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_6",
+      "title": "Bodega Test Page 3 - Instructions on Preparation of Chips (P3)",
+      "summary": "This document provides information on the compatibility of different chip brands with sandwich toppings, including additional costs associated with sandwiches, coffee, and other items.",
+      "keywords": [
+        "chip brands",
+        "additional cost",
+        "sandwich",
+        "coffee",
+        "other items"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Compatibility of Chip Brands with Sandwich Toppings",
+          "description": "This table provides information on the additional costs associated with different chip brands when purchased with sandwiches, coffee, and other items.",
+          "rows": [
+            {
+              "Chip Brand": "Frito",
+              "Additional Cost with Sandwich (USD)": "+$2.00",
+              "Additional Cost with Coffee (USD)": "+$3.00",
+              "Additional Cost with Other Items (USD)": "+$2.00*"
+            },
+            {
+              "Chip Brand": "Lays",
+              "Additional Cost with Sandwich (USD)": "+$1.50",
+              "Additional Cost with Coffee (USD)": "+$3.00",
+              "Additional Cost with Other Items (USD)": "+$2.09"
+            },
+            {
+              "Chip Brand": "Juantonios",
+              "Additional Cost with Sandwich (USD)": "+$1.00",
+              "Additional Cost with Coffee (USD)": "+$2.75*",
+              "Additional Cost with Other Items (USD)": "+$2.50"
+            },
+            {
+              "Chip Brand": "[OTHER]",
+              "Additional Cost with Sandwich (USD)": "+$0.00",
+              "Additional Cost with Coffee (USD)": "+$2.50",
+              "Additional Cost with Other Items (USD)": "NA"
+            }
+          ],
+          "metadata": {
+            "row_count": 4,
+            "column_count": 4,
+            "data_types": [
+              "text",
+              "numeric",
+              "numeric",
+              "numeric"
+            ],
+            "units": [
+              "brand",
+              "USD",
+              "USD",
+              "USD"
+            ],
+            "technical_category": "compatibility"
+          }
+        }
+      ],
+      "raw_content": "# Bodega Test Page 3\n## Instructions on Preparation of Chips (P3)\n\n*This table provides information on the compatibility of different chip brands with sandwich toppings.*\n\n| Chip Brand | Additional Cost with Sandwich (USD) | Additional Cost with Coffee (USD) | Additional Cost with Other Items (USD) |\n|------------|------------------------------------|-----------------------------------|----------------------------------------|\n| Frito      | +$2.00                             | +$3.00                            | +$2.00*                                |\n| Lays       | +$1.50                             | +$3.00                            | +$2.09                                 |\n| Juantonios | +$1.00                             | +$2.75*                           | +$2.50                                 |\n| [OTHER]    | +$0.00                             | +$2.50                            | NA                                     |\n\nNOTE: *Indicates a free drink is included with the purchase.",
+      "processing_metadata": {
+        "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_6.md",
+        "processed_at": "2025-06-26T17:38:10.195706",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "pb&j_20250626_173624",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_7",
+      "title": "Bodega Test Page 4 - Instructions on Preparation of Chips (P3)",
+      "summary": "This document provides instructions on the preparation of chips, focusing on sandwich topping compatibility. It includes two tables listing the available drinks and their corresponding IDs, categorized by size.",
+      "keywords": [
+        "Bodega Test Page 4",
+        "Preparation of Chips",
+        "Sandwich Topping Compatibility",
+        "Small-Sized Drinks",
+        "Medium to Large-Sized Drinks"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Small-Sized Drinks and Their IDs",
+          "description": "This table lists the available small-sized drinks and their corresponding IDs.",
+          "rows": [
+            {
+              "Drink Name": "Coke",
+              "ID": "04182003"
+            },
+            {
+              "Drink Name": "Pepsi",
+              "ID": "10252005"
+            },
+            {
+              "Drink Name": "Dr. Pepper",
+              "ID": "11221969"
+            }
+          ],
+          "metadata": {
+            "row_count": 3,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "numeric"
+            ],
+            "units": [
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "compatibility"
+          }
+        },
+        {
+          "table_id": "table_2",
+          "title": "Medium to Large-Sized Drinks and Their IDs",
+          "description": "This table lists the available medium to large-sized drinks and their corresponding IDs. Note that Spite is not available in small size.",
+          "rows": [
+            {
+              "Drink Name": "Coke",
+              "ID": "04182004"
+            },
+            {
+              "Drink Name": "Pepsi",
+              "ID": "10252006"
+            },
+            {
+              "Drink Name": "Dr. Pepper",
+              "ID": "11221970"
+            },
+            {
+              "Drink Name": "Spite",
+              "ID": "04071963"
+            }
+          ],
+          "metadata": {
+            "row_count": 4,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "numeric"
+            ],
+            "units": [
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "compatibility"
+          }
+        }
+      ],
+      "raw_content": "# Bodega Test Page 4\n## Instructions on Preparation of Chips (P3)\n\n*This is for Sandwich Topping Compatibility*\n\nThe following tables list the available drinks and their corresponding IDs. The first table is for small-sized drinks, and the second table is for medium to large-sized drinks.\n\n**Table 1: Small-Sized Drinks and Their IDs**\n\n| Drink Name | ID |\n|------------|--------|\n| Coke       | 04182003 |\n| Pepsi      | 10252005 |\n| Dr. Pepper | 11221969 |\n\n**Table 2: Medium to Large-Sized Drinks and Their IDs**\n\n| Drink Name | ID |\n|------------|--------|\n| Coke       | 04182004 |\n| Pepsi      | 10252006 |\n| Dr. Pepper | 11221970 |\n| Spite      | 04071963 |\n\n**Note:** Spite is not available in small size.\n\nThe left table represents small drinks, and the right table represents medium to large drinks.",
+      "processing_metadata": {
+        "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_7.md",
+        "processed_at": "2025-06-26T17:38:28.061126",
+        "model_used": "gpt-4",
+        "tables_found": 2,
+        "document_id": "pb&j_20250626_173624",
+        "stage": "03_cleaned_json"
+      }
+    }
+  ],
+  "toast_info": {
+    "converted_at": "2025-06-26T17:38:28.065007",
+    "converter": "PB&J Toast",
+    "format": "row-based dictionaries",
+    "original_format": "column-based arrays"
+  }
+}

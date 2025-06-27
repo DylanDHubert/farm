@@ -1,0 +1,16 @@
+{
+  "page_id": "page_2",
+  "title": "NO_CONTENT_HERE",
+  "summary": "No summary available due to lack of content.",
+  "keywords": [],
+  "tables": [],
+  "raw_content": "NO_CONTENT_HERE",
+  "processing_metadata": {
+    "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_2.md",
+    "processed_at": "2025-06-26T17:37:25.589787",
+    "model_used": "gpt-4",
+    "tables_found": 0,
+    "document_id": "pb&j_20250626_173624",
+    "stage": "03_cleaned_json"
+  }
+}

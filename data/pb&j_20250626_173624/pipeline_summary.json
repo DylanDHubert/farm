@@ -1,0 +1,55 @@
+{
+  "pipeline_info": {
+    "completed_at": "2025-06-26T17:38:28.065880",
+    "total_processing_time_seconds": 135.052634,
+    "pdf_source": "data/pb&j.pdf",
+    "document_folder": "processed_documents/pb&j_20250626_173624",
+    "llamaparse_mode": "premium",
+    "openai_model": "gpt-4",
+    "output_base_dir": "processed_documents"
+  },
+  "stage_results": {
+    "stage_1_peanut_parse": {
+      "pages_parsed": 7,
+      "folder": "processed_documents/pb&j_20250626_173624/01_parsed_markdown"
+    },
+    "stage_2_butter_better": {
+      "documents_enhanced": 7,
+      "folder": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown"
+    },
+    "stage_3_jelly_json": {
+      "pages_processed": 7,
+      "individual_json_folder": "processed_documents/pb&j_20250626_173624/03_cleaned_json",
+      "final_output": "processed_documents/pb&j_20250626_173624/final_output.json"
+    },
+    "stage_4_toast_format": {
+      "format_converted": "column-based to row-based",
+      "final_output": "processed_documents/pb&j_20250626_173624/final_output.json"
+    }
+  },
+  "data_summary": {
+    "total_pages": 7,
+    "total_tables": 5,
+    "unique_keywords": 33,
+    "page_titles": [
+      "Which Sandwich?",
+      "NO_CONTENT_HERE",
+      "The Peanut Butter and Jelly Sandwich Metaphor for Software Engineering",
+      "Bodega Test Page 1: Instructions on Preparation of B.L.T. Sandwich",
+      "Bodega Test Page 2: Instructions on Preparation of Sandwich (P2)",
+      "Bodega Test Page 3 - Instructions on Preparation of Chips (P3)",
+      "Bodega Test Page 4 - Instructions on Preparation of Chips (P3)"
+    ]
+  },
+  "folder_structure": {
+    "main_folder": "processed_documents/pb&j_20250626_173624",
+    "original_pdf": "processed_documents/pb&j_20250626_173624/pb&j.pdf",
+    "metadata": "processed_documents/pb&j_20250626_173624/document_metadata.json",
+    "final_output": "processed_documents/pb&j_20250626_173624/final_output.json",
+    "subfolders": {
+      "parsed_markdown": "processed_documents/pb&j_20250626_173624/01_parsed_markdown",
+      "enhanced_markdown": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown",
+      "cleaned_json": "processed_documents/pb&j_20250626_173624/03_cleaned_json"
+    }
+  }
+}

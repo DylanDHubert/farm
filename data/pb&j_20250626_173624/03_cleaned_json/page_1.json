@@ -1,0 +1,20 @@
+{
+  "page_id": "page_1",
+  "title": "Which Sandwich?",
+  "summary": "The document discusses the preference for a Peanut Butter Jelly sandwich.",
+  "keywords": [
+    "Sandwich",
+    "Peanut Butter",
+    "Jelly"
+  ],
+  "tables": [],
+  "raw_content": "# Which Sandwich?\n\nPeanut Butter Jelly!\n\nNote: The markdown content provided does not contain any tables to enhance. The text has been formatted for better readability.",
+  "processing_metadata": {
+    "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_1.md",
+    "processed_at": "2025-06-26T17:37:23.136063",
+    "model_used": "gpt-4",
+    "tables_found": 0,
+    "document_id": "pb&j_20250626_173624",
+    "stage": "03_cleaned_json"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "page_id": "page_7",
+  "title": "Bodega Test Page 4 - Instructions on Preparation of Chips (P3)",
+  "summary": "This document provides instructions on the preparation of chips, focusing on sandwich topping compatibility. It includes two tables listing the available drinks and their corresponding IDs, categorized by size.",
+  "keywords": [
+    "Bodega Test Page 4",
+    "Preparation of Chips",
+    "Sandwich Topping Compatibility",
+    "Small-Sized Drinks",
+    "Medium to Large-Sized Drinks"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Small-Sized Drinks and Their IDs",
+      "description": "This table lists the available small-sized drinks and their corresponding IDs.",
+      "columns": [
+        "Drink Name",
+        "ID"
+      ],
+      "rows": [
+        [
+          "Coke",
+          "04182003"
+        ],
+        [
+          "Pepsi",
+          "10252005"
+        ],
+        [
+          "Dr. Pepper",
+          "11221969"
+        ]
+      ],
+      "metadata": {
+        "row_count": 3,
+        "column_count": 2,
+        "data_types": [
+          "text",
+          "numeric"
+        ],
+        "units": [
+          "N/A",
+          "N/A"
+        ],
+        "technical_category": "compatibility"
+      }
+    },
+    {
+      "table_id": "table_2",
+      "title": "Medium to Large-Sized Drinks and Their IDs",
+      "description": "This table lists the available medium to large-sized drinks and their corresponding IDs. Note that Spite is not available in small size.",
+      "columns": [
+        "Drink Name",
+        "ID"
+      ],
+      "rows": [
+        [
+          "Coke",
+          "04182004"
+        ],
+        [
+          "Pepsi",
+          "10252006"
+        ],
+        [
+          "Dr. Pepper",
+          "11221970"
+        ],
+        [
+          "Spite",
+          "04071963"
+        ]
+      ],
+      "metadata": {
+        "row_count": 4,
+        "column_count": 2,
+        "data_types": [
+          "text",
+          "numeric"
+        ],
+        "units": [
+          "N/A",
+          "N/A"
+        ],
+        "technical_category": "compatibility"
+      }
+    }
+  ],
+  "raw_content": "# Bodega Test Page 4\n## Instructions on Preparation of Chips (P3)\n\n*This is for Sandwich Topping Compatibility*\n\nThe following tables list the available drinks and their corresponding IDs. The first table is for small-sized drinks, and the second table is for medium to large-sized drinks.\n\n**Table 1: Small-Sized Drinks and Their IDs**\n\n| Drink Name | ID |\n|------------|--------|\n| Coke       | 04182003 |\n| Pepsi      | 10252005 |\n| Dr. Pepper | 11221969 |\n\n**Table 2: Medium to Large-Sized Drinks and Their IDs**\n\n| Drink Name | ID |\n|------------|--------|\n| Coke       | 04182004 |\n| Pepsi      | 10252006 |\n| Dr. Pepper | 11221970 |\n| Spite      | 04071963 |\n\n**Note:** Spite is not available in small size.\n\nThe left table represents small drinks, and the right table represents medium to large drinks.",
+  "processing_metadata": {
+    "source_file": "processed_documents/pb&j_20250626_173624/02_enhanced_markdown/page_7.md",
+    "processed_at": "2025-06-26T17:38:28.061126",
+    "model_used": "gpt-4",
+    "tables_found": 2,
+    "document_id": "pb&j_20250626_173624",
+    "stage": "03_cleaned_json"
+  }
+}
