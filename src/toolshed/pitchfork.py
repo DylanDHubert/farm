@@ -41,7 +41,10 @@ class Pitchfork:
         tables = self.silo.get_all_tables()
         
         for table in tables:
-            table_id = table["table_id"]
+            # Use table title as unique identifier instead of table_id
+            # since table_ids are duplicated across pages but titles are unique
+            unique_id = table["title"]
+            original_table_id = table["table_id"]
             doc_id = table["doc_id"]
             page_id = table["page_id"]
             
@@ -59,9 +62,9 @@ class Pitchfork:
                 if "data_type" in col:
                     data_types.append(col["data_type"])
             
-            # Create table info
-            self.table_catalog[table_id] = TableInfo(
-                table_id=table_id,
+            # Create table info with unique_id as the key
+            self.table_catalog[unique_id] = TableInfo(
+                table_id=original_table_id,  # Keep original table_id for compatibility
                 title=table["title"],
                 description=table["description"],
                 doc_id=doc_id,
@@ -88,15 +91,21 @@ class Pitchfork:
     
     def get_table_by_id(self, table_id: str, doc_id: Optional[str] = None) -> Optional[Dict[str, Any]]:
         """
-        Get complete table data by ID.
+        Get complete table data by ID or title.
         
         Args:
-            table_id: Table identifier
+            table_id: Table identifier or title
             doc_id: Optional document ID for disambiguation
             
         Returns:
             Complete table data or None if not found
         """
+        # First try to get by title (our unique identifier)
+        result = self.silo.get_table_by_title(table_id, doc_id)
+        if result:
+            return result
+        
+        # Fallback to original table_id lookup
         return self.silo.get_table_by_id(table_id, doc_id)
     
     def get_table_info(self, table_id: str) -> Optional[TableInfo]:
@@ -104,14 +113,37 @@ class Pitchfork:
         Get table information from catalog.
         
         Args:
-            table_id: Table identifier
+            table_id: Table identifier or title
             
         Returns:
             TableInfo object or None if not found
         """
         if not self.is_cataloged:
             self.build_catalog()
-        return self.table_catalog.get(table_id)
+        
+        # First try to find by title (our unique identifier)
+        if table_id in self.table_catalog:
+            return self.table_catalog[table_id]
+        
+        # Fallback: search by table_id in case someone passes the original table_id
+        for info in self.table_catalog.values():
+            if info.table_id == table_id:
+                return info
+        
+        return None
+    
+    def get_table_by_title(self, title: str, doc_id: Optional[str] = None) -> Optional[Dict[str, Any]]:
+        """
+        Get complete table data by title.
+        
+        Args:
+            title: Table title
+            doc_id: Optional document ID for disambiguation
+            
+        Returns:
+            Complete table data or None if not found
+        """
+        return self.silo.get_table_by_title(title, doc_id)
     
     def get_tables_by_category(self, category: str) -> List[TableInfo]:
         """
@@ -174,9 +206,10 @@ class Pitchfork:
         
         Args:
             keyword: Keyword to search for
-            
+        
         Returns:
-            List of TableInfo objects containing the keyword
+            List of TableInfo objects containing the keyword.
+            If no matches are found, returns the full table catalog as a fallback so the agent can see all options.
         """
         if not self.is_cataloged:
             self.build_catalog()
@@ -190,7 +223,10 @@ class Pitchfork:
                 keyword_lower in info.technical_category.lower()):
                 matches.append(info)
         
-        return matches
+        if matches:
+            return matches
+        # Fallback: return all tables if no match
+        return list(self.table_catalog.values())
     
     def get_tables_by_data_type(self, data_type: str) -> List[TableInfo]:
         """
@@ -284,14 +320,19 @@ class Pitchfork:
         Search for specific values within a table.
         
         Args:
-            table_id: Table identifier
+            table_id: Table identifier or title
             search_term: Term to search for
             doc_id: Optional document ID for disambiguation
             
         Returns:
             List of TableRow objects containing the search term
         """
-        table_data = self.silo.get_table_by_id(table_id, doc_id)
+        # First try to get by title (our unique identifier)
+        table_data = self.silo.get_table_by_title(table_id, doc_id)
+        if not table_data:
+            # Fallback to original table_id lookup
+            table_data = self.silo.get_table_by_id(table_id, doc_id)
+        
         if not table_data:
             return []
         
@@ -305,7 +346,7 @@ class Pitchfork:
                     matches.append(TableRow(
                         row_index=i,
                         data=row_data,
-                        table_id=table_id,
+                        table_id=table_data["table_id"],  # Use actual table_id from data
                         doc_id=table_data["doc_id"],
                         page_id=table_data["page_id"]
                     ))

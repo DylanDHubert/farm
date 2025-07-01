@@ -397,6 +397,44 @@ class Silo:
         
         return None
     
+    def get_table_by_title(self, title: str, doc_id: Optional[str] = None) -> Optional[Dict[str, Any]]:
+        """
+        Get a specific table by title.
+        
+        If doc_id is provided, searches only in that document.
+        If doc_id is None, searches across all loaded documents.
+        
+        Args:
+            title: Table title to search for
+            doc_id: Optional document ID for disambiguation
+            
+        Returns:
+            Table data with doc_id and page_id added, or None if not found
+            
+        Example:
+            # Search in specific document
+            table = silo.get_table_by_title("B.L.T. Sandwich Preparation Measurements", "doc1")
+            
+            # Search across all documents
+            table = silo.get_table_by_title("B.L.T. Sandwich Preparation Measurements")
+        """
+        docs = [doc_id] if doc_id else self.documents.keys()
+        
+        for d_id in docs:
+            data = self.documents.get(d_id)
+            if not data:
+                continue
+                
+            for page in data.get("pages", []):
+                for table in page.get("tables", []):
+                    if table["title"] == title:
+                        table_copy = dict(table)
+                        table_copy["doc_id"] = d_id
+                        table_copy["page_id"] = page["page_id"]
+                        return table_copy
+        
+        return None
+    
     def get_all_keywords(self) -> List[str]:
         """
         Get all unique keywords across all documents.

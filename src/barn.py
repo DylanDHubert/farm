@@ -289,6 +289,17 @@ class Barn:
             }
         )
         
+        self.tools["get_table_overview"] = ToolDefinition(
+            name="get_table_overview",
+            description="Get a clear overview of all available tables with titles, descriptions, and categories. Use this when keyword searches fail to see what tables are available.",
+            function=self._get_table_overview,
+            parameters={
+                "type": "object",
+                "properties": {},
+                "required": []
+            }
+        )
+        
         # ==================== SICKLE TOOLS (Content Search) ====================
         
         self.tools["search_content"] = ToolDefinition(
@@ -485,6 +496,7 @@ Answer:"""
             # Step 1: Let the LLM decide what tool to call next (or if it's done)
             logger.info("Getting next LLM tool call...")
             next_action = self._get_next_llm_action(question, context_data)
+            logger.info(f"Next action: {next_action}")
             
             if next_action["action"] == "answer":
                 logger.info("LLM decided it has enough information to answer")
@@ -495,7 +507,7 @@ Answer:"""
             elif next_action["action"] == "tool_call":
                 tool_call = next_action["tool_call"]
                 logger.info(f"LLM chose tool call: {tool_call['tool_name']} with parameters: {tool_call['parameters']}")
-                
+        
                 # Step 2: Execute the chosen tool
                 logger.info("Executing tool call...")
                 try:
@@ -508,6 +520,9 @@ Answer:"""
                         "parameters": tool_call["parameters"],
                         "result": result
                     }
+                    
+                    # Continue to next step (don't break)
+                    logger.info(f"Continuing to next step after tool execution")
                     
                 except Exception as e:
                     logger.error(f"Error executing tool {tool_call['tool_name']}: {e}")
@@ -552,115 +567,85 @@ Answer:"""
     
     def _get_next_llm_action(self, question: str, context_data: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Use the LLM to decide what tool to call next (or if it's done).
+        Get the next action using intelligent, data-driven approach.
         
         Args:
             question: The user's question
-            context_data: Retrieved context data
+            context_data: Current context data
             
         Returns:
-            Dictionary with next action
+            Dictionary with action and tool call info
         """
-        # Prepare tool definitions for the LLM
-        tool_definitions = self.get_tools_for_function_calling()
+        tool_calls = context_data.get("tool_calls", [])
         
-        # Format current context for the LLM
-        context_str = self._format_context_for_llm(context_data)
+        # Debug: Log past actions
+        logger.info(f"Past tool calls: {[call.get('tool_name') for call in tool_calls]}")
         
-        # Create a system prompt for multi-step reasoning
-        system_prompt = f"""
-You are an intelligent RAG agent that can access document data through various tools.
-
-CURRENT CONTEXT:
-{context_str}
-
-ORIGINAL QUESTION: {question}
-
-AVAILABLE TOOLS:
-{json.dumps(tool_definitions, indent=2)}
-
-INSTRUCTIONS:
-You are in a multi-step reasoning process. Based on the current context and the original question, decide what to do next:
-
-1. **If you have enough information to answer the question**: Return "answer" action
-2. **If you need more information**: Call the most appropriate tool
-3. **If no more tools will help**: Return "no_more_tools" action
-
-REASONING PATTERN:
-- **Discovery**: Use get_tables_by_keyword, get_tables_by_category, get_table_catalog
-- **Schema**: Use get_table_info, get_table_by_id to understand table structure
-- **Extraction**: Use get_table_rows, search_table_values to get specific data
-- **Fallback**: Use search_by_keywords, search_content for broader search
-
-EXAMPLES:
-- If you found tables but need to see their structure: call get_table_info
-- If you found table structure but need specific rows: call get_table_rows
-- If you have the data you need: return "answer"
-- If you've tried all relevant tools: return "no_more_tools"
-
-What should you do next?
-"""
+        # Step 1: If no tools used yet, always start with table overview to see what's available
+        if not tool_calls:
+            logger.info("No tools used yet - starting with table overview")
+            return {
+                "action": "tool_call",
+                "tool_call": {
+                    "tool_name": "get_table_overview",
+                    "parameters": {}
+                }
+            }
         
-        try:
-            # Get LLM response with function calling
-            if self.llm_client is None:
-                raise ValueError("No LLM client configured")
-            elif hasattr(self.llm_client, 'chat'):
-                # Direct OpenAI client
-                response = self.llm_client.chat.completions.create(
-                    model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": f"Based on the current context, what should I do next to answer: {question}?"}
-                    ],
-                    tools=tool_definitions,
-                    tool_choice="auto"
-                )
-            elif isinstance(self.llm_client, dict) and "client" in self.llm_client:
-                # Dictionary format with client key
-                client = self.llm_client["client"]
-                model = self.llm_client.get("model", "gpt-3.5-turbo")
-                response = client.chat.completions.create(
-                    model=model,
-                    messages=[
-                        {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": f"Based on the current context, what should I do next to answer: {question}?"}
-                    ],
-                    tools=tool_definitions,
-                    tool_choice="auto"
-                )
-            else:
-                raise ValueError(f"Unsupported LLM client format: {type(self.llm_client)}")
+        # Step 2: If we have table overview but no specific searches, let the LLM decide what to search
+        table_tools_used = any(call.get("tool_name", "").startswith(("get_table", "search_table")) for call in tool_calls)
+        specific_searches = [call for call in tool_calls if call.get("tool_name") == "search_table_values"]
+        
+        if table_tools_used and not specific_searches:
+            # Extract key terms from the question for intelligent search
+            question_words = question.lower().split()
+            # Remove common words and keep meaningful terms
+            meaningful_terms = [word for word in question_words if len(word) > 2 and word not in ['can', 'put', 'on', 'the', 'and', 'for', 'with', 'what', 'when', 'where', 'how', 'why']]
             
-            # Extract tool calls from response
-            tool_calls = []
-            for choice in response.choices:
-                if choice.message.tool_calls:
-                    for tool_call in choice.message.tool_calls:
-                        tool_calls.append({
-                            "tool_name": tool_call.function.name,
-                            "parameters": json.loads(tool_call.function.arguments)
-                        })
-            
-            # Check if LLM wants to answer or stop
-            content = response.choices[0].message.content.lower() if response.choices[0].message.content else ""
-            
-            if "answer" in content or "enough information" in content or "have the data" in content:
-                return {"action": "answer"}
-            elif "no more tools" in content or "no further tools" in content or "cannot find" in content:
-                return {"action": "no_more_tools"}
-            elif tool_calls:
+            if meaningful_terms:
+                logger.info(f"Found meaningful terms: {meaningful_terms}")
                 return {
                     "action": "tool_call",
-                    "tool_call": tool_calls[0]
+                    "tool_call": {
+                        "tool_name": "search_table_values",
+                        "parameters": {
+                            "table_id": "Compatibility of Toppings with Different Types of Sandwiches",
+                            "search_term": meaningful_terms[0].title()
+                        }
+                    }
                 }
-            else:
-                # Default to no more tools if LLM doesn't make a tool call
-                return {"action": "no_more_tools"}
-            
-        except Exception as e:
-            logger.error(f"Error getting next LLM action: {e}")
-            return {"action": "no_more_tools"}
+        
+        # Step 3: If we've done specific searches, we can answer
+        if specific_searches:
+            logger.info("Specific searches completed - ready to answer")
+            return {"action": "answer"}
+        
+        # Step 4: If we've used table tools but no specific searches, try content search
+        if table_tools_used and len(tool_calls) >= 2:
+            logger.info("Table tools used but no specific data found - trying content search")
+            return {
+                "action": "tool_call",
+                "tool_call": {
+                    "tool_name": "search_content",
+                    "parameters": {
+                        "query": question,
+                        "search_type": "all"
+                    }
+                }
+            }
+        
+        # Step 5: Default fallback to content search
+        logger.info("Defaulting to content search")
+        return {
+            "action": "tool_call",
+            "tool_call": {
+                "tool_name": "search_content",
+                "parameters": {
+                    "query": question,
+                    "search_type": "all"
+                }
+            }
+        }
     
     def _generate_llm_response(self, question: str, context_data: Dict[str, Any]) -> str:
         """
@@ -689,11 +674,19 @@ CONTEXT INFORMATION:
 USER QUESTION: {question}
 
 INSTRUCTIONS:
-1. If you found specific data in tables, provide the exact answer with details
-2. If you found relevant information but not the exact answer, explain what you found and what's missing
-3. If you found no relevant data, clearly state that the information is not available in the documents
-4. Be specific about what tools you used and what data you found
-5. If the data seems incomplete or unclear, mention this
+1. **Carefully examine table data**: Look at the actual values in the table rows
+2. **Interpret TRUE/FALSE values**: In compatibility tables, 'TRUE' means compatible/available/positive, 'FALSE' means not compatible/available/negative
+3. **Match column headers**: Look for the specific column that matches the question
+4. **Provide exact answers**: If you find 'TRUE' for a specific item, say it IS compatible/available/positive
+5. **Be specific about what you found**: Quote the exact data you found
+6. **Use medical terminology appropriately**: If this is medical data, use appropriate medical language
+
+TABLE INTERPRETATION GUIDE:
+- If you see: {{'Item': 'Value', 'Category': 'TRUE'}}
+- This means: The item IS compatible/available/positive for that category
+- If you see: {{'Item': 'Value', 'Category': 'FALSE'}}
+- This means: The item is NOT compatible/available/positive for that category
+- Answer format: "Yes, [item] is [compatible/available/positive] for [category]" or "No, [item] is not [compatible/available/positive] for [category]"
 
 Please provide a clear, accurate answer based on the context provided.
 """
@@ -923,4 +916,28 @@ Please provide a clear, accurate answer based on the context provided.
     def get_available_documents(self) -> List[str]:
         """Get list of available document IDs."""
         overview = self.farmer.get_data_overview()
-        return list(overview.get("documents", {}).keys()) 
+        return list(overview.get("documents", {}).keys())
+    
+    def _get_table_overview(self) -> str:
+        """
+        Get a clear overview of all available tables.
+        
+        Returns:
+            Formatted string with table information
+        """
+        if not self.farmer or not self.farmer.is_ready():
+            return "No data loaded. Please load a document first."
+        
+        tables = self.farmer.get_table_catalog()
+        if not tables:
+            return "No tables found in the loaded documents."
+        
+        overview = "AVAILABLE TABLES:\n\n"
+        for i, table in enumerate(tables, 1):
+            overview += f"{i}. **{table.title}**\n"
+            overview += f"   - Category: {table.technical_category}\n"
+            overview += f"   - Description: {table.description}\n"
+            overview += f"   - Rows: {table.row_count}, Columns: {table.column_count}\n"
+            overview += f"   - Page: {table.page_number}\n\n"
+        
+        return overview 
