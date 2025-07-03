@@ -1,0 +1,149 @@
+{
+  "page_id": "page_14",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides a detailed surgical protocol for the Trident II Clusterhole HA, including instructions for screw instruments and a comprehensive list of Trident II Screw Instruments and Single-Use Instruments.",
+  "keywords": [
+    "Trident II Clusterhole HA",
+    "surgical protocol",
+    "screw instruments",
+    "drill bit",
+    "depth gauge"
+  ],
+  "tables": [
+    {
+      "table_id": "table_4",
+      "title": "Trident II Screw Instruments and Single-Use Instruments",
+      "description": "This table lists the catalog numbers and descriptions of Trident II Screw Instruments and Single-Use Instruments.",
+      "columns": [
+        "Trident II Screw Instruments",
+        "Description",
+        "Single-Use Instruments",
+        "Description"
+      ],
+      "rows": [
+        [
+          "7005-0101",
+          "Ratchet Driver Handle",
+          "7005-3315S",
+          "Single Use Drill Bit 3.3mm x 15mm"
+        ],
+        [
+          "7005-0102",
+          "Non-Captive U-Joint Driver",
+          "7005-3325S",
+          "Single Use Drill Bit 3.3mm x 25mm"
+        ],
+        [
+          "7005-0100",
+          "U-Joint Driver",
+          "7005-3340S",
+          "Single Use Drill Bit 3.3mm x 40mm"
+        ],
+        [
+          "7005-0099",
+          "Straight Driver",
+          "7005-3360S",
+          "Single Use Drill Bit 3.3mm x 60mm"
+        ],
+        [
+          "7005-0500",
+          "Screw Forceps",
+          "7005-4015S",
+          "Single Use Drill Bit 4.0mm x 15mm"
+        ],
+        [
+          "7005-0200",
+          "Depth Gauge - Short",
+          "7005-4025S",
+          "Single Use Drill Bit 4.0mm x 25mm"
+        ],
+        [
+          "7005-0201",
+          "Depth Gauge - Long",
+          "7005-4040S",
+          "Single Use Drill Bit 4.0mm x 40mm"
+        ],
+        [
+          "7005-0300",
+          "Ball Joint Drill Shaft",
+          "7005-4060S",
+          "Single Use Drill Bit 4.0mm x 60mm"
+        ],
+        [
+          "7005-0433",
+          "Drill Guide 3.3mm",
+          null,
+          null
+        ],
+        [
+          "7005-0440",
+          "Drill Guide 4.0mm",
+          null,
+          null
+        ],
+        [
+          "7005-3325",
+          "Drill Bit 3.3mm X 25mm",
+          null,
+          null
+        ],
+        [
+          "7005-3340",
+          "Drill Bit 3.3mm X 40mm",
+          null,
+          null
+        ],
+        [
+          "7005-3360",
+          "Drill Bit 3.3mm X 60mm",
+          null,
+          null
+        ],
+        [
+          "7005-4025",
+          "Drill Bit 4.0mm X 25mm",
+          null,
+          null
+        ],
+        [
+          "7005-4040",
+          "Drill Bit 4.0mm X 40mm",
+          null,
+          null
+        ],
+        [
+          "7005-4060",
+          "Drill Bit 4.0mm X 60mm",
+          null,
+          null
+        ]
+      ],
+      "metadata": {
+        "row_count": 16,
+        "column_count": 4,
+        "data_types": [
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "units": [
+          null,
+          null,
+          null,
+          "mm"
+        ],
+        "technical_category": "specifications"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Instructions for Screw Instruments\n\n### Ball Joint Drill Shaft\nTo attach, retract the sleeve and insert the bit so that the laser marking on the bit is concealed within the shaft tip.\n\n### Ratchet Handle\nTo attach the driver, retract the sleeve and insert the driver so that the engraved line on the shaft is concealed within the sleeve.\n\n![Figure 14. Image showing the process of attaching the ball joint drill shaft]\n\n![Figure 15. Image showing the process of attaching the ratchet handle]\n\n### Drill Bit Length\nThe Drill Guide conceals 10mm of the Drill Bit length (Figure 16 - example of 40mm Drill Bit).\n\n### Depth Gauge\nLocate the end of the bone hole using the hook on the tip of the gauge. Clamp onto the gauge at the level of the screw hole and extract the gauge to use the markings to aid in appropriate screw size selection.\n\n![Figure 16. Image showing a drill bit with 10mm and 40mm measurements]\n\n### Table 4. Trident II Screw Instruments and Single-Use Instruments\n\n| Trident II Screw Instruments | | Single-Use Instruments | |\n|---|---|---|---|\n| Catalog Number | Description | Catalog Number | Description |\n| 7005-0101 | Ratchet Driver Handle | 7005-3315S | Single Use Drill Bit 3.3mm x 15mm |\n| 7005-0102 | Non-Captive U-Joint Driver | 7005-3325S | Single Use Drill Bit 3.3mm x 25mm |\n| 7005-0100 | U-Joint Driver | 7005-3340S | Single Use Drill Bit 3.3mm x 40mm |\n| 7005-0099 | Straight Driver | 7005-3360S | Single Use Drill Bit 3.3mm x 60mm |\n| 7005-0500 | Screw Forceps | 7005-4015S | Single Use Drill Bit 4.0mm x 15mm |\n| 7005-0200 | Depth Gauge - Short | 7005-4025S | Single Use Drill Bit 4.0mm x 25mm |\n| 7005-0201 | Depth Gauge - Long | 7005-4040S | Single Use Drill Bit 4.0mm x 40mm |\n| 7005-0300 | Ball Joint Drill Shaft | 7005-4060S | Single Use Drill Bit 4.0mm x 60mm |\n| 7005-0433 | Drill Guide 3.3mm | | |\n| 7005-0440 | Drill Guide 4.0mm | | |\n| 7005-3325 | Drill Bit 3.3mm X 25mm | | |\n| 7005-3340 | Drill Bit 3.3mm X 40mm | | |\n| 7005-3360 | Drill Bit 3.3mm X 60mm | | |\n| 7005-4025 | Drill Bit 4.0mm X 25mm | | |\n| 7005-4040 | Drill Bit 4.0mm X 40mm | | |\n| 7005-4060 | Drill Bit 4.0mm X 60mm | | |",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_14.md",
+    "processed_at": "2025-07-03T12:30:51.078992",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "page_id": "page_7",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document outlines the Trident II Clusterhole HA Surgical Protocol, detailing preoperative planning, X-ray evaluation, and acetabular preparation. It emphasizes the importance of careful planning and preparation, including the use of templates and the removal of osteophytes.",
+  "keywords": [
+    "Trident II Clusterhole HA Surgical Protocol",
+    "preoperative planning",
+    "X-ray evaluation",
+    "acetabular preparation",
+    "osteophytes"
+  ],
+  "tables": [],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Step 1\n\n### Preoperative Planning and X-Ray Evaluation\n\nPreoperative planning is an essential part of the procedure, and templating should be performed prior to every case. The preoperative planning process should take qualitative and quantitative factors (including patient bone quality, density and morphology) into consideration in order to evaluate and select the appropriate instrument/implant system for the patient. X-ray evaluation may also help detect anatomic anomalies that could prevent the intraoperative achievement of the established preoperative goals. Selecting potential implant style and sizes can facilitate operating room preparation and assure availability of an appropriate selection. When it is done using X-rays that have been suitably scaled for magnification, templating allows the surgeon to predict the style, size and position of the implant that may help restore the correct anatomy of the individual patient.\n\nTemplate planning can be done using acetate templates for printed X-rays or preoperative planning software for digital studies.\n\nUse the template overlay LTEM116 available through your Stryker representative.\n\n## Step 2\n\n### Acetabular Preparation\n\nThe acetabulum is prepared using the surgeon's preferred technique to gain adequate exposure for reaming. Excision of the labrum and osteophytes allows for proper visualization of the bony anatomy and improves ease of reaming.\n\nStryker's femoral and wing retractors can be utilized to help gain acetabular exposure. (Figure 1)\n\nWith the acetabulum exposed, bony defects can be identified. If necessary, bone grafting options may be considered prior to reaming.\n\n### Note\n\nCareful identification and removal of osteophytes can help reduce the possibility of bone-to-bone or component-to-bone impingement.\n\nFigure 1.\n\n(Note: The provided markdown does not contain any tables to enhance. The text has been formatted for better readability.)",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_7.md",
+    "processed_at": "2025-07-03T12:37:26.852260",
+    "model_used": "gpt-4",
+    "tables_found": 0,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

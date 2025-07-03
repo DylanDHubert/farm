@@ -1,0 +1,312 @@
+{
+  "processing_info": {
+    "processor": "Peanut (LlamaParse)",
+    "processing_time": "2025-07-03T12:18:53.271944",
+    "total_documents": 32,
+    "use_premium_mode": true,
+    "page_separator": "\n---\n"
+  },
+  "document_info": {
+    "source_pdf": "./Hip_TRTIIH_SP_2.pdf",
+    "parsed_files": [
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_1.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_2.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_3.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_4.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_5.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_6.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_7.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_8.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_9.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_10.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_11.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_12.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_13.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_14.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_15.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_16.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_17.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_18.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_19.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_20.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_21.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_22.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_23.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_24.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_25.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_26.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_27.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_28.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_29.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_30.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_31.md",
+      "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown/page_32.md"
+    ],
+    "total_characters": 97029
+  },
+  "folder_structure": {
+    "main_folder": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853",
+    "parsed_markdown_folder": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown"
+  },
+  "stages_completed": [
+    "enhancement",
+    "cleaning"
+  ],
+  "enhancement_info": {
+    "enhanced_at": "2025-07-03T12:29:17.794482",
+    "files_enhanced": 26,
+    "enhancement_summary": {
+      "page_1.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_4.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_21.md": [
+        "Restructured document for better organization"
+      ],
+      "page_15.md": [
+        "Restructured document for better organization"
+      ],
+      "page_31.md": [
+        "Restructured document for better organization"
+      ],
+      "page_11.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_10.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_24.md": [
+        "Restructured document for better organization"
+      ],
+      "page_20.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_14.md": [
+        "Restructured document for better organization"
+      ],
+      "page_30.md": [
+        "Restructured document for better organization"
+      ],
+      "page_13.md": [
+        "Restructured document for better organization"
+      ],
+      "page_9.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_17.md": [
+        "Restructured document for better organization"
+      ],
+      "page_22.md": [
+        "Restructured document for better organization"
+      ],
+      "page_16.md": [
+        "Restructured document for better organization"
+      ],
+      "page_32.md": [
+        "Restructured document for better organization"
+      ],
+      "page_12.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_8.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_19.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_3.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_29.md": [
+        "Restructured document for better organization"
+      ],
+      "page_7.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_6.md": [
+        "Restructured document for better organization"
+      ],
+      "page_18.md": [
+        "General formatting and structure improvements"
+      ],
+      "page_2.md": [
+        "Restructured document for better organization"
+      ]
+    },
+    "skipped_pages": [
+      {
+        "filename": "page_5.md",
+        "error": "Enhancement failed - page skipped",
+        "timestamp": "2025-07-03T12:18:54.377607"
+      },
+      {
+        "filename": "page_25.md",
+        "error": "Enhancement failed - page skipped",
+        "timestamp": "2025-07-03T12:21:41.802193"
+      },
+      {
+        "filename": "page_27.md",
+        "error": "Enhancement failed - page skipped",
+        "timestamp": "2025-07-03T12:24:21.003265"
+      },
+      {
+        "filename": "page_23.md",
+        "error": "Enhancement failed - page skipped",
+        "timestamp": "2025-07-03T12:24:21.197835"
+      },
+      {
+        "filename": "page_26.md",
+        "error": "Enhancement failed - page skipped",
+        "timestamp": "2025-07-03T12:26:38.533464"
+      },
+      {
+        "filename": "page_28.md",
+        "error": "Enhancement failed - page skipped",
+        "timestamp": "2025-07-03T12:28:26.825613"
+      }
+    ]
+  },
+  "cleaning_info": {
+    "processed_at": "2025-07-03T12:38:05.989878",
+    "pages_processed": 26,
+    "total_tables_extracted": 24,
+    "unique_keywords": 98,
+    "processing_summary": {
+      "page_1": {
+        "title": "Trident\u00ae II Clusterhole HA Acetabular System Surgical Protocol",
+        "tables": 0,
+        "keywords": 5
+      },
+      "page_10": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 0,
+        "keywords": 5
+      },
+      "page_11": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 0,
+        "keywords": 5
+      },
+      "page_12": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 2,
+        "keywords": 5
+      },
+      "page_13": {
+        "title": "Step 5A: Optional Ancillary Screw Fixation",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_14": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_15": {
+        "title": "Step 6: Trial Insert Reduction",
+        "tables": 2,
+        "keywords": 5
+      },
+      "page_16": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_17": {
+        "title": "Appendix A (Continued): Head Assembly and Universal Adapter Sleeves",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_18": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 0,
+        "keywords": 5
+      },
+      "page_19": {
+        "title": "Appendix C: Removal of the Insert and Shell",
+        "tables": 2,
+        "keywords": 5
+      },
+      "page_2": {
+        "title": "Trident II Clusterhole High Availability Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_20": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_21": {
+        "title": "Trident II Clusterhole HA surgical protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_22": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_24": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 6
+      },
+      "page_29": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 2,
+        "keywords": 6
+      },
+      "page_3": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_30": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_31": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 3,
+        "keywords": 5
+      },
+      "page_32": {
+        "title": "Stryker Corporation - CE 2797",
+        "tables": 0,
+        "keywords": 5
+      },
+      "page_4": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 0,
+        "keywords": 5
+      },
+      "page_6": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_7": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 0,
+        "keywords": 5
+      },
+      "page_8": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 1,
+        "keywords": 5
+      },
+      "page_9": {
+        "title": "Trident II Clusterhole HA Surgical Protocol",
+        "tables": 0,
+        "keywords": 5
+      }
+    },
+    "skipped_pages": []
+  },
+  "pipeline_complete": true,
+  "final_output_ready": true
+}

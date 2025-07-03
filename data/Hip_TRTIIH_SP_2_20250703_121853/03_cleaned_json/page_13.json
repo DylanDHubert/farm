@@ -1,0 +1,87 @@
+{
+  "page_id": "page_13",
+  "title": "Step 5A: Optional Ancillary Screw Fixation",
+  "summary": "This section provides instructions for using 6.5mm Low Profile Hex Screws for ancillary screw fixation. It includes a table of available screw sizes and their corresponding product codes. It also provides cautionary notes and instructions for screw insertion.",
+  "keywords": [
+    "ancillary screw fixation",
+    "6.5mm Low Profile Hex Screws",
+    "Trident II Non-Captive U-Joint Driver",
+    "Drill Bit",
+    "screw insertion"
+  ],
+  "tables": [
+    {
+      "table_id": "table_3",
+      "title": "Available Sizes of 6.5mm Low Profile Hex Screws",
+      "description": "This table lists the available sizes of 6.5mm Low Profile Hex Screws and their corresponding product codes.",
+      "columns": [
+        "Screw Length (mm)",
+        "Product Code"
+      ],
+      "rows": [
+        [
+          "15",
+          "7030-6515"
+        ],
+        [
+          "20",
+          "7030-6520"
+        ],
+        [
+          "25",
+          "7030-6525"
+        ],
+        [
+          "30",
+          "7030-6530"
+        ],
+        [
+          "35",
+          "7030-6535"
+        ],
+        [
+          "40",
+          "7030-6540"
+        ],
+        [
+          "45",
+          "7030-6545"
+        ],
+        [
+          "50",
+          "7030-6550"
+        ],
+        [
+          "55",
+          "7030-6555"
+        ],
+        [
+          "60",
+          "7030-6560"
+        ]
+      ],
+      "metadata": {
+        "row_count": 10,
+        "column_count": 2,
+        "data_types": [
+          "numeric",
+          "text"
+        ],
+        "units": [
+          "mm",
+          "N/A"
+        ],
+        "technical_category": "specifications"
+      }
+    }
+  ],
+  "raw_content": "## Step 5A\n\n### Optional Ancillary Screw Fixation\n\nIf the decision is made to use ancillary screw fixation, then only 6.5mm Low Profile Hex Screws (7030-65XX) may be used. The Cancellous Bone Screws are 6.5mm in diameter and available in a variety of lengths from 15-60mm (Table 3). The acetabular screws are designed to be inserted and removed with the Trident II screw instrumentation (Table 4). Single Use Drill Bits are also offered for bone preparation.\n\nAttach a 3.3 or 4.0mm Drill Bit to the Ball Joint Drill Shaft and connect to an appropriate power bone drill. After determining the site for screw placement, pass the appropriately sized Drill Bit through the Drill Guide of equivalent diameter size and insert the guide flush to the shell screw hole (Figure 12). Use of the guide is required to ensure proper alignment of the hole trajectory to the screw hole and facilitates full seating of the screw head within the shell upon insertion. Drill to the desired depth and insert the Depth Gauge to aid in selection of the appropriate screw size.\n\nTo insert a screw using the Trident II Non-Captive U-Joint Driver (marked \"Non-Captive\") (Figure 13), use the Screw Forceps to hold the screw and guide it into the implant.\n\nIf using the Trident II Straight Driver, attach the screw to the driver tip. The Straight Driver tip has a captive design to hold the screw on, however excessive shaking or motion may cause the screw to detach. Screw Forceps may be used to hold the screw and guide into the implant.\n\nFollowing screw insertion into bone, confirm the screw head is seated flush against the shell to help prevent eventual improper seating of the acetabular insert.\n\n| Screw Length (mm) | Product Code | \n| --- | --- | \n| 15 | 7030-6515 | \n| 20 | 7030-6520 | \n| 25 | 7030-6525 | \n| 30 | 7030-6530 | \n| 35 | 7030-6535 | \n| 40 | 7030-6540 | \n| 45 | 7030-6545 | \n| 50 | 7030-6550 | \n| 55 | 7030-6555 | \n| 60 | 7030-6560 | \n\n**Table 3: Available Sizes of 6.5mm Low Profile Hex Screws**\n\n**Notes:**\n- An optional Trident II U-Joint Driver with a captive tip (7005-0100) is available as an alternative to the Trident II Non-Captive U-Joint Driver. To use this driver, attach the screw to the driver tip. The tip has a captive design to hold the screw on, however excessive shaking or motion may cause the screw to detach. Screw Forceps may be used for this driver.\n- Trident II Acetabular Shells are not intended to be drilled through.\n- In dense bone, the use of 4.0mm Drill Bits may facilitate easier insertion of screws without substantial compromise of screw purchase.\n- For drilling screw holes deeper than 40mm, it is recommended to drill sequentially with a 25mm/ 40mm bit and then follow with a 60mm bit to deepen to desired depth.\n\n### Caution\n\n- Do not use a dull Drill Bit as it may generate excessive stresses in the bone.\n- Do not pass a drill, screw any other instrumentation beyond the inner table of the pelvis.\n- Malposition of either the shell screw hole orientation or bone hole trajectory, or improper use of the screws may result in injury to the neurovascular structures in the vicinity.\n- Once screws are inserted, confirm screw heads do not protrude into the inside of shell and interfere with proper assembly of liner implant.\n- Do not use a power drill to insert the screw, as excessive torque may result in damage to screw or driver.\n- Operating the Ball Joint Drill Shaft at angles exceeding 45˚ for prolonged periods of time or with excessive force can lead to damage to the flexible joint and Drill Bit.",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_13.md",
+    "processed_at": "2025-07-03T12:30:16.129252",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

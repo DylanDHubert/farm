@@ -1,0 +1,22 @@
+{
+  "page_id": "page_18",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides a detailed procedure for the implantation of the MDM Liner, a part of the Modular Dual Mobility (MDM) system. It includes important notes and cautionary measures to ensure proper alignment and seating of the liner, as well as to minimize potential risks such as fretting and corrosion.",
+  "keywords": [
+    "MDM Liner",
+    "implantation procedure",
+    "modular dual mobility",
+    "Trident II Clusterhole HA",
+    "surgical protocol"
+  ],
+  "tables": [],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Appendix B\n\n### Modular Dual Mobility (MDM)\n\n#### MDM Liner Implantation Procedure\n\nEnsure that the inside of the shell is clean, dry, and free of soft tissue or any other debris, which could prevent the liner from properly seating in the shell.\n\nGently introduce the MDM Liner, making sure that the liner flange scallops are aligned with the slots in the rim of the shell. This orientation will allow the liner to rest on the four indexing barbs and will ensure that the liner is parallel with the shell. Next, slowly turn the liner until it drops into the final pre-locking position. Correct rotational orientation will result in the liner tabs aligned with the slots on the shell rim.\n\nApply finger pressure around the rim of the liner first to engage the liner within the shell.\n\nLoad a 36mm Plastic Insert Impactor Tip onto the Insert Positioner/Impactor Handle. It may be necessary to lightly tap on the rim of the liner with the Plastic Insert Impactor Tip, working around the rim in all four quadrants, to ensure the liner is properly seated and concentric within the shell.\n\nThe liner is properly seated when there is no further rocking or movement of the liner within the shell. This step should be done prior to final impaction of the liner.\n\nPosition the Positioner/Impactor Handle into the inner diameter of the liner. Take care to align the handle with the axis of the shell. Strike the handle with several mallet blows to fully seat the liner. MDM Liners are designed to lock within the shell by means of mating tapers.\n\nVerify the liner is properly aligned and fully seated into the acetabular shell. Check the taper lock by running a small blunt instrument (or the Liner Removal Tool) around the periphery of the shell/ liner interface. There should not be any space between the rim of the shell and the underside of the rim.\n\nVisually assess the inner articular surface of the MDM Liner to ensure it is not scratched or damaged prior to the trial insert/head reduction.\n\n#### Important Notes\n\n- As with any modular interface under load, there is a potential for fretting and/or corrosion. Proper alignment and locking of the MDM Liner into the shell may help to minimize this risk.\n\n- Having a clear view of the rim of the acetabulum will allow easier visualization of the shell slots and indexing barbs for proper positioning and seating of the liner.\n\n#### Cautionary Measures\n\n- Care should be taken to avoid forcing the MDM Liner Trial into place when trialing with the shell. The liner trial should freely assemble with the shell.\n\n- Care should be taken to avoid damage to the highly polished inner surface of the MDM CoCr Liner.\n\n- Care should be taken to ensure that the liner is correctly aligned within the shell. Failure to do so may result in incomplete or incorrect liner engagement.",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_18.md",
+    "processed_at": "2025-07-03T12:31:56.665204",
+    "model_used": "gpt-4",
+    "tables_found": 0,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

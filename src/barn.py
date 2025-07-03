@@ -19,9 +19,9 @@ import logging
 import os
 from typing import Dict, List, Optional, Any, Union, Callable
 from dataclasses import dataclass
-from farmer import Farmer
-from models.table import TableInfo, TableRow
-from models.search import SearchResult, SemanticSearchResult
+from src.farmer import Farmer
+from src.models.table import TableInfo, TableRow
+from src.models.search import SearchResult, SemanticSearchResult
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -148,39 +148,39 @@ class Barn:
             }
         )
         
-        self.tools["get_table_by_id"] = ToolDefinition(
-            name="get_table_by_id",
-            description="Get complete table data by table ID",
-            function=self.farmer.get_table_by_id if self.farmer.is_ready() else lambda table_id, doc_id=None: None,
+        self.tools["get_table_by_name"] = ToolDefinition(
+            name="get_table_by_name",
+            description="Get complete table data by table title/name. Use this to access specific tables by their readable names.",
+            function=self.farmer.pitchfork.get_table_by_title if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda title, doc_id=None: None,
             parameters={
                 "type": "object",
                 "properties": {
-                    "table_id": {
+                    "title": {
                         "type": "string",
-                        "description": "The unique identifier of the table"
+                        "description": "The title/name of the table (e.g., 'Nutrition Information', 'Surgical Protocol')"
                     },
                     "doc_id": {
                         "type": "string",
                         "description": "Optional document ID for disambiguation"
                     }
                 },
-                "required": ["table_id"]
+                "required": ["title"]
             }
         )
         
         self.tools["get_table_info"] = ToolDefinition(
             name="get_table_info",
-            description="Get metadata information about a specific table",
-            function=self.farmer.pitchfork.get_table_info if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda table_id: None,
+            description="Get metadata information about a specific table by title",
+            function=self.farmer.pitchfork.get_table_info if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda title: None,
             parameters={
                 "type": "object",
                 "properties": {
-                    "table_id": {
+                    "title": {
                         "type": "string",
-                        "description": "The unique identifier of the table"
+                        "description": "The title/name of the table"
                     }
                 },
-                "required": ["table_id"]
+                "required": ["title"]
             }
         )
         
@@ -194,7 +194,7 @@ class Barn:
                 "properties": {
                     "category": {
                         "type": "string",
-                        "description": "The technical category to filter by (e.g., 'compatibility', 'measurement', 'nutrition')"
+                        "description": "The technical category to filter by (e.g., 'technical', 'measurement', 'analysis')"
                     }
                 },
                 "required": ["category"]
@@ -221,13 +221,13 @@ class Barn:
         self.tools["get_table_rows"] = ToolDefinition(
             name="get_table_rows",
             description="Get specific rows from a table with optional filtering criteria",
-            function=self.farmer.get_table_rows if self.farmer.is_ready() else lambda table_id, criteria=None, doc_id=None: [],
+            function=self.farmer.pitchfork.get_table_rows if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda title, criteria=None, doc_id=None: [],
             parameters={
                 "type": "object",
                 "properties": {
-                    "table_id": {
+                    "title": {
                         "type": "string",
-                        "description": "The unique identifier of the table"
+                        "description": "The title/name of the table"
                     },
                     "criteria": {
                         "type": "object",
@@ -238,20 +238,20 @@ class Barn:
                         "description": "Optional document ID for disambiguation"
                     }
                 },
-                "required": ["table_id"]
+                "required": ["title"]
             }
         )
         
         self.tools["search_table_values"] = ToolDefinition(
             name="search_table_values",
             description="Search for specific values within a table's data",
-            function=self.farmer.search_table_values if self.farmer.is_ready() else lambda table_id, search_term, doc_id=None: [],
+            function=self.farmer.pitchfork.search_table_values if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda title, search_term, doc_id=None: [],
             parameters={
                 "type": "object",
                 "properties": {
-                    "table_id": {
+                    "title": {
                         "type": "string",
-                        "description": "The unique identifier of the table"
+                        "description": "The title/name of the table"
                     },
                     "search_term": {
                         "type": "string",
@@ -262,32 +262,12 @@ class Barn:
                         "description": "Optional document ID for disambiguation"
                     }
                 },
-                "required": ["table_id", "search_term"]
+                "required": ["title", "search_term"]
             }
         )
         
-        # Convenience Tools
-        self.tools["get_compatibility_tables"] = ToolDefinition(
-            name="get_compatibility_tables",
-            description="Get all tables related to compatibility information",
-            function=self.farmer.get_compatibility_tables if self.farmer.is_ready() else lambda: [],
-            parameters={
-                "type": "object",
-                "properties": {},
-                "required": []
-            }
-        )
         
-        self.tools["get_measurement_tables"] = ToolDefinition(
-            name="get_measurement_tables",
-            description="Get all tables related to measurements and quantities",
-            function=self.farmer.get_measurement_tables if self.farmer.is_ready() else lambda: [],
-            parameters={
-                "type": "object",
-                "properties": {},
-                "required": []
-            }
-        )
+        # Removed domain-specific measurement tables tool
         
         self.tools["get_table_overview"] = ToolDefinition(
             name="get_table_overview",
@@ -304,14 +284,14 @@ class Barn:
         
         self.tools["search_content"] = ToolDefinition(
             name="search_content",
-            description="Search for content across all pages using keywords",
+            description="Search for content across all pages using a natural language query string. Use this for general content searches.",
             function=self.farmer.search if self.farmer.is_ready() else lambda query, search_type="all", limit=10: [],
             parameters={
                 "type": "object",
                 "properties": {
                     "query": {
                         "type": "string",
-                        "description": "The search query (natural language or keywords)"
+                        "description": "The search query as a single string (e.g., 'B.L.T. sandwich' or 'nutritional information')"
                     },
                     "search_type": {
                         "type": "string",
@@ -330,7 +310,7 @@ class Barn:
         
         self.tools["search_by_keywords"] = ToolDefinition(
             name="search_by_keywords",
-            description="Search using a specific list of keywords",
+            description="Search using a specific list of keywords as an array. Use this when you have exact keywords to search for.",
             function=self.farmer.sickle.search_by_keywords if (self.farmer.is_ready() and self.farmer.sickle) else lambda keywords, search_type="all", limit=10: [],
             parameters={
                 "type": "object",
@@ -338,7 +318,7 @@ class Barn:
                     "keywords": {
                         "type": "array",
                         "items": {"type": "string"},
-                        "description": "List of specific keywords to search for"
+                        "description": "List of specific keywords as array (e.g., ['B.L.T.', 'sandwich', 'bacon'])"
                     },
                     "search_type": {
                         "type": "string",
@@ -462,8 +442,9 @@ Answer:"""
         """
         Process a conversational query using intelligent multi-step function calling.
         
-        The LLM will analyze the question and iteratively call tools, building context
-        until it has enough information to answer the question.
+        The system automatically starts with table overview and keywords overview,
+        then lets the LLM intelligently choose between Pitchfork (semantic search) 
+        and Sickle (keyword search) based on the query context.
         
         Args:
             question: The user's question
@@ -486,6 +467,39 @@ Answer:"""
             "step_count": 0
         }
         
+        # Step 0: Automatically get table overview and keywords overview
+        logger.info("Automatically getting table overview and keywords overview...")
+        
+        # Get table overview
+        try:
+            table_overview = self._get_table_overview()
+            context_data["results"]["table_overview"] = {
+                "parameters": {},
+                "result": table_overview
+            }
+            logger.info("Table overview retrieved successfully")
+        except Exception as e:
+            logger.error(f"Error getting table overview: {e}")
+            context_data["results"]["table_overview"] = {
+                "parameters": {},
+                "error": str(e)
+            }
+        
+        # Get keywords overview
+        try:
+            keywords_overview = self._get_keywords_overview()
+            context_data["results"]["keywords_overview"] = {
+                "parameters": {},
+                "result": keywords_overview
+            }
+            logger.info("Keywords overview retrieved successfully")
+        except Exception as e:
+            logger.error(f"Error getting keywords overview: {e}")
+            context_data["results"]["keywords_overview"] = {
+                "parameters": {},
+                "error": str(e)
+            }
+        
         max_steps = 5  # Prevent infinite loops
         
         # Multi-step agent loop
@@ -507,6 +521,9 @@ Answer:"""
             elif next_action["action"] == "tool_call":
                 tool_call = next_action["tool_call"]
                 logger.info(f"LLM chose tool call: {tool_call['tool_name']} with parameters: {tool_call['parameters']}")
+                
+                # DEBUG: Print tool call to terminal
+                print(f"🔧 TOOL CALL: {tool_call['tool_name']} | Params: {tool_call['parameters']}")
         
                 # Step 2: Execute the chosen tool
                 logger.info("Executing tool call...")
@@ -567,7 +584,7 @@ Answer:"""
     
     def _get_next_llm_action(self, question: str, context_data: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Get the next action using intelligent, data-driven approach.
+        Get the next action using LLM-based intelligent decision making.
         
         Args:
             question: The user's question
@@ -581,9 +598,127 @@ Answer:"""
         # Debug: Log past actions
         logger.info(f"Past tool calls: {[call.get('tool_name') for call in tool_calls]}")
         
-        # Step 1: If no tools used yet, always start with table overview to see what's available
+        # Prevent infinite loops by checking for repeated tool calls
+        if len(tool_calls) >= 2:
+            recent_calls = tool_calls[-2:]
+            if (recent_calls[0]['tool_name'] == recent_calls[1]['tool_name'] and 
+                recent_calls[0]['parameters'] == recent_calls[1]['parameters']):
+                logger.warning("Detected repeated tool call - stopping to prevent infinite loop")
+                return {"action": "answer"}
+        
+        # Use LLM to decide next action
+        try:
+            # Format context for LLM
+            context_str = self._format_context_for_llm(context_data)
+            
+            # Create decision prompt
+            decision_prompt = f"""
+You are an intelligent agent that decides what tools to use to answer questions about document data.
+
+AVAILABLE TOOLS:
+{self._format_tools_for_llm()}
+
+CURRENT CONTEXT:
+{context_str}
+
+USER QUESTION: {question}
+
+TOOL SELECTION STRATEGY:
+You have access to two main search approaches:
+
+1. **PITCHFORK (Table Operations)**: Use for questions about:
+   - Specific data in tables (numbers, values, measurements)
+   - Table structure and metadata
+   - Technical categories and descriptions
+   - Structured data queries
+   - Tools: get_table_catalog, get_table_by_id, get_table_info, get_tables_by_category, etc.
+
+2. **SICKLE (Content Search)**: Use for questions about:
+   - General content and concepts
+   - Natural language queries
+   - Keyword-based searches
+   - Page-level information
+   - Tools: search_content, search_by_keywords, etc.
+
+INSTRUCTIONS:
+1. Analyze the question type and choose the appropriate search approach
+2. For table-specific questions (data, measurements, categories), use PITCHFORK tools
+3. For content/concept questions, use SICKLE tools
+4. You MUST use at least one search tool (Pitchfork or Sickle) to retrieve relevant data before answering, unless the answer is trivially obvious from the overviews.
+5. Decide what action to take next:
+   - "tool_call": Call a specific tool with parameters
+   - "answer": Generate final answer (if you have enough information)
+   - "no_more_tools": Stop searching (if no more tools would help)
+
+6. If choosing "tool_call", specify:
+   - tool_name: The exact name of the tool to call
+   - parameters: A JSON object with the tool's parameters
+
+7. IMPORTANT: Do not repeat the same tool call with the same parameters
+8. If you've gathered enough information to answer, choose "answer"
+
+RESPONSE FORMAT:
+Return a JSON object with:
+- "action": "tool_call" | "answer" | "no_more_tools"
+- "tool_call": {{"tool_name": "...", "parameters": {{...}}}} (only if action is "tool_call")
+
+What should I do next?
+"""
+            
+            # Get LLM decision
+            if hasattr(self.llm_client, 'chat'):
+                # OpenAI client format
+                response = self.llm_client.chat.completions.create(
+                    model="gpt-4",
+                    messages=[
+                        {"role": "system", "content": "You are an intelligent agent that decides what tools to use. Respond with valid JSON only."},
+                        {"role": "user", "content": decision_prompt}
+                    ],
+                    max_tokens=500,
+                    temperature=0.1
+                )
+                decision_text = response.choices[0].message.content
+            elif isinstance(self.llm_client, dict) and "client" in self.llm_client:
+                # Dictionary format with client key
+                client = self.llm_client["client"]
+                if hasattr(client, 'chat'):
+                    response = client.chat.completions.create(
+                        model=self.llm_client.get("model", "gpt-4"),
+                        messages=[
+                            {"role": "system", "content": "You are an intelligent agent that decides what tools to use. Respond with valid JSON only."},
+                            {"role": "user", "content": decision_prompt}
+                        ],
+                        max_tokens=500,
+                        temperature=0.1
+                    )
+                    decision_text = response.choices[0].message.content
+                else:
+                    raise ValueError("LLM client format not supported")
+            else:
+                raise ValueError("LLM client format not supported")
+            
+            # Parse LLM response
+            import json
+            try:
+                decision = json.loads(decision_text.strip())
+                logger.info(f"LLM decision: {decision}")
+                return decision
+            except json.JSONDecodeError:
+                logger.error(f"Failed to parse LLM response as JSON: {decision_text}")
+                # Fallback to simple logic
+                return self._fallback_action_logic(question, context_data)
+                
+        except Exception as e:
+            logger.error(f"Error getting LLM action: {e}")
+            # Fallback to simple logic
+            return self._fallback_action_logic(question, context_data)
+    
+    def _fallback_action_logic(self, question: str, context_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Fallback logic when LLM decision fails."""
+        tool_calls = context_data.get("tool_calls", [])
+        
+        # If no tools used yet, start with table overview
         if not tool_calls:
-            logger.info("No tools used yet - starting with table overview")
             return {
                 "action": "tool_call",
                 "tool_call": {
@@ -592,50 +727,11 @@ Answer:"""
                 }
             }
         
-        # Step 2: If we have table overview but no specific searches, let the LLM decide what to search
-        table_tools_used = any(call.get("tool_name", "").startswith(("get_table", "search_table")) for call in tool_calls)
-        specific_searches = [call for call in tool_calls if call.get("tool_name") == "search_table_values"]
-        
-        if table_tools_used and not specific_searches:
-            # Extract key terms from the question for intelligent search
-            question_words = question.lower().split()
-            # Remove common words and keep meaningful terms
-            meaningful_terms = [word for word in question_words if len(word) > 2 and word not in ['can', 'put', 'on', 'the', 'and', 'for', 'with', 'what', 'when', 'where', 'how', 'why']]
-            
-            if meaningful_terms:
-                logger.info(f"Found meaningful terms: {meaningful_terms}")
-                return {
-                    "action": "tool_call",
-                    "tool_call": {
-                        "tool_name": "search_table_values",
-                        "parameters": {
-                            "table_id": "Compatibility of Toppings with Different Types of Sandwiches",
-                            "search_term": meaningful_terms[0].title()
-                        }
-                    }
-                }
-        
-        # Step 3: If we've done specific searches, we can answer
-        if specific_searches:
-            logger.info("Specific searches completed - ready to answer")
+        # If we have some data, try to answer
+        if len(tool_calls) >= 1:
             return {"action": "answer"}
         
-        # Step 4: If we've used table tools but no specific searches, try content search
-        if table_tools_used and len(tool_calls) >= 2:
-            logger.info("Table tools used but no specific data found - trying content search")
-            return {
-                "action": "tool_call",
-                "tool_call": {
-                    "tool_name": "search_content",
-                    "parameters": {
-                        "query": question,
-                        "search_type": "all"
-                    }
-                }
-            }
-        
-        # Step 5: Default fallback to content search
-        logger.info("Defaulting to content search")
+        # Default to content search
         return {
             "action": "tool_call",
             "tool_call": {
@@ -646,6 +742,13 @@ Answer:"""
                 }
             }
         }
+    
+    def _format_tools_for_llm(self) -> str:
+        """Format available tools for LLM consumption."""
+        tools_info = []
+        for tool_name, tool_def in self.tools.items():
+            tools_info.append(f"- {tool_name}: {tool_def.description}")
+        return "\n".join(tools_info)
     
     def _generate_llm_response(self, question: str, context_data: Dict[str, Any]) -> str:
         """
@@ -675,18 +778,18 @@ USER QUESTION: {question}
 
 INSTRUCTIONS:
 1. **Carefully examine table data**: Look at the actual values in the table rows
-2. **Interpret TRUE/FALSE values**: In compatibility tables, 'TRUE' means compatible/available/positive, 'FALSE' means not compatible/available/negative
+2. **Interpret TRUE/FALSE values**: In data tables, 'TRUE' means available/positive/yes, 'FALSE' means not available/negative/no
 3. **Match column headers**: Look for the specific column that matches the question
-4. **Provide exact answers**: If you find 'TRUE' for a specific item, say it IS compatible/available/positive
+4. **Provide exact answers**: If you find 'TRUE' for a specific item, say it IS available/positive/yes
 5. **Be specific about what you found**: Quote the exact data you found
-6. **Use medical terminology appropriately**: If this is medical data, use appropriate medical language
+6. **Use appropriate terminology**: Use language that matches the document's domain
 
 TABLE INTERPRETATION GUIDE:
 - If you see: {{'Item': 'Value', 'Category': 'TRUE'}}
-- This means: The item IS compatible/available/positive for that category
+- This means: The item IS available/positive/yes for that category
 - If you see: {{'Item': 'Value', 'Category': 'FALSE'}}
-- This means: The item is NOT compatible/available/positive for that category
-- Answer format: "Yes, [item] is [compatible/available/positive] for [category]" or "No, [item] is not [compatible/available/positive] for [category]"
+- This means: The item is NOT available/positive/yes for that category
+- Answer format: "Yes, [item] is [available/positive/yes] for [category]" or "No, [item] is not [available/positive/yes] for [category]"
 
 Please provide a clear, accurate answer based on the context provided.
 """
@@ -769,7 +872,7 @@ Please provide a clear, accurate answer based on the context provided.
                 parameters = result.get("parameters", {})
                 
                 # Categorize results by tool type
-                if tool_name.startswith(("get_tables_by_", "get_table_catalog", "get_compatibility_", "get_measurement_")):
+                if tool_name.startswith(("get_tables_by_", "get_table_catalog", "get_measurement_")):
                     discovery_results.append((tool_name, actual_result, parameters))
                 elif tool_name.startswith(("get_table_rows", "search_table_values", "get_table_by_id")):
                     extraction_results.append((tool_name, actual_result, parameters))
@@ -778,7 +881,7 @@ Please provide a clear, accurate answer based on the context provided.
                     
             # Handle old format: result is directly a list
             elif isinstance(result, list) and result:
-                if tool_name.startswith(("get_tables_by_", "get_table_catalog", "get_compatibility_", "get_measurement_")):
+                if tool_name.startswith(("get_tables_by_", "get_table_catalog", "get_measurement_")):
                     discovery_results.append((tool_name, result, {}))
                 elif tool_name.startswith(("get_table_rows", "search_table_values", "get_table_by_id")):
                     extraction_results.append((tool_name, result, {}))
@@ -940,4 +1043,82 @@ Please provide a clear, accurate answer based on the context provided.
             overview += f"   - Rows: {table.row_count}, Columns: {table.column_count}\n"
             overview += f"   - Page: {table.page_number}\n\n"
         
-        return overview 
+        return overview
+    
+    def _get_keywords_overview(self) -> str:
+        """
+        Get a plain list of all available keywords for content search.
+        
+        Returns:
+            String with a simple list of keywords
+        """
+        if not self.farmer or not self.farmer.is_ready():
+            return "No data loaded. Please load a document first."
+        
+        if not self.farmer.sickle:
+            return "No keyword search tool available."
+        
+        try:
+            keywords = self.farmer.sickle.get_available_keywords()
+            if not keywords:
+                return "No keywords found in the loaded documents."
+            
+            overview = "AVAILABLE KEYWORDS FOR CONTENT SEARCH:\n"
+            overview += ", ".join(keywords)
+            return overview
+        except Exception as e:
+            logger.error(f"Error getting keywords overview: {e}")
+            return f"Error retrieving keywords: {str(e)}"
+    
+    def _find_best_table_for_search(self, table_overview: str, search_term: str) -> Optional[str]:
+        """
+        Find the best table to search in based on the table overview and search term.
+        
+        Args:
+            table_overview: String containing the table overview
+            search_term: Term to search for
+            
+        Returns:
+            Best table title to search in, or None if no good match
+        """
+        if not table_overview:
+            return None
+        
+        # Extract table titles from the overview
+        lines = table_overview.split('\n')
+        table_titles = []
+        
+        for line in lines:
+            if line.strip().startswith('**') and line.strip().endswith('**'):
+                # Extract title from markdown format: **Title**
+                title = line.strip()[2:-2]  # Remove **
+                table_titles.append(title)
+        
+        # Score each table based on relevance to search term
+        best_table = None
+        best_score = 0
+        
+        for title in table_titles:
+            title_lower = title.lower()
+            search_lower = search_term.lower()
+            
+            # Simple scoring: exact match = 10, contains = 5, word match = 3
+            score = 0
+            if search_lower in title_lower:
+                score += 5
+            if search_lower == title_lower:
+                score += 10
+            
+            # Check for word matches
+            search_words = search_lower.split()
+            title_words = title_lower.split()
+            for word in search_words:
+                if word in title_words:
+                    score += 3
+            
+            if score > best_score:
+                best_score = score
+                best_table = title
+        
+        logger.info(f"Search term '{search_term}' -> best table: '{best_table}' (score: {best_score})")
+        return best_table 

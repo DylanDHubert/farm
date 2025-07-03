@@ -1,0 +1,192 @@
+{
+  "page_id": "page_15",
+  "title": "Step 6: Trial Insert Reduction",
+  "summary": "This section provides a detailed guide on the trial insert reduction process during a joint mechanics evaluation. It includes instructions on the use of implant trials, the assessment of joint laxity, and the use of intraoperative X-ray. It also includes two tables detailing the availability of different diameters for Alpha Codes in the Trial Insert Reduction and Trident Eccentric Trials.",
+  "keywords": [
+    "Trial Insert Reduction",
+    "Trident Eccentric Trials",
+    "joint mechanics evaluation",
+    "implant trials",
+    "intraoperative X-ray"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Trial Insert Reduction Table",
+      "description": "This table shows the availability of different diameters for each Alpha Code in the Trial Insert Reduction process.",
+      "columns": [
+        "Alpha Code",
+        "Diameter 22mm (Availability)",
+        "Diameter 28mm (Availability)",
+        "Diameter 32mm (Availability)",
+        "Diameter 36mm (Availability)",
+        "Diameter 40mm (Availability)",
+        "Diameter 44mm (Availability)"
+      ],
+      "rows": [
+        [
+          "A",
+          "TRUE",
+          "TRUE",
+          "FALSE",
+          "FALSE",
+          "FALSE",
+          "FALSE"
+        ],
+        [
+          "B",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "FALSE",
+          "FALSE",
+          "FALSE"
+        ],
+        [
+          "C",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "FALSE",
+          "FALSE",
+          "FALSE"
+        ],
+        [
+          "D",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "FALSE",
+          "FALSE"
+        ],
+        [
+          "E",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "FALSE"
+        ],
+        [
+          "F",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE"
+        ],
+        [
+          "G",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE"
+        ],
+        [
+          "H",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE",
+          "TRUE"
+        ]
+      ],
+      "metadata": {
+        "row_count": 8,
+        "column_count": 7,
+        "data_types": [
+          "text",
+          "boolean"
+        ],
+        "units": [
+          "mm",
+          "boolean"
+        ],
+        "technical_category": "specifications"
+      }
+    },
+    {
+      "table_id": "table_2",
+      "title": "Trident Eccentric Trials Table",
+      "description": "This table shows the availability of different diameters for each Alpha Code in the Trident Eccentric Trials.",
+      "columns": [
+        "Alpha Code",
+        "Diameter 28mm (Availability)",
+        "Diameter 32mm (Availability)",
+        "Diameter 36mm (Availability)"
+      ],
+      "rows": [
+        [
+          "B",
+          "TRUE",
+          "FALSE",
+          "FALSE"
+        ],
+        [
+          "C",
+          "TRUE",
+          "FALSE",
+          "FALSE"
+        ],
+        [
+          "D",
+          "TRUE",
+          "TRUE",
+          "FALSE"
+        ],
+        [
+          "E",
+          "TRUE",
+          "TRUE",
+          "TRUE"
+        ],
+        [
+          "F",
+          "TRUE",
+          "TRUE",
+          "TRUE"
+        ],
+        [
+          "G",
+          "TRUE",
+          "TRUE",
+          "TRUE"
+        ],
+        [
+          "H",
+          "TRUE",
+          "TRUE",
+          "TRUE"
+        ]
+      ],
+      "metadata": {
+        "row_count": 7,
+        "column_count": 4,
+        "data_types": [
+          "text",
+          "boolean"
+        ],
+        "units": [
+          "mm",
+          "boolean"
+        ],
+        "technical_category": "specifications"
+      }
+    }
+  ],
+  "raw_content": "## Step 6\n\n### Trial Insert Reduction\n\nA joint mechanics evaluation may be performed with implant trials following femoral preparation and shell implantation. Insert a Trial Insert into the Trident II Shell (Figure 17a).\n\nAn optional Trial Insert Hex Containment Screw for securing the trial to the shell is available (Figure 17b). Only use a Straight Driver (7005-0099) or optional Trident II U-Joint (7005-0100) to insert the Hex Containment. Only these two drivers have a captive tip design to hold the Hex Containment Screw on, however excessive shaking or motion may cause the screw to detach.\n\nDo not overtighten as this may lead to liner trial damage.\n\nTo facilitate insertion/removal of the Trial Insert, Screw Forceps may be placed into the two holes in the plastic face.\n\nAfter reducing the femoral and acetabular trials, the patient should be taken through a complete range of motion. Trials matching the final selected implant sizes should be used. Careful assessment of impingement at the extreme range of motion should be performed. A final check of hip mechanics should be completed to include range of motion consistent with the patient's normal daily activities.\n\nAt this point, joint laxity should also be assessed, taking into consideration the type of anesthetic used and its effects on soft tissue. Additionally, an intraoperative X-ray may be taken at this point to assess leg length, offset, component size and position.\n\n### Trial Insert Reduction Table\n\n| Alpha Code | Diameter 22mm (Availability) | Diameter 28mm (Availability) | Diameter 32mm (Availability) | Diameter 36mm (Availability) | Diameter 40mm (Availability) | Diameter 44mm (Availability) |\n|------------|------------------------------|------------------------------|------------------------------|------------------------------|------------------------------|------------------------------|\n| A          | TRUE                         | TRUE                         | FALSE                        | FALSE                        | FALSE                        | FALSE                        |\n| B          | TRUE                         | TRUE                         | TRUE                         | FALSE                        | FALSE                        | FALSE                        |\n| C          | TRUE                         | TRUE                         | TRUE                         | FALSE                        | FALSE                        | FALSE                        |\n| D          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | FALSE                        | FALSE                        |\n| E          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         | FALSE                        |\n| F          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         |\n| G          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         |\n| H          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         |\n\n**Note:** \n- ▲ = 0° (2200-XXX) only\n- ● = 0° (2200-XXX) and 10° (2210-XXX)\n- ■ = 0° (2200-XXX),10° (2210-XXX) and elevated rim (2260-XXX)\n\n### Trident Eccentric Trials Table\n\n| Alpha Code | Diameter 28mm (Availability) | Diameter 32mm (Availability) | Diameter 36mm (Availability) |\n|------------|------------------------------|------------------------------|------------------------------|\n| B          | TRUE                         | FALSE                        | FALSE                        |\n| C          | TRUE                         | FALSE                        | FALSE                        |\n| D          | TRUE                         | TRUE                         | FALSE                        |\n| E          | TRUE                         | TRUE                         | TRUE                         |\n| F          | TRUE                         | TRUE                         | TRUE                         |\n| G          | TRUE                         | TRUE                         | TRUE                         |\n| H          | TRUE                         | TRUE                         | TRUE                         |\n\n**Note:** \n- ▲ = 0° (2240-XXX) only\n- ● = 0° (2240-XXX) and 10° (2250-XXX)\n\n### Note\nImpingement should be carefully assessed and avoided during range of motion. Impingement can result in increased wear in metal-polyethylene systems, as well as instability.\n\n![Figure 17a shows an anatomical model of a hip joint. Figure 17b illustrates the Trial Insert Hex Containment Screw Kit 7003-0000, showing a retaining ring and hex screw.]\n\n15",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_15.md",
+    "processed_at": "2025-07-03T12:31:23.744119",
+    "model_used": "gpt-4",
+    "tables_found": 2,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

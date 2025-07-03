@@ -1,0 +1,2416 @@
+{
+  "document_info": {
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "processed_at": "2025-07-03T12:38:05.984490",
+    "total_pages": 26,
+    "total_tables": 24,
+    "total_keywords": 98,
+    "processing_pipeline": [
+      "01_parsed_markdown",
+      "02_enhanced_markdown",
+      "03_cleaned_json"
+    ]
+  },
+  "document_summary": {
+    "combined_keywords": [
+      "Trident II Shell Removal",
+      "depth gauge",
+      "Trident II Clusterhole HA",
+      "acetabular shell",
+      "acetabular reamer",
+      "instruments",
+      "Trident Insert Revision",
+      "Poly Insert",
+      "shell implantation",
+      "MDM Liner",
+      "implantation procedure",
+      "part numbers",
+      "modular dual mobility",
+      "Howmedica Osteonics Corp.",
+      "acetabulum",
+      "descriptions",
+      "Offset Reamer Handle",
+      "6.5mm Low Profile Hex Screws",
+      "acetabular system",
+      "alignment guide",
+      "Surgical Protocol",
+      "Trident Eccentric Trials",
+      "CuttingEdge Reamer Handle",
+      "hemispherical implant component",
+      "implant trials",
+      "optional instruments",
+      "healthcare professionals",
+      "reaming process",
+      "CuttingEdge Reamers",
+      "Acetabular System",
+      "preoperative planning",
+      "screw instruments",
+      "Universal Adapter Sleeves",
+      "Straight Reamer Handle",
+      "HA Surgical Protocol",
+      "Adapter Sleeve",
+      "MDM CoCr Liner",
+      "Trial Insert Reduction",
+      "Trident® II Clusterhole HA",
+      "stem taper type",
+      "Trident 0°",
+      "compatible stem materials",
+      "Ceramic Insert Removal",
+      "head assembly",
+      "angles and views",
+      "textured surface",
+      "Trident Polyethylene Insert",
+      "intraoperative X-ray",
+      "Polyethylene Insert Removal",
+      "Trident II Core Trials Tray",
+      "joint mechanics evaluation",
+      "CE 2797",
+      "indications",
+      "surgical protocol",
+      "Catalog Number",
+      "Trident II Clusterhole",
+      "Window Trial",
+      "auxiliary instruments",
+      "Size",
+      "surgical steps",
+      "step duration",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Alignment Guide",
+      "X-ray evaluation",
+      "Shell Impactor",
+      "Trident II Clusterhole HA Shell",
+      "Auxiliary Trials Tray",
+      "Head Disassembly Instrument",
+      "femoral head material",
+      "acetabular shells",
+      "femoral stem",
+      "equipment required",
+      "Trident 10°",
+      "catalog numbers",
+      "contraindications",
+      "Hex Dome Hole Plug",
+      "Crossfire Inserts",
+      "7000-0102",
+      "Drill Bit",
+      "replacement head",
+      "ancillary screw fixation",
+      "drill bit",
+      "Straight Shell Impactor",
+      "product offerings",
+      "Compatibility",
+      "Trident Alumina Ceramic Inserts",
+      "single-use instruments",
+      "screw insertion",
+      "MDM Liner Removal",
+      "Description",
+      "BIOLOX Delta Ceramic Heads",
+      "Trident II",
+      "acetabular preparation",
+      "osteophytes",
+      "implantation",
+      "Stryker Corporation",
+      "Trident II Non-Captive U-Joint Driver",
+      "precautions"
+    ],
+    "page_titles": [
+      "Trident® II Clusterhole HA Acetabular System Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Step 5A: Optional Ancillary Screw Fixation",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Step 6: Trial Insert Reduction",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Appendix A (Continued): Head Assembly and Universal Adapter Sleeves",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Appendix C: Removal of the Insert and Shell",
+      "Trident II Clusterhole High Availability Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA surgical protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Stryker Corporation - CE 2797",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol"
+    ],
+    "table_summary": [
+      {
+        "page_id": "page_1",
+        "page_title": "Trident® II Clusterhole HA Acetabular System Surgical Protocol",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_10",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_11",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_12",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 2,
+        "table_titles": [
+          "Angles and Views in Trident II Surgical Protocol",
+          "Lateral View Angle in Trident II Surgical Protocol"
+        ]
+      },
+      {
+        "page_id": "page_13",
+        "page_title": "Step 5A: Optional Ancillary Screw Fixation",
+        "table_count": 1,
+        "table_titles": [
+          "Available Sizes of 6.5mm Low Profile Hex Screws"
+        ]
+      },
+      {
+        "page_id": "page_14",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Trident II Screw Instruments and Single-Use Instruments"
+        ]
+      },
+      {
+        "page_id": "page_15",
+        "page_title": "Step 6: Trial Insert Reduction",
+        "table_count": 2,
+        "table_titles": [
+          "Trial Insert Reduction Table",
+          "Trident Eccentric Trials Table"
+        ]
+      },
+      {
+        "page_id": "page_16",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Insertion Stages and Images"
+        ]
+      },
+      {
+        "page_id": "page_17",
+        "page_title": "Appendix A (Continued): Head Assembly and Universal Adapter Sleeves",
+        "table_count": 1,
+        "table_titles": [
+          "Universal Adapter Sleeves"
+        ]
+      },
+      {
+        "page_id": "page_18",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_19",
+        "page_title": "Appendix C: Removal of the Insert and Shell",
+        "table_count": 2,
+        "table_titles": [
+          "Figures 21 and 22",
+          "Figures 23 and 24"
+        ]
+      },
+      {
+        "page_id": "page_2",
+        "page_title": "Trident II Clusterhole High Availability Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Trident II Clusterhole High Availability Surgical Protocol Steps"
+        ]
+      },
+      {
+        "page_id": "page_20",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Disassembly of Impacted Head"
+        ]
+      },
+      {
+        "page_id": "page_21",
+        "page_title": "Trident II Clusterhole HA surgical protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Replacement Femoral Head Options"
+        ]
+      },
+      {
+        "page_id": "page_22",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Catalog Information"
+        ]
+      },
+      {
+        "page_id": "page_24",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Catalog Numbers for Trident 0° and 10° Crossfire Inserts"
+        ]
+      },
+      {
+        "page_id": "page_29",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 2,
+        "table_titles": [
+          "Instruments included in the Trident II Core Trials Tray (7000-0102)",
+          "Optional Instruments for the Trident II Core Trials Tray (7000-0102)"
+        ]
+      },
+      {
+        "page_id": "page_3",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Table of Contents"
+        ]
+      },
+      {
+        "page_id": "page_30",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Instruments in Trident II Auxiliary Trials Tray (7000-0103)"
+        ]
+      },
+      {
+        "page_id": "page_31",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 3,
+        "table_titles": [
+          "Instruments",
+          "Single-Use Instruments",
+          "Auxiliary Instruments"
+        ]
+      },
+      {
+        "page_id": "page_32",
+        "page_title": "Stryker Corporation - CE 2797",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_4",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_6",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Compatibility of MDM Liner and Insert with Trident II Shells"
+        ]
+      },
+      {
+        "page_id": "page_7",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 0,
+        "table_titles": []
+      },
+      {
+        "page_id": "page_8",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 1,
+        "table_titles": [
+          "Reaming Process Guidelines"
+        ]
+      },
+      {
+        "page_id": "page_9",
+        "page_title": "Trident II Clusterhole HA Surgical Protocol",
+        "table_count": 0,
+        "table_titles": []
+      }
+    ]
+  },
+  "pages": [
+    {
+      "page_id": "page_1",
+      "title": "Trident® II Clusterhole HA Acetabular System Surgical Protocol",
+      "summary": "This document provides a detailed overview of the Trident® II Clusterhole HA Acetabular System, focusing on the hemispherical implant component. The component features a textured surface and multiple circular holes distributed across its dome.",
+      "keywords": [
+        "Trident® II Clusterhole HA",
+        "Acetabular System",
+        "Surgical Protocol",
+        "hemispherical implant component",
+        "textured surface"
+      ],
+      "tables": [],
+      "raw_content": "# Trident® II Clusterhole HA\n\n## Acetabular System\n\n### Surgical Protocol\n\nThe following image illustrates a hemispherical implant component that is part of the Trident® II Clusterhole HA Acetabular System. The component features a textured surface and multiple circular holes distributed across its dome.\n\n[The image shows a hemispherical implant component with a textured surface and multiple circular holes distributed across its dome.]",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_1.md",
+        "processed_at": "2025-07-03T12:29:27.318484",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_10",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides a detailed surgical protocol for the Trident II Clusterhole HA, focusing on the evaluation of Window Trial in Step 4. It includes instructions for attaching the Window Trial and important notes for successful implementation.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "Window Trial",
+        "acetabular reamer",
+        "Shell Impactor"
+      ],
+      "tables": [],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Step 4\n\n### Evaluation of Window Trial\n\nSelect a Window Trial of equal diameter or 1mm smaller than the last acetabular reamer used. Attach the Window Trial onto the Shell Impactor to evaluate the fit within the reamed acetabulum (Figure 6). The trial is windowed for visualization and assessment of depth, position, bone contact and congruency within the acetabulum. Impact gently into the acetabulum to avoid damage to the surrounding bone or press-fit.\n\nFigure 6.\n\n### Instructions\n\n#### Window Trial Attachment\nTo attach, insert the tip of the impactor flush with the square recess in the dome of the trial. Turn the knob clock-wise until the trial is attached. For the straight impactor, it may be required to apply light pressure on the knob in the direction of the trial to initially engage the threads.\n\nFailure to completely thread the components together may result in damage to the threads upon impaction and lead to difficulty in detaching the components. Do not overtighten.\n\n> **Note**\n> \n> It is recommended to use a Window Trial that is line-to-line or 1mm smaller than the last reamer.\n\n10\n\n**Note:** The provided markdown does not contain any tables to enhance. The text has been formatted for better readability and structure while preserving all the original content.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_10.md",
+        "processed_at": "2025-07-03T12:29:32.844048",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_11",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides a detailed surgical protocol for the implantation of the Trident II Clusterhole HA Shell. It includes instructions for assessing the patient's condition, selecting the appropriate shell size, attaching the shell to the impactor, and inserting the shell into the acetabulum. It also provides guidelines for using the Alignment Guide and the Straight Shell Impactor.",
+      "keywords": [
+        "Trident II Clusterhole HA Shell",
+        "surgical protocol",
+        "shell implantation",
+        "Alignment Guide",
+        "Straight Shell Impactor"
+      ],
+      "tables": [],
+      "raw_content": "## Trident II Clusterhole HA Surgical Protocol\n\n### Step 5: Shell Implantation\n\nAssess the acetabular bone and surrounding soft tissue to ensure shell insertion will not be inhibited. Prior to implantation, it is prudent to reassess patient positioning in the surgical field and adjust to the correct position if necessary.\n\nSelect the appropriately sized Trident II Clusterhole HA Shell as identified on the product label. Attach the shell to the impactor using the instructions provided in the table below.\n\nAn Alignment Guide can be attached to the Shell Impactor to aid in establishing abduction/inclination and anteversion angles (Refer to Figure 9). Many surgeons prefer to target a zone of 40±10˚ of abduction and 15±10˚ of anteversion depending on patient anatomy and biomechanics. The shell abduction angle of approximately 45° can be determined by positioning the Alignment Guide perpendicular to the long axis of the patient (Refer to Figure 10). Shell anteversion can be set at approximately 20° by moving the Shell Impactor so that the left/right anteversion rod is parallel to the long axis of the patient (Refer to Figure 11).\n\nThe screw hole pattern in the shell is intended to be oriented superiorly for ancillary screw fixation. During shell insertion, avoid damage to the roughened surface from instruments such as retractors, and avoid dragging across soft tissue to keep the shell free of debris.\n\nImpact the shell into the acetabulum using a mallet until a stable press-fit is achieved. Remove the impactor by carefully unthreading from the shell. The shell seating depth may be determined by viewing the acetabulum through the exposed dome hole. Should further seating be required, the impactor can be reattached to the shell to facilitate secondary impaction.\n\nAn optional Hex Dome Hole Plug may only be inserted into the shell using the Trident II Straight Driver (7005-0099) or optional U-Joint Driver (7005-0100). Only these two drivers have a captive tip design to hold the Dome Hole Plug on, however excessive shaking or motion may cause the plug to detach. Evaluate the plug after insertion to confirm it is fully threaded into the shell to prevent impingement with the liner.\n\n### Step 6: Instrument Instructions\n\n#### Shell Impactors\nInsert the impactor tip flush with the square recess in the shell dome (Refer to Figure 7). Turn the knob clockwise while applying a slight pressure towards the shell until it is attached. For the Straight Shell Impactor, it may be required to apply light pressure on the knob in the direction of the shell to initially engage the threads.\n\nFigure 7.\n\nFailure to completely thread the components together may result in damage to the threads upon impaction. Do not overtighten. The gap on the knob is designed to indicate an inadequate connection and will be concealed after appropriate tightening (Refer to Figure 8).\n\nFigure 8.\n\n#### Alignment Guides\n\nLateral 1440-1370\nor\nSupine 1440-1380\n\nTo attach, slide the Alignment Guide onto the flats of the impactor spindle and rotate it to the desired location.\n\nFigure 9.\n\n#### Straight Shell Impactor: 7004-0100\n\n11\n\n(Note: The provided markdown does not contain any tables to enhance. The text has been formatted for better readability and structure.)",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_11.md",
+        "processed_at": "2025-07-03T12:29:40.423302",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_12",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides detailed surgical protocol for the Trident II Clusterhole HA, including specific angles and views, notes on the procedure, and cautions regarding the alignment guide.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "angles and views",
+        "alignment guide",
+        "acetabular shell"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Angles and Views in Trident II Surgical Protocol",
+          "description": "This table illustrates the angles and views used in the Trident II Surgical Protocol.",
+          "rows": [
+            {
+              "Angle (°)": "45",
+              "View": "90°"
+            },
+            {
+              "Angle (°)": "90",
+              "View": "A/P view"
+            }
+          ],
+          "metadata": {
+            "row_count": 2,
+            "column_count": 2,
+            "data_types": [
+              "numeric",
+              "text"
+            ],
+            "units": [
+              "°",
+              "N/A"
+            ],
+            "technical_category": "angles and views"
+          }
+        },
+        {
+          "table_id": "table_2",
+          "title": "Lateral View Angle in Trident II Surgical Protocol",
+          "description": "This table illustrates the lateral view angle used in the Trident II Surgical Protocol.",
+          "rows": [
+            {
+              "Angle (°)": "20",
+              "View": "Lateral view"
+            }
+          ],
+          "metadata": {
+            "row_count": 1,
+            "column_count": 2,
+            "data_types": [
+              "numeric",
+              "text"
+            ],
+            "units": [
+              "°",
+              "N/A"
+            ],
+            "technical_category": "angles and views"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Figure 10. Angles and Views in Trident II Surgical Protocol\n\n```mermaid\ngraph TD\n    A[45°] --> B[90°]\n    B --> C[A/P view]\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#bbf,stroke:#333,stroke-width:2px\n    style C fill:#bfb,stroke:#333,stroke-width:2px\n```\n\n## Figure 11. Lateral View Angle in Trident II Surgical Protocol\n\n```mermaid\ngraph LR\n    A[20°] --> B[Lateral view]\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#bfb,stroke:#333,stroke-width:2px\n```\n\n### Notes on Trident II Surgical Protocol\n\n- Avoid catching soft tissue debris onto the frictional shell surface during implantation.\n\n- Shell positioning must be carefully considered when selecting certain inserts as hooded options are not available in all sizes to adjust joint stability. Proper positioning of the Trident II Acetabular Shell may minimize potential impingement and promote stability and articulation between the insert and head. As with any acetabular system, excessive vertical orientation and/or anteversion of the shell should be avoided, as this may lead to premature wear and/or noise of the components' surfaces.\n\n- While the alignment guides offer some assistance in shell placement, it is important to critically evaluate anatomic landmarks before shell implantation. These anatomic landmarks include the anterior and posterior walls of the acetabulum, the sciatic notch, the transacetabular ligament (TAL), the floor and/or acetabular fossa of the acetabulum.\n\n### Caution Regarding Trident II Surgical Protocol\n\nThe Alignment Guide's utility may be diminished if the pelvis has moved from the original position during intraoperative manipulation. Small changes in pelvic flexion will greatly affect anteversion. The Alignment Guide is only one aid to assist with proper implant positioning. The surgeon must also rely on anatomic landmarks to avoid improper positioning of components.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_12.md",
+        "processed_at": "2025-07-03T12:29:56.088738",
+        "model_used": "gpt-4",
+        "tables_found": 2,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_13",
+      "title": "Step 5A: Optional Ancillary Screw Fixation",
+      "summary": "This section provides instructions for using 6.5mm Low Profile Hex Screws for ancillary screw fixation. It includes a table of available screw sizes and their corresponding product codes. It also provides cautionary notes and instructions for screw insertion.",
+      "keywords": [
+        "ancillary screw fixation",
+        "6.5mm Low Profile Hex Screws",
+        "Trident II Non-Captive U-Joint Driver",
+        "Drill Bit",
+        "screw insertion"
+      ],
+      "tables": [
+        {
+          "table_id": "table_3",
+          "title": "Available Sizes of 6.5mm Low Profile Hex Screws",
+          "description": "This table lists the available sizes of 6.5mm Low Profile Hex Screws and their corresponding product codes.",
+          "rows": [
+            {
+              "Screw Length (mm)": "15",
+              "Product Code": "7030-6515"
+            },
+            {
+              "Screw Length (mm)": "20",
+              "Product Code": "7030-6520"
+            },
+            {
+              "Screw Length (mm)": "25",
+              "Product Code": "7030-6525"
+            },
+            {
+              "Screw Length (mm)": "30",
+              "Product Code": "7030-6530"
+            },
+            {
+              "Screw Length (mm)": "35",
+              "Product Code": "7030-6535"
+            },
+            {
+              "Screw Length (mm)": "40",
+              "Product Code": "7030-6540"
+            },
+            {
+              "Screw Length (mm)": "45",
+              "Product Code": "7030-6545"
+            },
+            {
+              "Screw Length (mm)": "50",
+              "Product Code": "7030-6550"
+            },
+            {
+              "Screw Length (mm)": "55",
+              "Product Code": "7030-6555"
+            },
+            {
+              "Screw Length (mm)": "60",
+              "Product Code": "7030-6560"
+            }
+          ],
+          "metadata": {
+            "row_count": 10,
+            "column_count": 2,
+            "data_types": [
+              "numeric",
+              "text"
+            ],
+            "units": [
+              "mm",
+              "N/A"
+            ],
+            "technical_category": "specifications"
+          }
+        }
+      ],
+      "raw_content": "## Step 5A\n\n### Optional Ancillary Screw Fixation\n\nIf the decision is made to use ancillary screw fixation, then only 6.5mm Low Profile Hex Screws (7030-65XX) may be used. The Cancellous Bone Screws are 6.5mm in diameter and available in a variety of lengths from 15-60mm (Table 3). The acetabular screws are designed to be inserted and removed with the Trident II screw instrumentation (Table 4). Single Use Drill Bits are also offered for bone preparation.\n\nAttach a 3.3 or 4.0mm Drill Bit to the Ball Joint Drill Shaft and connect to an appropriate power bone drill. After determining the site for screw placement, pass the appropriately sized Drill Bit through the Drill Guide of equivalent diameter size and insert the guide flush to the shell screw hole (Figure 12). Use of the guide is required to ensure proper alignment of the hole trajectory to the screw hole and facilitates full seating of the screw head within the shell upon insertion. Drill to the desired depth and insert the Depth Gauge to aid in selection of the appropriate screw size.\n\nTo insert a screw using the Trident II Non-Captive U-Joint Driver (marked \"Non-Captive\") (Figure 13), use the Screw Forceps to hold the screw and guide it into the implant.\n\nIf using the Trident II Straight Driver, attach the screw to the driver tip. The Straight Driver tip has a captive design to hold the screw on, however excessive shaking or motion may cause the screw to detach. Screw Forceps may be used to hold the screw and guide into the implant.\n\nFollowing screw insertion into bone, confirm the screw head is seated flush against the shell to help prevent eventual improper seating of the acetabular insert.\n\n| Screw Length (mm) | Product Code | \n| --- | --- | \n| 15 | 7030-6515 | \n| 20 | 7030-6520 | \n| 25 | 7030-6525 | \n| 30 | 7030-6530 | \n| 35 | 7030-6535 | \n| 40 | 7030-6540 | \n| 45 | 7030-6545 | \n| 50 | 7030-6550 | \n| 55 | 7030-6555 | \n| 60 | 7030-6560 | \n\n**Table 3: Available Sizes of 6.5mm Low Profile Hex Screws**\n\n**Notes:**\n- An optional Trident II U-Joint Driver with a captive tip (7005-0100) is available as an alternative to the Trident II Non-Captive U-Joint Driver. To use this driver, attach the screw to the driver tip. The tip has a captive design to hold the screw on, however excessive shaking or motion may cause the screw to detach. Screw Forceps may be used for this driver.\n- Trident II Acetabular Shells are not intended to be drilled through.\n- In dense bone, the use of 4.0mm Drill Bits may facilitate easier insertion of screws without substantial compromise of screw purchase.\n- For drilling screw holes deeper than 40mm, it is recommended to drill sequentially with a 25mm/ 40mm bit and then follow with a 60mm bit to deepen to desired depth.\n\n### Caution\n\n- Do not use a dull Drill Bit as it may generate excessive stresses in the bone.\n- Do not pass a drill, screw any other instrumentation beyond the inner table of the pelvis.\n- Malposition of either the shell screw hole orientation or bone hole trajectory, or improper use of the screws may result in injury to the neurovascular structures in the vicinity.\n- Once screws are inserted, confirm screw heads do not protrude into the inside of shell and interfere with proper assembly of liner implant.\n- Do not use a power drill to insert the screw, as excessive torque may result in damage to screw or driver.\n- Operating the Ball Joint Drill Shaft at angles exceeding 45˚ for prolonged periods of time or with excessive force can lead to damage to the flexible joint and Drill Bit.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_13.md",
+        "processed_at": "2025-07-03T12:30:16.129252",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_14",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides a detailed surgical protocol for the Trident II Clusterhole HA, including instructions for screw instruments and a comprehensive list of Trident II Screw Instruments and Single-Use Instruments.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "screw instruments",
+        "drill bit",
+        "depth gauge"
+      ],
+      "tables": [
+        {
+          "table_id": "table_4",
+          "title": "Trident II Screw Instruments and Single-Use Instruments",
+          "description": "This table lists the catalog numbers and descriptions of Trident II Screw Instruments and Single-Use Instruments.",
+          "rows": [
+            {
+              "Trident II Screw Instruments": "7005-0101",
+              "Description": "Single Use Drill Bit 3.3mm x 15mm",
+              "Single-Use Instruments": "7005-3315S"
+            },
+            {
+              "Trident II Screw Instruments": "7005-0102",
+              "Description": "Single Use Drill Bit 3.3mm x 25mm",
+              "Single-Use Instruments": "7005-3325S"
+            },
+            {
+              "Trident II Screw Instruments": "7005-0100",
+              "Description": "Single Use Drill Bit 3.3mm x 40mm",
+              "Single-Use Instruments": "7005-3340S"
+            },
+            {
+              "Trident II Screw Instruments": "7005-0099",
+              "Description": "Single Use Drill Bit 3.3mm x 60mm",
+              "Single-Use Instruments": "7005-3360S"
+            },
+            {
+              "Trident II Screw Instruments": "7005-0500",
+              "Description": "Single Use Drill Bit 4.0mm x 15mm",
+              "Single-Use Instruments": "7005-4015S"
+            },
+            {
+              "Trident II Screw Instruments": "7005-0200",
+              "Description": "Single Use Drill Bit 4.0mm x 25mm",
+              "Single-Use Instruments": "7005-4025S"
+            },
+            {
+              "Trident II Screw Instruments": "7005-0201",
+              "Description": "Single Use Drill Bit 4.0mm x 40mm",
+              "Single-Use Instruments": "7005-4040S"
+            },
+            {
+              "Trident II Screw Instruments": "7005-0300",
+              "Description": "Single Use Drill Bit 4.0mm x 60mm",
+              "Single-Use Instruments": "7005-4060S"
+            },
+            {
+              "Trident II Screw Instruments": "7005-0433",
+              "Description": null,
+              "Single-Use Instruments": null
+            },
+            {
+              "Trident II Screw Instruments": "7005-0440",
+              "Description": null,
+              "Single-Use Instruments": null
+            },
+            {
+              "Trident II Screw Instruments": "7005-3325",
+              "Description": null,
+              "Single-Use Instruments": null
+            },
+            {
+              "Trident II Screw Instruments": "7005-3340",
+              "Description": null,
+              "Single-Use Instruments": null
+            },
+            {
+              "Trident II Screw Instruments": "7005-3360",
+              "Description": null,
+              "Single-Use Instruments": null
+            },
+            {
+              "Trident II Screw Instruments": "7005-4025",
+              "Description": null,
+              "Single-Use Instruments": null
+            },
+            {
+              "Trident II Screw Instruments": "7005-4040",
+              "Description": null,
+              "Single-Use Instruments": null
+            },
+            {
+              "Trident II Screw Instruments": "7005-4060",
+              "Description": null,
+              "Single-Use Instruments": null
+            }
+          ],
+          "metadata": {
+            "row_count": 16,
+            "column_count": 4,
+            "data_types": [
+              "text",
+              "text",
+              "text",
+              "text"
+            ],
+            "units": [
+              null,
+              null,
+              null,
+              "mm"
+            ],
+            "technical_category": "specifications"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Instructions for Screw Instruments\n\n### Ball Joint Drill Shaft\nTo attach, retract the sleeve and insert the bit so that the laser marking on the bit is concealed within the shaft tip.\n\n### Ratchet Handle\nTo attach the driver, retract the sleeve and insert the driver so that the engraved line on the shaft is concealed within the sleeve.\n\n![Figure 14. Image showing the process of attaching the ball joint drill shaft]\n\n![Figure 15. Image showing the process of attaching the ratchet handle]\n\n### Drill Bit Length\nThe Drill Guide conceals 10mm of the Drill Bit length (Figure 16 - example of 40mm Drill Bit).\n\n### Depth Gauge\nLocate the end of the bone hole using the hook on the tip of the gauge. Clamp onto the gauge at the level of the screw hole and extract the gauge to use the markings to aid in appropriate screw size selection.\n\n![Figure 16. Image showing a drill bit with 10mm and 40mm measurements]\n\n### Table 4. Trident II Screw Instruments and Single-Use Instruments\n\n| Trident II Screw Instruments | | Single-Use Instruments | |\n|---|---|---|---|\n| Catalog Number | Description | Catalog Number | Description |\n| 7005-0101 | Ratchet Driver Handle | 7005-3315S | Single Use Drill Bit 3.3mm x 15mm |\n| 7005-0102 | Non-Captive U-Joint Driver | 7005-3325S | Single Use Drill Bit 3.3mm x 25mm |\n| 7005-0100 | U-Joint Driver | 7005-3340S | Single Use Drill Bit 3.3mm x 40mm |\n| 7005-0099 | Straight Driver | 7005-3360S | Single Use Drill Bit 3.3mm x 60mm |\n| 7005-0500 | Screw Forceps | 7005-4015S | Single Use Drill Bit 4.0mm x 15mm |\n| 7005-0200 | Depth Gauge - Short | 7005-4025S | Single Use Drill Bit 4.0mm x 25mm |\n| 7005-0201 | Depth Gauge - Long | 7005-4040S | Single Use Drill Bit 4.0mm x 40mm |\n| 7005-0300 | Ball Joint Drill Shaft | 7005-4060S | Single Use Drill Bit 4.0mm x 60mm |\n| 7005-0433 | Drill Guide 3.3mm | | |\n| 7005-0440 | Drill Guide 4.0mm | | |\n| 7005-3325 | Drill Bit 3.3mm X 25mm | | |\n| 7005-3340 | Drill Bit 3.3mm X 40mm | | |\n| 7005-3360 | Drill Bit 3.3mm X 60mm | | |\n| 7005-4025 | Drill Bit 4.0mm X 25mm | | |\n| 7005-4040 | Drill Bit 4.0mm X 40mm | | |\n| 7005-4060 | Drill Bit 4.0mm X 60mm | | |",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_14.md",
+        "processed_at": "2025-07-03T12:30:51.078992",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_15",
+      "title": "Step 6: Trial Insert Reduction",
+      "summary": "This section provides a detailed guide on the trial insert reduction process during a joint mechanics evaluation. It includes instructions on the use of implant trials, the assessment of joint laxity, and the use of intraoperative X-ray. It also includes two tables detailing the availability of different diameters for Alpha Codes in the Trial Insert Reduction and Trident Eccentric Trials.",
+      "keywords": [
+        "Trial Insert Reduction",
+        "Trident Eccentric Trials",
+        "joint mechanics evaluation",
+        "implant trials",
+        "intraoperative X-ray"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Trial Insert Reduction Table",
+          "description": "This table shows the availability of different diameters for each Alpha Code in the Trial Insert Reduction process.",
+          "rows": [
+            {
+              "Alpha Code": "A",
+              "Diameter 22mm (Availability)": "TRUE",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "FALSE",
+              "Diameter 36mm (Availability)": "FALSE",
+              "Diameter 40mm (Availability)": "FALSE",
+              "Diameter 44mm (Availability)": "FALSE"
+            },
+            {
+              "Alpha Code": "B",
+              "Diameter 22mm (Availability)": "TRUE",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "FALSE",
+              "Diameter 40mm (Availability)": "FALSE",
+              "Diameter 44mm (Availability)": "FALSE"
+            },
+            {
+              "Alpha Code": "C",
+              "Diameter 22mm (Availability)": "TRUE",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "FALSE",
+              "Diameter 40mm (Availability)": "FALSE",
+              "Diameter 44mm (Availability)": "FALSE"
+            },
+            {
+              "Alpha Code": "D",
+              "Diameter 22mm (Availability)": "TRUE",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE",
+              "Diameter 40mm (Availability)": "FALSE",
+              "Diameter 44mm (Availability)": "FALSE"
+            },
+            {
+              "Alpha Code": "E",
+              "Diameter 22mm (Availability)": "TRUE",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE",
+              "Diameter 40mm (Availability)": "TRUE",
+              "Diameter 44mm (Availability)": "FALSE"
+            },
+            {
+              "Alpha Code": "F",
+              "Diameter 22mm (Availability)": "TRUE",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE",
+              "Diameter 40mm (Availability)": "TRUE",
+              "Diameter 44mm (Availability)": "TRUE"
+            },
+            {
+              "Alpha Code": "G",
+              "Diameter 22mm (Availability)": "TRUE",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE",
+              "Diameter 40mm (Availability)": "TRUE",
+              "Diameter 44mm (Availability)": "TRUE"
+            },
+            {
+              "Alpha Code": "H",
+              "Diameter 22mm (Availability)": "TRUE",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE",
+              "Diameter 40mm (Availability)": "TRUE",
+              "Diameter 44mm (Availability)": "TRUE"
+            }
+          ],
+          "metadata": {
+            "row_count": 8,
+            "column_count": 7,
+            "data_types": [
+              "text",
+              "boolean"
+            ],
+            "units": [
+              "mm",
+              "boolean"
+            ],
+            "technical_category": "specifications"
+          }
+        },
+        {
+          "table_id": "table_2",
+          "title": "Trident Eccentric Trials Table",
+          "description": "This table shows the availability of different diameters for each Alpha Code in the Trident Eccentric Trials.",
+          "rows": [
+            {
+              "Alpha Code": "B",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "FALSE",
+              "Diameter 36mm (Availability)": "FALSE"
+            },
+            {
+              "Alpha Code": "C",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "FALSE",
+              "Diameter 36mm (Availability)": "FALSE"
+            },
+            {
+              "Alpha Code": "D",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "FALSE"
+            },
+            {
+              "Alpha Code": "E",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE"
+            },
+            {
+              "Alpha Code": "F",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE"
+            },
+            {
+              "Alpha Code": "G",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE"
+            },
+            {
+              "Alpha Code": "H",
+              "Diameter 28mm (Availability)": "TRUE",
+              "Diameter 32mm (Availability)": "TRUE",
+              "Diameter 36mm (Availability)": "TRUE"
+            }
+          ],
+          "metadata": {
+            "row_count": 7,
+            "column_count": 4,
+            "data_types": [
+              "text",
+              "boolean"
+            ],
+            "units": [
+              "mm",
+              "boolean"
+            ],
+            "technical_category": "specifications"
+          }
+        }
+      ],
+      "raw_content": "## Step 6\n\n### Trial Insert Reduction\n\nA joint mechanics evaluation may be performed with implant trials following femoral preparation and shell implantation. Insert a Trial Insert into the Trident II Shell (Figure 17a).\n\nAn optional Trial Insert Hex Containment Screw for securing the trial to the shell is available (Figure 17b). Only use a Straight Driver (7005-0099) or optional Trident II U-Joint (7005-0100) to insert the Hex Containment. Only these two drivers have a captive tip design to hold the Hex Containment Screw on, however excessive shaking or motion may cause the screw to detach.\n\nDo not overtighten as this may lead to liner trial damage.\n\nTo facilitate insertion/removal of the Trial Insert, Screw Forceps may be placed into the two holes in the plastic face.\n\nAfter reducing the femoral and acetabular trials, the patient should be taken through a complete range of motion. Trials matching the final selected implant sizes should be used. Careful assessment of impingement at the extreme range of motion should be performed. A final check of hip mechanics should be completed to include range of motion consistent with the patient's normal daily activities.\n\nAt this point, joint laxity should also be assessed, taking into consideration the type of anesthetic used and its effects on soft tissue. Additionally, an intraoperative X-ray may be taken at this point to assess leg length, offset, component size and position.\n\n### Trial Insert Reduction Table\n\n| Alpha Code | Diameter 22mm (Availability) | Diameter 28mm (Availability) | Diameter 32mm (Availability) | Diameter 36mm (Availability) | Diameter 40mm (Availability) | Diameter 44mm (Availability) |\n|------------|------------------------------|------------------------------|------------------------------|------------------------------|------------------------------|------------------------------|\n| A          | TRUE                         | TRUE                         | FALSE                        | FALSE                        | FALSE                        | FALSE                        |\n| B          | TRUE                         | TRUE                         | TRUE                         | FALSE                        | FALSE                        | FALSE                        |\n| C          | TRUE                         | TRUE                         | TRUE                         | FALSE                        | FALSE                        | FALSE                        |\n| D          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | FALSE                        | FALSE                        |\n| E          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         | FALSE                        |\n| F          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         |\n| G          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         |\n| H          | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         | TRUE                         |\n\n**Note:** \n- ▲ = 0° (2200-XXX) only\n- ● = 0° (2200-XXX) and 10° (2210-XXX)\n- ■ = 0° (2200-XXX),10° (2210-XXX) and elevated rim (2260-XXX)\n\n### Trident Eccentric Trials Table\n\n| Alpha Code | Diameter 28mm (Availability) | Diameter 32mm (Availability) | Diameter 36mm (Availability) |\n|------------|------------------------------|------------------------------|------------------------------|\n| B          | TRUE                         | FALSE                        | FALSE                        |\n| C          | TRUE                         | FALSE                        | FALSE                        |\n| D          | TRUE                         | TRUE                         | FALSE                        |\n| E          | TRUE                         | TRUE                         | TRUE                         |\n| F          | TRUE                         | TRUE                         | TRUE                         |\n| G          | TRUE                         | TRUE                         | TRUE                         |\n| H          | TRUE                         | TRUE                         | TRUE                         |\n\n**Note:** \n- ▲ = 0° (2240-XXX) only\n- ● = 0° (2240-XXX) and 10° (2250-XXX)\n\n### Note\nImpingement should be carefully assessed and avoided during range of motion. Impingement can result in increased wear in metal-polyethylene systems, as well as instability.\n\n![Figure 17a shows an anatomical model of a hip joint. Figure 17b illustrates the Trial Insert Hex Containment Screw Kit 7003-0000, showing a retaining ring and hex screw.]\n\n15",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_15.md",
+        "processed_at": "2025-07-03T12:31:23.744119",
+        "model_used": "gpt-4",
+        "tables_found": 2,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_16",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides a detailed surgical protocol for the implantation of Trident Polyethylene and Alumina Ceramic Inserts. It includes step-by-step instructions, notes, and images for each stage of the process.",
+      "keywords": [
+        "Trident Polyethylene Insert",
+        "Trident Alumina Ceramic Inserts",
+        "surgical protocol",
+        "implantation",
+        "acetabulum"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Insertion Stages and Images",
+          "description": "This table provides images of the ceramic and polyethylene inserts before and after insertion.",
+          "rows": [
+            {
+              "Insertion Stage": "Before Insertion",
+              "Ceramic Insert (Images)": "ceramic_before.jpg, ceramic_before_closeup.jpg",
+              "Polyethylene Insert (Images)": "polyethylene_before.jpg, polyethylene_before_closeup.jpg"
+            },
+            {
+              "Insertion Stage": "After Insertion",
+              "Ceramic Insert (Images)": "ceramic_after.jpg, ceramic_after_closeup.jpg",
+              "Polyethylene Insert (Images)": "polyethylene_after.jpg, polyethylene_after_closeup.jpg"
+            }
+          ],
+          "metadata": {
+            "row_count": 2,
+            "column_count": 3,
+            "data_types": [
+              "text",
+              "image",
+              "image"
+            ],
+            "units": [
+              "N/A",
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "surgical protocol"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Appendix A\n\n### Insert Implantation\n\nThe Trident Polyethylene Insert is designed to lock into the shell by means of a circumferential ring that engages the mating groove within the shell. Rotational stability can be achieved when the anti-rotational barbs of the shell interlock with the insert scallops. Trident Alumina Ceramic Inserts are designed to gain fixation within the shell by means of mating tapers. Rotational stability between the components is achieved when the shell's anti-rotational barbs interlock with the insert scallops.\n\n> **Note**\n> \n> Having a clear view of the rim of the acetabulum will allow easier visualization of the shell slots and indexing barbs for proper positioning and seating of the liner.\n\n> **Note**\n> \n> Use caution handling ceramic components during assembly because of the brittle nature of the ceramic material. All components are pre-sterilized and cannot be sterilized after opening.\n\n1. Ensure that the inside of the shell and periphery are clean and free of soft tissue or any other debris which can cause eccentric positioning of the insert and improper seating in the shell.\n\n2. Gently introduce the ceramic or polyethylene insert, making sure that the insert flange scallops are aligned with the slots at the rim of the shell. This orientation will allow the insert to rest on the four indexing barbs and will ensure that the insert is parallel with the shell. Once the insert is seated at the initial position, slowly turn and drop the insert into the final pre-locked position.\n\n3. Select the appropriately sized Plastic Insert Impactor Tip and load onto Insert Positioner/Impactor Handle (Figure 18).\n\n4. Position Insert Positioner/Impactor Handle into the inner diameter of the insert. Take care to align the handle with the axis of the shell. Strike the handle with approximately four firm mallet blows to fully seat the insert (Figure 19).\n\nFigure 18. Image shows a long surgical instrument with a handle on one end and a rounded tip on the other. Purple arrows indicate a specific part of the instrument.\n\nFigure 19. Image shows a cross-section of a hip joint implant. A surgical instrument is shown inserting a component into the acetabular shell. A purple arrow indicates the direction of insertion.\n\n| Insertion Stage | Ceramic Insert (Images) | Polyethylene Insert (Images) |\n|-----------------|-------------------------|------------------------------|\n| Before Insertion| ![Ceramic insert before insertion](ceramic_before.jpg)<br>![Closeup of ceramic insert before insertion](ceramic_before_closeup.jpg) | ![Polyethylene insert before insertion](polyethylene_before.jpg)<br>![Closeup of polyethylene insert before insertion](polyethylene_before_closeup.jpg) |\n| After Insertion | ![Ceramic insert after insertion](ceramic_after.jpg)<br>![Closeup of ceramic insert after insertion](ceramic_after_closeup.jpg) | ![Polyethylene insert after insertion](polyethylene_after.jpg)<br>![Closeup of polyethylene insert after insertion](polyethylene_after_closeup.jpg) |",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_16.md",
+        "processed_at": "2025-07-03T12:31:36.112640",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_17",
+      "title": "Appendix A (Continued): Head Assembly and Universal Adapter Sleeves",
+      "summary": "This document provides instructions for head assembly to the implanted femoral stem, including the use of Universal Adapter Sleeves. It also includes a table of part numbers, taper types, and compatible stem materials.",
+      "keywords": [
+        "head assembly",
+        "femoral stem",
+        "Universal Adapter Sleeves",
+        "part numbers",
+        "compatible stem materials"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Universal Adapter Sleeves",
+          "description": "This table lists the part numbers, taper types, and compatible stem materials for Universal Adapter Sleeves.",
+          "rows": [
+            {
+              "Part Numbers": "19-0XXXT",
+              "Taper Type": "C-Taper",
+              "Compatible Stem Materials": "TMZF, Ti-6Al-4V, CoCr"
+            },
+            {
+              "Part Numbers": "6519-T-XXX",
+              "Taper Type": "V40",
+              "Compatible Stem Materials": "TMZF, Ti-6Al-4V, CoCr, stainless steel"
+            }
+          ],
+          "metadata": {
+            "row_count": 2,
+            "column_count": 3,
+            "data_types": [
+              "text",
+              "text",
+              "text"
+            ],
+            "units": [
+              "N/A",
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "compatibility"
+          }
+        }
+      ],
+      "raw_content": "## Appendix A (Continued)\n\n### Head Assembly\n\nPrior to head assembly to the implanted femoral stem, neck length selection may be reevaluated using Stryker's V40 or C-Taper head trial. Place the head trial onto the stem neck taper and reduce the hip to verify that the mechanics have not been altered due to shell seating.\n\nRemove the head trial and dry the implant trunnion with a laparatomy sponge or sterile towel.\n\nSelect the appropriate corresponding V40 or C-Taper femoral head size and place it onto the dry trunnion of the femoral stem with a slight twist. Impact the head with moderate impactions in line with the neck using the Stem Head Impactor (1104-1000) (Figure 20). Care should be taken to prevent scratching of the femoral head against the acetabular component rim during final reduction.\n\nWith the final selected femoral, head and acetabular implants in place, reduce the components and perform a final joint mechanics evaluation of the patient.\n\n### Optional Step\n\n#### Universal Adapter Sleeves\n\n| Part Numbers | Taper Type | Compatible Stem Materials |\n|--------------|------------|---------------------------|\n| 19-0XXXT     | C-Taper    | TMZF, Ti-6Al-4V, CoCr    |\n| 6519-T-XXX   | V40        | TMZF, Ti-6Al-4V, CoCr, stainless steel |\n\nAfter completing the trialing process, assemble the Universal Adapter Sleeve to the femoral stem manually. The Universal Adapter Sleeve must be fully seated on the stem taper before the head is assembled. Intraoperatively assemble the BIOLOX delta Universal Taper Ceramic Head onto the sleeved femoral stem and set with moderate impactions in line with the neck using the Stem Head Impactor (1104-1000). Care must be taken to avoid excessive impact forces when assembling the BIOLOX delta Ceramic Head to the sleeved femoral component.\n\n### Notes\n\n- When selecting a BIOLOX delta Universal Taper Ceramic Head for implantation, use of a Universal Adapter Sleeve is necessary.\n\n- In no instance should any attempt be made to preassemble the Universal Adapter Sleeve inside the BIOLOX delta Universal Ceramic Head.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_17.md",
+        "processed_at": "2025-07-03T12:31:50.240281",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_18",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides a detailed procedure for the implantation of the MDM Liner, a part of the Modular Dual Mobility (MDM) system. It includes important notes and cautionary measures to ensure proper alignment and seating of the liner, as well as to minimize potential risks such as fretting and corrosion.",
+      "keywords": [
+        "MDM Liner",
+        "implantation procedure",
+        "modular dual mobility",
+        "Trident II Clusterhole HA",
+        "surgical protocol"
+      ],
+      "tables": [],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Appendix B\n\n### Modular Dual Mobility (MDM)\n\n#### MDM Liner Implantation Procedure\n\nEnsure that the inside of the shell is clean, dry, and free of soft tissue or any other debris, which could prevent the liner from properly seating in the shell.\n\nGently introduce the MDM Liner, making sure that the liner flange scallops are aligned with the slots in the rim of the shell. This orientation will allow the liner to rest on the four indexing barbs and will ensure that the liner is parallel with the shell. Next, slowly turn the liner until it drops into the final pre-locking position. Correct rotational orientation will result in the liner tabs aligned with the slots on the shell rim.\n\nApply finger pressure around the rim of the liner first to engage the liner within the shell.\n\nLoad a 36mm Plastic Insert Impactor Tip onto the Insert Positioner/Impactor Handle. It may be necessary to lightly tap on the rim of the liner with the Plastic Insert Impactor Tip, working around the rim in all four quadrants, to ensure the liner is properly seated and concentric within the shell.\n\nThe liner is properly seated when there is no further rocking or movement of the liner within the shell. This step should be done prior to final impaction of the liner.\n\nPosition the Positioner/Impactor Handle into the inner diameter of the liner. Take care to align the handle with the axis of the shell. Strike the handle with several mallet blows to fully seat the liner. MDM Liners are designed to lock within the shell by means of mating tapers.\n\nVerify the liner is properly aligned and fully seated into the acetabular shell. Check the taper lock by running a small blunt instrument (or the Liner Removal Tool) around the periphery of the shell/ liner interface. There should not be any space between the rim of the shell and the underside of the rim.\n\nVisually assess the inner articular surface of the MDM Liner to ensure it is not scratched or damaged prior to the trial insert/head reduction.\n\n#### Important Notes\n\n- As with any modular interface under load, there is a potential for fretting and/or corrosion. Proper alignment and locking of the MDM Liner into the shell may help to minimize this risk.\n\n- Having a clear view of the rim of the acetabulum will allow easier visualization of the shell slots and indexing barbs for proper positioning and seating of the liner.\n\n#### Cautionary Measures\n\n- Care should be taken to avoid forcing the MDM Liner Trial into place when trialing with the shell. The liner trial should freely assemble with the shell.\n\n- Care should be taken to avoid damage to the highly polished inner surface of the MDM CoCr Liner.\n\n- Care should be taken to ensure that the liner is correctly aligned within the shell. Failure to do so may result in incomplete or incorrect liner engagement.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_18.md",
+        "processed_at": "2025-07-03T12:31:56.665204",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_19",
+      "title": "Appendix C: Removal of the Insert and Shell",
+      "summary": "This document provides detailed instructions for the removal of various components of a medical device, including the Polyethylene Insert, MDM Liner, Ceramic Insert, and Trident II Shell. It also provides guidance on revising the Trident II Shell with a Trident Insert.",
+      "keywords": [
+        "Polyethylene Insert Removal",
+        "MDM Liner Removal",
+        "Ceramic Insert Removal",
+        "Trident II Shell Removal",
+        "Trident Insert Revision"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Figures 21 and 22",
+          "description": "Visual representation of the Polyethylene Insert Removal process.",
+          "rows": [
+            {
+              "Figure 21": "Figure 21.",
+              "Figure 22": "Figure 22."
+            }
+          ],
+          "metadata": {
+            "row_count": 1,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "text"
+            ],
+            "units": [
+              "NA",
+              "NA"
+            ],
+            "technical_category": "visual_representation"
+          }
+        },
+        {
+          "table_id": "table_2",
+          "title": "Figures 23 and 24",
+          "description": "Visual representation of the Ceramic Insert Removal process.",
+          "rows": [
+            {
+              "Figure 23": "Figure 23.",
+              "Figure 24": "Figure 24."
+            }
+          ],
+          "metadata": {
+            "row_count": 1,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "text"
+            ],
+            "units": [
+              "NA",
+              "NA"
+            ],
+            "technical_category": "visual_representation"
+          }
+        }
+      ],
+      "raw_content": "## Appendix C\n\n### Removal of the Insert and Shell\n\n#### Polyethylene Insert Removal\nUse a 3.3mm Drill Bit to create an off-center hole in the polyethylene insert. Care must be taken to avoid drilling through an unused screw hole and into the wall of the acetabulum. Use the T-Handle (1101-2100) to thread the Polyethylene Insert Removal Tool (2112-0010) into the insert, and advance the tool to the medial wall of the shell to dislodge the insert (Figures 21 and 22). If the Polyethylene Insert Removal Tool is not available, then a 6.5mm Cancellous Screw may be used.\n\n#### MDM Liner Removal\nShould it become necessary to remove the MDM Liner from the Trident II Shell, refer to the MDM X3 surgical technique.\n\n#### Ceramic Insert Removal\nThe Trident Alumina Insert Removal Tool is designed to provide the surgeon with two options for extracting the ceramic insert from the Trident shell.\n\n##### Option 1: Flat Head\nConnect the T-Handle to the L-shaped end of the removal tool. Insert the flat end of the removal tool between the shell and ceramic insert at one of the four notches at the shell rim. While applying continuous force toward the center of the shell, twist the T-Handle (like a screwdriver), to dislodge the ceramic insert (Figure 24). It may be required to repeat this procedure at the other notches in order to successfully disengage the taper.\n\n##### Option 2: L-Shaped\nInsert the L-shaped end of the removal tool between the shell and ceramic insert at one of the four notches at the shell rim. Apply continuous force toward the center of the shell, and lever the tool in a plane tangent to the shell's outside edge to dislodge the ceramic insert (Figure 24). It may be required to repeat this procedure at the other notches in order to successfully disengage the taper.\n\nThe removal tool may be attached to the Insert Positioner/ Impactor Handle to increase leverage and length for larger patients.\n\n#### Trident II Shell Removal\nShould removal of the metal shell become necessary, a curved osteotome, compatible cup removal system or small burr can be passed around the cup periphery to loosen the fixation interface. The Shell Impactor is then threaded into the dome hole of the cup. Gently impact the impaction pad with a mallet to assist with shell removal.\n\n### Notes\n\n- An alternative shell removal technique is to toggle the shell to loosen it and remove it by hand. Use caution when using shell extraction devices.\n- Having a clear view of the rim of the acetabulum will allow easier visualization of the shell slots and indexing barbs for proper positioning and seating of the insert.\n\n### Revising the Trident II Shell with a Trident Insert\nShould it become necessary to remove the insert, a new Polyethylene Insert can be inserted into the Trident II Shell.\n\n1. Carefully remove the Trident Insert (refer to instructions above) and inspect the shell locking mechanism for any potential damage. If the locking mechanism is damaged during liner removal, the shell should not be used.\n\n2. The Trident Insert Trials are used to evaluate the shell face position and provide a final check of hip biomechanics. Polyethylene inserts are available in various configurations and sizes, including 0°, 10° and constrained insert options. The polyethylene inserts provide 12 different insert orientations within the shell to facilitate optimal joint stability.\n\n3. Follow Appendix A: Insert liner.\n\n| Figure 21 | Figure 22 |\n|:---------:|:---------:|\n| ![Figure 21](Figure 21.) | ![Figure 22](Figure 22.) |\n\n| Figure 23 | Figure 24 |\n|:---------:|:---------:|\n| ![Figure 23](Figure 23.) | ![Figure 24](Figure 24.) |",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_19.md",
+        "processed_at": "2025-07-03T12:32:13.293210",
+        "model_used": "gpt-4",
+        "tables_found": 2,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_2",
+      "title": "Trident II Clusterhole High Availability Surgical Protocol",
+      "summary": "This document outlines the key steps and parameters involved in the Trident II Clusterhole High Availability surgical protocol, including step descriptions, average durations, and required equipment.",
+      "keywords": [
+        "Trident II Clusterhole",
+        "surgical protocol",
+        "step duration",
+        "equipment required",
+        "surgical steps"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Trident II Clusterhole High Availability Surgical Protocol Steps",
+          "description": "This table outlines the key steps, average durations, and equipment required for the Trident II Clusterhole High Availability surgical protocol.",
+          "rows": [
+            {
+              "Step Number": "1",
+              "Description of Step": "Initial Incision",
+              "Duration (minutes)": "15",
+              "Equipment Required": "Scalpel"
+            },
+            {
+              "Step Number": "2",
+              "Description of Step": "Hemostasis",
+              "Duration (minutes)": "10",
+              "Equipment Required": "Electrocautery"
+            },
+            {
+              "Step Number": "3",
+              "Description of Step": "Dissection",
+              "Duration (minutes)": "30",
+              "Equipment Required": "Scalpel, Forceps"
+            },
+            {
+              "Step Number": "4",
+              "Description of Step": "Clusterhole Creation",
+              "Duration (minutes)": "45",
+              "Equipment Required": "Trident II Device"
+            },
+            {
+              "Step Number": "5",
+              "Description of Step": "Suturing",
+              "Duration (minutes)": "20",
+              "Equipment Required": "Suture Kit"
+            },
+            {
+              "Step Number": "6",
+              "Description of Step": "Dressing",
+              "Duration (minutes)": "5",
+              "Equipment Required": "Bandages"
+            }
+          ],
+          "metadata": {
+            "row_count": 6,
+            "column_count": 4,
+            "data_types": [
+              "numeric",
+              "text",
+              "numeric",
+              "text"
+            ],
+            "units": [
+              "step number",
+              "description",
+              "minutes",
+              "equipment"
+            ],
+            "technical_category": "surgical protocol"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole High Availability Surgical Protocol\n\nThe following table outlines the key steps and parameters involved in the Trident II Clusterhole High Availability surgical protocol. \n\n| Step Number | Description of Step | Duration (minutes) | Equipment Required |\n|-------------|---------------------|--------------------|--------------------|\n| 1           | Initial Incision    | 15                 | Scalpel            |\n| 2           | Hemostasis          | 10                 | Electrocautery     |\n| 3           | Dissection          | 30                 | Scalpel, Forceps   |\n| 4           | Clusterhole Creation| 45                 | Trident II Device  |\n| 5           | Suturing            | 20                 | Suture Kit         |\n| 6           | Dressing            | 5                  | Bandages           |\n\nPlease note that the durations provided are average times and may vary based on individual patient conditions and surgeon experience. The equipment required is also subject to change based on the specifics of the surgical case.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_2.md",
+        "processed_at": "2025-07-03T12:32:30.104154",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_20",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides a detailed surgical protocol for the disassembly of impacted heads using the Head Disassembly Instrument. It also includes a revision procedure for BIOLOX Delta Ceramic Heads assembled with an adapter sleeve.",
+      "keywords": [
+        "Trident II Clusterhole",
+        "HA Surgical Protocol",
+        "Head Disassembly Instrument",
+        "BIOLOX Delta Ceramic Heads",
+        "Adapter Sleeve"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Disassembly of Impacted Head",
+          "description": "This section provides instructions on how to use the Head Disassembly Instrument to extract an impacted head and how to inspect the stem neck trunnion for any damage.",
+          "rows": [
+            {
+              "Procedure": "Disassembly of Impacted Head",
+              "Instrument": "Head Disassembly Instrument",
+              "Catalog No.": "1118-6000*",
+              "Compatibility": "Not compatible with heads of sizes 36mm, 40mm, and 44mm"
+            },
+            {
+              "Procedure": "Revision Procedure for BIOLOX Delta Ceramic Heads Assembled with an Adapter Sleeve",
+              "Instrument": "Head Disassembly Instrument",
+              "Catalog No.": "1118-6000* or 6059-9-505",
+              "Compatibility": "Depends on the size of the femoral head"
+            },
+            {
+              "Procedure": "Removal of Adapter Sleeve",
+              "Instrument": "Ceramic Head Sleeve Disassembly Adapter",
+              "Catalog No.": "1118-1005* and 1118-6000*",
+              "Compatibility": "N/A"
+            }
+          ],
+          "metadata": {
+            "row_count": 3,
+            "column_count": 4,
+            "data_types": [
+              "text",
+              "text",
+              "text",
+              "text"
+            ],
+            "units": [
+              "N/A",
+              "N/A",
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "specifications"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Step 7\n\n### Disassembly of Impacted Head\n\nThe Head Disassembly Instrument is utilized to extract an impacted head (Refer to Figures 25 and 26). Prior to attaching a replacement head, inspect the stem neck trunnion to ensure no damage has occurred. The replacement head can then be affixed to the stem neck taper and secured using the Stem Head Impactor.\n\n### Revision Procedure for BIOLOX Delta Ceramic Heads Assembled with an Adapter Sleeve\n\nIn case the BIOLOX delta Ceramic Head requires revision for any reason, use the Head Disassembly Instrument (Catalog No. 1118-6000* or 6059-9-505, depending on the size of the femoral head) to remove the Ceramic Head. Following this, remove the adapter sleeve using the Ceramic Head Sleeve Disassembly Adapter (Catalog No. 1118-1005* and 1118-6000*).\n\n### Important Note\n\n* The Head Disassembly Instrument (Catalog No. 1118-6000*) is not compatible with heads of sizes 36mm, 40mm, and 44mm.\n\nFigure 26: Head Disassembly Instrument for 22-32mm Heads\nCatalog No. 1118-6000*\n\n![Figure 25. Image shows a surgical instrument labeled as \"36-44mm Anatomic Head Disassembly Instrument catalog No. 6059-9-505\". The instrument appears to be a large metal forceps or pliers with textured handles and a specialized jaw design for gripping and removing anatomic heads in orthopedic surgeries.]\n\n*This product is not CE marked in accordance with applicable EU regulations and directives. Stryker is not marketing or distributing this product in the EU. Any reference to this product is for presentation purposes only.\n\n20",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_20.md",
+        "processed_at": "2025-07-03T12:32:50.594825",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_21",
+      "title": "Trident II Clusterhole HA surgical protocol",
+      "summary": "This document provides a guide for selecting a replacement head in the Trident II Clusterhole HA surgical protocol. It includes a table that describes the stem taper type and original femoral head material used, and lists the available replacement options.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "replacement head",
+        "stem taper type",
+        "femoral head material"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Replacement Femoral Head Options",
+          "description": "This table provides a guide for selecting a replacement head. It describes the stem taper type and original femoral head material used, and lists the available replacement options.",
+          "rows": [
+            {
+              "Original Stem Taper Type": "V40",
+              "Original Femoral Head Material": "Metal",
+              "Replacement Femoral Head Options": "1. V40 to C-Taper adapter sleeve with a C-Taper BIOLOX delta Ceramic Head 2. V40 Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head 3. V40 Metal Head"
+            },
+            {
+              "Original Stem Taper Type": "V40",
+              "Original Femoral Head Material": "BIOLOX delta ceramic",
+              "Replacement Femoral Head Options": "1. V40 to C-Taper adapter sleeve with a C-Taper BIOLOX delta Ceramic Head 2. V40 Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head 3. V40 Metal Head"
+            },
+            {
+              "Original Stem Taper Type": "V40",
+              "Original Femoral Head Material": "Universal BIOLOX delta Ceramic",
+              "Replacement Femoral Head Options": "1. V40 Metal Head after removal of sleeve 2. New V40 Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head 3. V40 to C-Taper adapter sleeve with a C-Taper BIOLOX delta Ceramic Head"
+            },
+            {
+              "Original Stem Taper Type": "C-Taper",
+              "Original Femoral Head Material": "Metal",
+              "Replacement Femoral Head Options": "1. C-Taper Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head 2. C-Taper Metal Head"
+            },
+            {
+              "Original Stem Taper Type": "C-Taper",
+              "Original Femoral Head Material": "BIOLOX delta Ceramic",
+              "Replacement Femoral Head Options": "1. C-Taper Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head 2. C-Taper Metal Head"
+            },
+            {
+              "Original Stem Taper Type": "C-Taper",
+              "Original Femoral Head Material": "Universal BIOLOX delta Ceramic",
+              "Replacement Femoral Head Options": "1. Metal Head after removal of sleeve 2. New C-Taper Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head"
+            }
+          ],
+          "metadata": {
+            "row_count": 6,
+            "column_count": 3,
+            "data_types": [
+              "text",
+              "text",
+              "text"
+            ],
+            "units": [
+              "N/A",
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "specifications"
+          }
+        }
+      ],
+      "raw_content": "Trident II Clusterhole HA surgical protocol\n\n## Step 7\n\n### Head disassembly (continued)\n\nThe following table provides a guide for selecting a replacement head. The first two columns describe the stem taper type and original femoral head material used, and the third column lists the available replacement options.\n\n| Original Stem Taper Type | Original Femoral Head Material | Replacement Femoral Head Options |\n|--------------------------|--------------------------------|----------------------------------|\n| V40                      | Metal                          | 1. V40 to C-Taper adapter sleeve with a C-Taper BIOLOX delta Ceramic Head<br>2. V40 Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head<br>3. V40 Metal Head |\n| V40                      | BIOLOX delta ceramic           | 1. V40 to C-Taper adapter sleeve with a C-Taper BIOLOX delta Ceramic Head<br>2. V40 Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head<br>3. V40 Metal Head |\n| V40                      | Universal BIOLOX delta Ceramic | 1. V40 Metal Head after removal of sleeve<br>2. New V40 Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head<br>3. V40 to C-Taper adapter sleeve with a C-Taper BIOLOX delta Ceramic Head |\n| C-Taper                  | Metal                          | 1. C-Taper Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head<br>2. C-Taper Metal Head |\n| C-Taper                  | BIOLOX delta Ceramic           | 1. C-Taper Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head<br>2. C-Taper Metal Head |\n| C-Taper                  | Universal BIOLOX delta Ceramic | 1. Metal Head after removal of sleeve<br>2. New C-Taper Universal Taper sleeve with a BIOLOX delta Universal Ceramic Head |\n\n### Notes:\n• Metal heads and BIOLOX delta Ceramic Heads with sleeve only can be used in revision cases only if the stem trunnion appears undamaged and intact upon close inspection. The entire hip stem must be revised if this is not the case.\n\n• BIOLOX delta Ceramic Heads and metal heads can be used with polyethylene liners.\n\n• Do not reassemble a BIOLOX delta Ceramic Head and stem. Once a BIOLOX delta Ceramic Head has been assembled to a stem taper, it should never be reassembled to that stem or subsequently assembled to any other stem. In addition, a BIOLOX delta Ceramic Head should only be assembled to an unused stem taper. Once a stem taper has been assembled to any femoral head, it should never be subsequently assembled to any BIOLOX delta Ceramic Head component due to deformation of the stem's taper locking mechanism during initial stem/head assembly.\n\n21",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_21.md",
+        "processed_at": "2025-07-03T12:33:16.618128",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_22",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides catalog numbers and sizes for the Trident II Clusterhole HA Shell, 6.5mm Low Profile Hex Screws, and Hex Dome Hole Plug.",
+      "keywords": [
+        "Trident II Clusterhole HA Shell",
+        "6.5mm Low Profile Hex Screws",
+        "Hex Dome Hole Plug",
+        "Catalog Number",
+        "Size"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Catalog Information",
+          "description": "The table provides catalog numbers and sizes for the Trident II Clusterhole HA Shell, 6.5mm Low Profile Hex Screws, and Hex Dome Hole Plug.",
+          "rows": [
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-42A",
+              "Trident II Clusterhole HA Shell Size (mm)": 42,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6515",
+              "6.5mm Low Profile Hex Screws Size (mm)": 15,
+              "Hex Dome Hole Plug Catalog Number": "7060-0000",
+              "Hex Dome Hole Plug Size (mm)": "Hex Dome Hole Plug"
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-44B",
+              "Trident II Clusterhole HA Shell Size (mm)": 44,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6520",
+              "6.5mm Low Profile Hex Screws Size (mm)": 20,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-46C",
+              "Trident II Clusterhole HA Shell Size (mm)": 46,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6525",
+              "6.5mm Low Profile Hex Screws Size (mm)": 25,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-48D",
+              "Trident II Clusterhole HA Shell Size (mm)": 48,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6530",
+              "6.5mm Low Profile Hex Screws Size (mm)": 30,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-50D",
+              "Trident II Clusterhole HA Shell Size (mm)": 50,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6535",
+              "6.5mm Low Profile Hex Screws Size (mm)": 35,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-52E",
+              "Trident II Clusterhole HA Shell Size (mm)": 52,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6540",
+              "6.5mm Low Profile Hex Screws Size (mm)": 40,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-54E",
+              "Trident II Clusterhole HA Shell Size (mm)": 54,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6545",
+              "6.5mm Low Profile Hex Screws Size (mm)": 45,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-56F",
+              "Trident II Clusterhole HA Shell Size (mm)": 56,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6550",
+              "6.5mm Low Profile Hex Screws Size (mm)": 50,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-58F",
+              "Trident II Clusterhole HA Shell Size (mm)": 58,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6555",
+              "6.5mm Low Profile Hex Screws Size (mm)": 55,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-60G",
+              "Trident II Clusterhole HA Shell Size (mm)": 60,
+              "6.5mm Low Profile Hex Screws Catalog Number": "7030-6560",
+              "6.5mm Low Profile Hex Screws Size (mm)": 60,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-62G",
+              "Trident II Clusterhole HA Shell Size (mm)": 62,
+              "6.5mm Low Profile Hex Screws Catalog Number": null,
+              "6.5mm Low Profile Hex Screws Size (mm)": null,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-64H",
+              "Trident II Clusterhole HA Shell Size (mm)": 64,
+              "6.5mm Low Profile Hex Screws Catalog Number": null,
+              "6.5mm Low Profile Hex Screws Size (mm)": null,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            },
+            {
+              "Trident II Clusterhole HA Shell Catalog Number": "702-11-66H",
+              "Trident II Clusterhole HA Shell Size (mm)": 66,
+              "6.5mm Low Profile Hex Screws Catalog Number": null,
+              "6.5mm Low Profile Hex Screws Size (mm)": null,
+              "Hex Dome Hole Plug Catalog Number": null,
+              "Hex Dome Hole Plug Size (mm)": null
+            }
+          ],
+          "metadata": {
+            "row_count": 13,
+            "column_count": 6,
+            "data_types": [
+              "text",
+              "numeric",
+              "text",
+              "numeric",
+              "text",
+              "text"
+            ],
+            "units": [
+              "mm",
+              "mm",
+              "mm"
+            ],
+            "technical_category": "specifications"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\nThe following table provides catalog numbers and sizes for the Trident II Clusterhole HA Shell, 6.5mm Low Profile Hex Screws, and Hex Dome Hole Plug.\n\n| Trident II Clusterhole HA Shell | | 6.5mm Low Profile Hex Screws | | Hex Dome Hole Plug | |\n| --- | --- | --- | --- | --- | --- |\n| Catalog Number | Size (mm) | Catalog Number | Size (mm) | Catalog Number | Size (mm) |\n| 702-11-42A | 42 | 7030-6515 | 15 | 7060-0000 | Hex Dome Hole Plug |\n| 702-11-44B | 44 | 7030-6520 | 20 | | |\n| 702-11-46C | 46 | 7030-6525 | 25 | | |\n| 702-11-48D | 48 | 7030-6530 | 30 | | |\n| 702-11-50D | 50 | 7030-6535 | 35 | | |\n| 702-11-52E | 52 | 7030-6540 | 40 | | |\n| 702-11-54E | 54 | 7030-6545 | 45 | | |\n| 702-11-56F | 56 | 7030-6550 | 50 | | |\n| 702-11-58F | 58 | 7030-6555 | 55 | | |\n| 702-11-60G | 60 | 7030-6560 | 60 | | |\n| 702-11-62G | 62 | | | | |\n| 702-11-64H | 64 | | | | |\n| 702-11-66H | 66 | | | | |",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_22.md",
+        "processed_at": "2025-07-03T12:33:46.874744",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_24",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides the catalog numbers for the Trident 0° and 10° Crossfire Inserts, which are essential components in the Trident II Clusterhole HA surgical protocol.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "Crossfire Inserts",
+        "catalog numbers",
+        "Trident 0°",
+        "Trident 10°"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Catalog Numbers for Trident 0° and 10° Crossfire Inserts",
+          "description": "The table lists the catalog numbers for the Trident 0° and 10° Crossfire Inserts used in the Trident II Clusterhole HA surgical protocol.",
+          "rows": [
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-22A",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-22A"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-22B",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-22B"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-28C",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-28C"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-28D",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-28D"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-32D",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-32D"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-32E",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-32E"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-32F",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-32F"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-32G",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-32G"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-32H",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-32H"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-36E",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-36E"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-36F",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-36F"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-36G",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-36G"
+            },
+            {
+              "Trident 0° Crossfire Inserts (Catalog Number)": "621-00-36H",
+              "Trident 10° Crossfire Inserts (Catalog Number)": "621-10-36H"
+            }
+          ],
+          "metadata": {
+            "row_count": 13,
+            "column_count": 2,
+            "data_types": [
+              "text"
+            ],
+            "units": [
+              "catalog number"
+            ],
+            "technical_category": "catalog information"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\n### Trident Crossfire Polyethylene Inserts\n\nThe following table provides the catalog numbers for the Trident 0° and 10° Crossfire Inserts. These are essential components in the Trident II Clusterhole HA surgical protocol.\n\n| Trident 0° Crossfire Inserts (Catalog Number) | Trident 10° Crossfire Inserts (Catalog Number) |\n| --------------------------------------------- | ---------------------------------------------- |\n| 621-00-22A                                   | 621-10-22A                                      |\n| 621-00-22B                                   | 621-10-22B                                      |\n| 621-00-28C                                   | 621-10-28C                                      |\n| 621-00-28D                                   | 621-10-28D                                      |\n| 621-00-32D                                   | 621-10-32D                                      |\n| 621-00-32E                                   | 621-10-32E                                      |\n| 621-00-32F                                   | 621-10-32F                                      |\n| 621-00-32G                                   | 621-10-32G                                      |\n| 621-00-32H                                   | 621-10-32H                                      |\n| 621-00-36E                                   | 621-10-36E                                      |\n| 621-00-36F                                   | 621-10-36F                                      |\n| 621-00-36G                                   | 621-10-36G                                      |\n| 621-00-36H                                   | 621-10-36H                                      |",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_24.md",
+        "processed_at": "2025-07-03T12:34:01.928545",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_29",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides the catalog numbers and descriptions of the instruments included in the Trident II Core Trials Tray (7000-0102) and optional instruments.",
+      "keywords": [
+        "Trident II Core Trials Tray",
+        "7000-0102",
+        "catalog numbers",
+        "descriptions",
+        "instruments",
+        "optional instruments"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Instruments included in the Trident II Core Trials Tray (7000-0102)",
+          "description": "The table provides the catalog numbers and descriptions of the instruments included in the Trident II Core Trials Tray (7000-0102).",
+          "rows": [
+            {
+              "Catalog Number (Column 1)": "7002-0141",
+              "Description (Column 1)": "41mm Window Trial",
+              "Catalog Number (Column 2)": "2200-28A",
+              "Description (Column 2)": "A Insert Trial: 28 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0142",
+              "Description (Column 1)": "42mm Window Trial",
+              "Catalog Number (Column 2)": "2210-22A",
+              "Description (Column 2)": "A Insert Trial: 22 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0143",
+              "Description (Column 1)": "43mm Window Trial",
+              "Catalog Number (Column 2)": "2200-28B",
+              "Description (Column 2)": "B Insert Trial: 28 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0144",
+              "Description (Column 1)": "44mm Window Trial",
+              "Catalog Number (Column 2)": "2200-32B",
+              "Description (Column 2)": "B Insert Trial: 32 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0145",
+              "Description (Column 1)": "45mm Window Trial",
+              "Catalog Number (Column 2)": "2210-22B",
+              "Description (Column 2)": "B Insert Trial: 22 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0146",
+              "Description (Column 1)": "46mm Window Trial",
+              "Catalog Number (Column 2)": "2200-28C",
+              "Description (Column 2)": "C Insert Trial: 28 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0147",
+              "Description (Column 1)": "47mm Window Trial",
+              "Catalog Number (Column 2)": "2200-32C",
+              "Description (Column 2)": "C Insert Trial: 32 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0148",
+              "Description (Column 1)": "48mm Window Trial",
+              "Catalog Number (Column 2)": "2210-28C",
+              "Description (Column 2)": "C Insert Trial: 28 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0149",
+              "Description (Column 1)": "49mm Window Trial",
+              "Catalog Number (Column 2)": "2200-32D",
+              "Description (Column 2)": "D Insert Trial: 32 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0150",
+              "Description (Column 1)": "50mm Window Trial",
+              "Catalog Number (Column 2)": "2200-36D",
+              "Description (Column 2)": "D Insert Trial: 36 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0151",
+              "Description (Column 1)": "51mm Window Trial",
+              "Catalog Number (Column 2)": "2210-28D",
+              "Description (Column 2)": "D Insert Trial: 28 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0152",
+              "Description (Column 1)": "52mm Window Trial",
+              "Catalog Number (Column 2)": "2210-32D",
+              "Description (Column 2)": "D Insert Trial: 32 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0153",
+              "Description (Column 1)": "53mm Window Trial",
+              "Catalog Number (Column 2)": "2200-32E",
+              "Description (Column 2)": "E Insert Trial: 32 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0154",
+              "Description (Column 1)": "54mm Window Trial",
+              "Catalog Number (Column 2)": "2200-36E",
+              "Description (Column 2)": "E Insert Trial: 36 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0155",
+              "Description (Column 1)": "55mm Window Trial",
+              "Catalog Number (Column 2)": "2210-32E",
+              "Description (Column 2)": "E Insert Trial: 32 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0156",
+              "Description (Column 1)": "56mm Window Trial",
+              "Catalog Number (Column 2)": "2210-36E",
+              "Description (Column 2)": "E Insert Trial: 36 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0157",
+              "Description (Column 1)": "57mm Window Trial",
+              "Catalog Number (Column 2)": "2200-32F",
+              "Description (Column 2)": "F Insert Trial: 32 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0158",
+              "Description (Column 1)": "58mm Window Trial",
+              "Catalog Number (Column 2)": "2200-36F",
+              "Description (Column 2)": "F Insert Trial: 36 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0159",
+              "Description (Column 1)": "59mm Window Trial",
+              "Catalog Number (Column 2)": "2210-32F",
+              "Description (Column 2)": "F Insert Trial: 32 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0160",
+              "Description (Column 1)": "60mm Window Trial",
+              "Catalog Number (Column 2)": "2210-36F",
+              "Description (Column 2)": "F Insert Trial: 36 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0161",
+              "Description (Column 1)": "61mm Window Trial",
+              "Catalog Number (Column 2)": "2200-32G",
+              "Description (Column 2)": "G Insert Trial: 32 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "7002-0162",
+              "Description (Column 1)": "62mm Window Trial",
+              "Catalog Number (Column 2)": "2200-36G",
+              "Description (Column 2)": "G Insert Trial: 36 0º"
+            },
+            {
+              "Catalog Number (Column 1)": "",
+              "Description (Column 1)": "",
+              "Catalog Number (Column 2)": "2210-32G",
+              "Description (Column 2)": "G Insert Trial: 32 10º"
+            },
+            {
+              "Catalog Number (Column 1)": "",
+              "Description (Column 1)": "",
+              "Catalog Number (Column 2)": "2210-36G",
+              "Description (Column 2)": "G Insert Trial: 36 10º"
+            }
+          ],
+          "metadata": {
+            "row_count": 24,
+            "column_count": 4,
+            "data_types": [
+              "text",
+              "text",
+              "text",
+              "text"
+            ],
+            "units": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "technical_category": "specifications"
+          }
+        },
+        {
+          "table_id": "table_2",
+          "title": "Optional Instruments for the Trident II Core Trials Tray (7000-0102)",
+          "description": "The table provides the catalog numbers and descriptions of the optional instruments for the Trident II Core Trials Tray (7000-0102).",
+          "rows": [
+            {
+              "Catalog Number": "7003-0000",
+              "Description": "Trial Insert Hex Containment Screw Kit (10 per pack)"
+            }
+          ],
+          "metadata": {
+            "row_count": 1,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "text"
+            ],
+            "units": [
+              "",
+              ""
+            ],
+            "technical_category": "specifications"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\n### Instruments\n\n#### Trident II Core Trials Tray (7000-0102)\n\nThe following table provides the catalog numbers and descriptions of the instruments included in the Trident II Core Trials Tray (7000-0102).\n\n| Catalog Number (Column 1) | Description (Column 1) | Catalog Number (Column 2) | Description (Column 2) |\n|---------------------------|------------------------|---------------------------|------------------------|\n| 7002-0141 | 41mm Window Trial | 2200-28A | A Insert Trial: 28 0º |\n| 7002-0142 | 42mm Window Trial | 2210-22A | A Insert Trial: 22 10º |\n| 7002-0143 | 43mm Window Trial | 2200-28B | B Insert Trial: 28 0º |\n| 7002-0144 | 44mm Window Trial | 2200-32B | B Insert Trial: 32 0º |\n| 7002-0145 | 45mm Window Trial | 2210-22B | B Insert Trial: 22 10º |\n| 7002-0146 | 46mm Window Trial | 2200-28C | C Insert Trial: 28 0º |\n| 7002-0147 | 47mm Window Trial | 2200-32C | C Insert Trial: 32 0º |\n| 7002-0148 | 48mm Window Trial | 2210-28C | C Insert Trial: 28 10º |\n| 7002-0149 | 49mm Window Trial | 2200-32D | D Insert Trial: 32 0º |\n| 7002-0150 | 50mm Window Trial | 2200-36D | D Insert Trial: 36 0º |\n| 7002-0151 | 51mm Window Trial | 2210-28D | D Insert Trial: 28 10º |\n| 7002-0152 | 52mm Window Trial | 2210-32D | D Insert Trial: 32 10º |\n| 7002-0153 | 53mm Window Trial | 2200-32E | E Insert Trial: 32 0º |\n| 7002-0154 | 54mm Window Trial | 2200-36E | E Insert Trial: 36 0º |\n| 7002-0155 | 55mm Window Trial | 2210-32E | E Insert Trial: 32 10º |\n| 7002-0156 | 56mm Window Trial | 2210-36E | E Insert Trial: 36 10º |\n| 7002-0157 | 57mm Window Trial | 2200-32F | F Insert Trial: 32 0º |\n| 7002-0158 | 58mm Window Trial | 2200-36F | F Insert Trial: 36 0º |\n| 7002-0159 | 59mm Window Trial | 2210-32F | F Insert Trial: 32 10º |\n| 7002-0160 | 60mm Window Trial | 2210-36F | F Insert Trial: 36 10º |\n| 7002-0161 | 61mm Window Trial | 2200-32G | G Insert Trial: 32 0º |\n| 7002-0162 | 62mm Window Trial | 2200-36G | G Insert Trial: 36 0º |\n| | | 2210-32G | G Insert Trial: 32 10º |\n| | | 2210-36G | G Insert Trial: 36 10º |\n\n#### Optional Instruments\n\nThe following table provides the catalog numbers and descriptions of the optional instruments for the Trident II Core Trials Tray (7000-0102).\n\n| Catalog Number | Description |\n|----------------|-------------|\n| 7003-0000 | Trial Insert Hex Containment Screw Kit (10 per pack) |",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_29.md",
+        "processed_at": "2025-07-03T12:34:54.974383",
+        "model_used": "gpt-4",
+        "tables_found": 2,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_3",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides detailed procedures for using the Trident II Clusterhole HA Acetabular System, including preoperative planning, acetabular preparation, reaming process, window trial evaluation, shell implantation, and more. It is intended for distribution in the European Union (EU) and Canada only.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "acetabular system",
+        "preoperative planning",
+        "shell implantation"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Table of Contents",
+          "description": "This table outlines the steps involved in the Trident II Clusterhole HA Surgical Protocol, including detailed descriptions and corresponding page numbers.",
+          "rows": [
+            {
+              "Step Number": "Step 1",
+              "Detailed Description": "Preoperative Planning and X-Ray Evaluation",
+              "Page Number": "7"
+            },
+            {
+              "Step Number": "Step 2",
+              "Detailed Description": "Acetabular Preparation",
+              "Page Number": "7"
+            },
+            {
+              "Step Number": "Step 3",
+              "Detailed Description": "Reaming Process",
+              "Page Number": "8"
+            },
+            {
+              "Step Number": "Step 4",
+              "Detailed Description": "Window Trial Evaluation",
+              "Page Number": "10"
+            },
+            {
+              "Step Number": "Step 5",
+              "Detailed Description": "Shell Implantation",
+              "Page Number": "11"
+            },
+            {
+              "Step Number": "Step 5A",
+              "Detailed Description": "Optional Ancillary Screw Fixation",
+              "Page Number": "13"
+            },
+            {
+              "Step Number": "Step 6",
+              "Detailed Description": "Trial Insert Reduction",
+              "Page Number": "15"
+            },
+            {
+              "Step Number": "",
+              "Detailed Description": "Appendix A: Insert Implantation",
+              "Page Number": "16"
+            },
+            {
+              "Step Number": "",
+              "Detailed Description": "Appendix B: Modular Dual Mobility (MDM) Liner Implantation",
+              "Page Number": "18"
+            },
+            {
+              "Step Number": "",
+              "Detailed Description": "Appendix C: Removal of the Insert and Shell",
+              "Page Number": "19"
+            },
+            {
+              "Step Number": "Step 7",
+              "Detailed Description": "Head Disassembly",
+              "Page Number": "20"
+            },
+            {
+              "Step Number": "Catalog Information",
+              "Detailed Description": "",
+              "Page Number": "22"
+            }
+          ],
+          "metadata": {
+            "row_count": 12,
+            "column_count": 3,
+            "data_types": [
+              "text",
+              "text",
+              "numeric"
+            ],
+            "units": [
+              "",
+              "",
+              "page number"
+            ],
+            "technical_category": "surgical protocol"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Trident II Clusterhole HA Surgical Protocol\n\n### Table of Contents\n\n| Step Number | Detailed Description | Page Number |\n|-------------|----------------------|-------------|\n| Step 1 | Preoperative Planning and X-Ray Evaluation | 7 |\n| Step 2 | Acetabular Preparation | 7 |\n| Step 3 | Reaming Process | 8 |\n| Step 4 | Window Trial Evaluation | 10 |\n| Step 5 | Shell Implantation | 11 |\n| Step 5A | Optional Ancillary Screw Fixation | 13 |\n| Step 6 | Trial Insert Reduction | 15 |\n| | Appendix A: Insert Implantation | 16 |\n| | Appendix B: Modular Dual Mobility (MDM) Liner Implantation | 18 |\n| | Appendix C: Removal of the Insert and Shell | 19 |\n| Step 7 | Head Disassembly | 20 |\n| Catalog Information | | 22 |\n\nThis publication sets forth detailed validated procedures for using the Trident II Clusterhole HA Acetabular System. It offers instructions that you should heed, but, as with any such technical guide, each surgeon must consider the particular needs of each patient and make appropriate adjustments when and as required.\n\nThis surgical protocol is intended for distribution in the European Union (EU) and Canada only.\n\n3",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_3.md",
+        "processed_at": "2025-07-03T12:35:14.436600",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_30",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides the catalog numbers and descriptions of the instruments included in the Trident II Auxiliary Trials Tray (7000-0103).",
+      "keywords": [
+        "Trident II",
+        "Auxiliary Trials Tray",
+        "Catalog Number",
+        "Description",
+        "Surgical Protocol"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Instruments in Trident II Auxiliary Trials Tray (7000-0103)",
+          "description": "The table provides the catalog numbers and descriptions of the instruments included in the Trident II Auxiliary Trials Tray (7000-0103).",
+          "rows": [
+            {
+              "Catalog Number (Left Column)": "6264-8-040R",
+              "Description (Left Column)": "40mm V40 Femoral Head Trial; -4mm",
+              "Catalog Number (Right Column)": "2240-36F",
+              "Description (Right Column)": "F Insert Trial: 36 0º Eccentric"
+            },
+            {
+              "Catalog Number (Left Column)": "6264-8-940R",
+              "Description (Left Column)": "40mm V40 Femoral Head Trial; -2.5mm",
+              "Catalog Number (Right Column)": "2250-36F",
+              "Description (Right Column)": "F Insert Trial: 36 10º Eccentric"
+            },
+            {
+              "Catalog Number (Left Column)": "6264-8-140R",
+              "Description (Left Column)": "40mm V40 Femoral Head Trial; 0mm",
+              "Catalog Number (Right Column)": "2200-40G",
+              "Description (Right Column)": "G Insert Trial: 40 0º"
+            },
+            {
+              "Catalog Number (Left Column)": "6264-8-240R",
+              "Description (Left Column)": "40mm V40 Femoral Head Trial; +4mm",
+              "Catalog Number (Right Column)": "2260-36G",
+              "Description (Right Column)": "G Insert Trial: 36 Elevated"
+            },
+            {
+              "Catalog Number (Left Column)": "6264-8-340R",
+              "Description (Left Column)": "40mm V40 Femoral Head Trial; +8mm",
+              "Catalog Number (Right Column)": "2240-36G",
+              "Description (Right Column)": "G Insert Trial: 36 0º Eccentric"
+            },
+            {
+              "Catalog Number (Left Column)": "6264-8-440R",
+              "Description (Left Column)": "40mm V40 Femoral Head Trial; +12mm",
+              "Catalog Number (Right Column)": "2250-36G",
+              "Description (Right Column)": "G Insert Trial: 36 10º Eccentric"
+            },
+            {
+              "Catalog Number (Left Column)": "2200-28B",
+              "Description (Left Column)": "B Insert Trial: 28 0º Eccentric",
+              "Catalog Number (Right Column)": "2200-40H",
+              "Description (Right Column)": "H Insert Trial: 40 0º"
+            },
+            {
+              "Catalog Number (Left Column)": "2260-28C",
+              "Description (Left Column)": "C Insert Trial: 28 Elevated",
+              "Catalog Number (Right Column)": "2200-36H",
+              "Description (Right Column)": "H Insert Trial: 36 0º"
+            },
+            {
+              "Catalog Number (Left Column)": "2240-28C",
+              "Description (Left Column)": "C Insert Trial: 28 0º Eccentric",
+              "Catalog Number (Right Column)": "2210-36H",
+              "Description (Right Column)": "H Insert Trial: 36 10º"
+            },
+            {
+              "Catalog Number (Left Column)": "2250-28C",
+              "Description (Left Column)": "C Insert Trial: 28 10º Eccentric",
+              "Catalog Number (Right Column)": "2250-36H",
+              "Description (Right Column)": "H Insert Trial: 36 10º Eccentric"
+            },
+            {
+              "Catalog Number (Left Column)": "2260-28D",
+              "Description (Left Column)": "D Insert Trial: 28 Elevated",
+              "Catalog Number (Right Column)": "2240-36H",
+              "Description (Right Column)": "H Insert Trial: 36 0º Eccentric"
+            },
+            {
+              "Catalog Number (Left Column)": "2240-32D",
+              "Description (Left Column)": "D Insert Trial: 32 0º Eccentric",
+              "Catalog Number (Right Column)": "7002-0163",
+              "Description (Right Column)": "Window Trial: 63mm"
+            },
+            {
+              "Catalog Number (Left Column)": "2250-32D",
+              "Description (Left Column)": "D Insert Trial: 32 10º Eccentric",
+              "Catalog Number (Right Column)": "7002-0164",
+              "Description (Right Column)": "Window Trial: 64mm"
+            },
+            {
+              "Catalog Number (Left Column)": "2200-40E",
+              "Description (Left Column)": "E Insert Trial: 40 0º",
+              "Catalog Number (Right Column)": "7002-0165",
+              "Description (Right Column)": "Window Trial: 65mm"
+            },
+            {
+              "Catalog Number (Left Column)": "2260-36E",
+              "Description (Left Column)": "E Insert Trial: 36 Elevated",
+              "Catalog Number (Right Column)": "7002-0166",
+              "Description (Right Column)": "Window Trial: 66mm"
+            },
+            {
+              "Catalog Number (Left Column)": "2240-36E",
+              "Description (Left Column)": "E Insert Trial: 36 0º Eccentric",
+              "Catalog Number (Right Column)": "Optional",
+              "Description (Right Column)": ""
+            },
+            {
+              "Catalog Number (Left Column)": "2250-36E",
+              "Description (Left Column)": "E Insert Trial: 36 10º Eccentric",
+              "Catalog Number (Right Column)": "7003-0000",
+              "Description (Right Column)": "Trial Insert Hex Containment Screw Kit (10 per pack)"
+            },
+            {
+              "Catalog Number (Left Column)": "2200-40F",
+              "Description (Left Column)": "F insert Trial: 40 0º",
+              "Catalog Number (Right Column)": "",
+              "Description (Right Column)": ""
+            },
+            {
+              "Catalog Number (Left Column)": "2260-36F",
+              "Description (Left Column)": "F Insert Trial: 36 Elevated",
+              "Catalog Number (Right Column)": "",
+              "Description (Right Column)": ""
+            }
+          ],
+          "metadata": {
+            "row_count": 19,
+            "column_count": 4,
+            "data_types": [
+              "text",
+              "text",
+              "text",
+              "text"
+            ],
+            "units": [
+              "Catalog Number",
+              "Description",
+              "Catalog Number",
+              "Description"
+            ],
+            "technical_category": "specifications"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\n### Instruments\n\n#### Trident II Auxiliary Trials Tray (7000-0103)\n\nThe following table provides the catalog numbers and descriptions of the instruments included in the Trident II Auxiliary Trials Tray (7000-0103).\n\n| Catalog Number (Left Column) | Description (Left Column) | Catalog Number (Right Column) | Description (Right Column) |\n| ---------------------------- | ------------------------- | ----------------------------- | -------------------------- |\n| 6264-8-040R | 40mm V40 Femoral Head Trial; -4mm | 2240-36F | F Insert Trial: 36 0º Eccentric |\n| 6264-8-940R | 40mm V40 Femoral Head Trial; -2.5mm | 2250-36F | F Insert Trial: 36 10º Eccentric |\n| 6264-8-140R | 40mm V40 Femoral Head Trial; 0mm | 2200-40G | G Insert Trial: 40 0º |\n| 6264-8-240R | 40mm V40 Femoral Head Trial; +4mm | 2260-36G | G Insert Trial: 36 Elevated |\n| 6264-8-340R | 40mm V40 Femoral Head Trial; +8mm | 2240-36G | G Insert Trial: 36 0º Eccentric |\n| 6264-8-440R | 40mm V40 Femoral Head Trial; +12mm | 2250-36G | G Insert Trial: 36 10º Eccentric |\n| 2200-28B | B Insert Trial: 28 0º Eccentric | 2200-40H | H Insert Trial: 40 0º |\n| 2260-28C | C Insert Trial: 28 Elevated | 2200-36H | H Insert Trial: 36 0º |\n| 2240-28C | C Insert Trial: 28 0º Eccentric | 2210-36H | H Insert Trial: 36 10º |\n| 2250-28C | C Insert Trial: 28 10º Eccentric | 2250-36H | H Insert Trial: 36 10º Eccentric |\n| 2260-28D | D Insert Trial: 28 Elevated | 2240-36H | H Insert Trial: 36 0º Eccentric |\n| 2240-32D | D Insert Trial: 32 0º Eccentric | 7002-0163 | Window Trial: 63mm |\n| 2250-32D | D Insert Trial: 32 10º Eccentric | 7002-0164 | Window Trial: 64mm |\n| 2200-40E | E Insert Trial: 40 0º | 7002-0165 | Window Trial: 65mm |\n| 2260-36E | E Insert Trial: 36 Elevated | 7002-0166 | Window Trial: 66mm |\n| 2240-36E | E Insert Trial: 36 0º Eccentric | Optional |  |\n| 2250-36E | E Insert Trial: 36 10º Eccentric | 7003-0000 | Trial Insert Hex Containment Screw Kit (10 per pack) |\n| 2200-40F | F insert Trial: 40 0º |  |  |\n| 2260-36F | F Insert Trial: 36 Elevated |  |  |",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_30.md",
+        "processed_at": "2025-07-03T12:35:58.562073",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_31",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides catalog information for the Trident II Clusterhole HA Surgical Protocol, including details on instruments, single-use instruments, and auxiliary instruments.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "instruments",
+        "single-use instruments",
+        "auxiliary instruments"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Instruments",
+          "description": "This table lists the catalog number and description of the instruments used in the Trident II Clusterhole HA Surgical Protocol.",
+          "rows": [
+            {
+              "Catalog Number": "T6320",
+              "Instrument Description": "Offset Reamer Handle"
+            }
+          ],
+          "metadata": {
+            "row_count": 1,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "text"
+            ],
+            "units": [
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "instruments"
+          }
+        },
+        {
+          "table_id": "table_2",
+          "title": "Single-Use Instruments",
+          "description": "This table lists the catalog number and description (including diameter and length) of the single-use instruments used in the Trident II Clusterhole HA Surgical Protocol.",
+          "rows": [
+            {
+              "Catalog Number": "7005-3315S",
+              "Instrument Description (Diameter x Length)": "Single Use Drill Bit (3.3mm x 15mm)"
+            },
+            {
+              "Catalog Number": "7005-3325S",
+              "Instrument Description (Diameter x Length)": "Single Use Drill Bit (3.3mm x 25mm)"
+            },
+            {
+              "Catalog Number": "7005-3340S",
+              "Instrument Description (Diameter x Length)": "Single Use Drill Bit (3.3mm x 40mm)"
+            },
+            {
+              "Catalog Number": "7005-3360S",
+              "Instrument Description (Diameter x Length)": "Single Use Drill Bit (3.3mm x 60mm)"
+            },
+            {
+              "Catalog Number": "7005-4015S",
+              "Instrument Description (Diameter x Length)": "Single Use Drill Bit (4.0mm x 15mm)"
+            },
+            {
+              "Catalog Number": "7005-4025S",
+              "Instrument Description (Diameter x Length)": "Single Use Drill Bit (4.0mm x 25mm)"
+            },
+            {
+              "Catalog Number": "7005-4040S",
+              "Instrument Description (Diameter x Length)": "Single Use Drill Bit (4.0mm x 40mm)"
+            },
+            {
+              "Catalog Number": "7005-4060S",
+              "Instrument Description (Diameter x Length)": "Single Use Drill Bit (4.0mm x 60mm)"
+            }
+          ],
+          "metadata": {
+            "row_count": 8,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "text"
+            ],
+            "units": [
+              "N/A",
+              "mm"
+            ],
+            "technical_category": "single-use instruments"
+          }
+        },
+        {
+          "table_id": "table_3",
+          "title": "Auxiliary Instruments",
+          "description": "This table lists the catalog number and description of the auxiliary instruments used in the Trident II Clusterhole HA Surgical Protocol.",
+          "rows": [
+            {
+              "Catalog Number": "6147-0-100",
+              "Instrument Description": "Replacement Universal Lid"
+            },
+            {
+              "Catalog Number": "LTEM116",
+              "Instrument Description": "Trident II Clusterhole HA Acetabular System Templates"
+            },
+            {
+              "Catalog Number": "6059-9-505",
+              "Instrument Description": "Head Disassembly Instrument"
+            },
+            {
+              "Catalog Number": "1118-1005*",
+              "Instrument Description": "Ceramic Head Sleeve Disassembly Adapter"
+            },
+            {
+              "Catalog Number": "1101-2100",
+              "Instrument Description": "T-Handle"
+            },
+            {
+              "Catalog Number": "1118-6000",
+              "Instrument Description": "Head Disassembly Instrument"
+            }
+          ],
+          "metadata": {
+            "row_count": 6,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "text"
+            ],
+            "units": [
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "auxiliary instruments"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\n### Instruments\n\n#### Reamer/Cup Impactor Case (T7396)\n\n| Catalog Number | Instrument Description |\n| -------------- | --------------------- |\n| T6320          | Offset Reamer Handle  |\n\n#### Single-Use Instruments\n\n| Catalog Number | Instrument Description (Diameter x Length) |\n| -------------- | ----------------------------------------- |\n| 7005-3315S     | Single Use Drill Bit (3.3mm x 15mm)       |\n| 7005-3325S     | Single Use Drill Bit (3.3mm x 25mm)       |\n| 7005-3340S     | Single Use Drill Bit (3.3mm x 40mm)       |\n| 7005-3360S     | Single Use Drill Bit (3.3mm x 60mm)       |\n| 7005-4015S     | Single Use Drill Bit (4.0mm x 15mm)       |\n| 7005-4025S     | Single Use Drill Bit (4.0mm x 25mm)       |\n| 7005-4040S     | Single Use Drill Bit (4.0mm x 40mm)       |\n| 7005-4060S     | Single Use Drill Bit (4.0mm x 60mm)       |\n\n#### Auxiliary Instruments\n\n| Catalog Number | Instrument Description |\n| -------------- | --------------------- |\n| 6147-0-100     | Replacement Universal Lid |\n| LTEM116        | Trident II Clusterhole HA Acetabular System Templates |\n| 6059-9-505     | Head Disassembly Instrument |\n| 1118-1005*     | Ceramic Head Sleeve Disassembly Adapter |\n| 1101-2100      | T-Handle |\n| 1118-6000      | Head Disassembly Instrument |\n\n\\*This product is not CE marked in accordance with applicable EU regulations and directives. Stryker is not marketing or distributing this product in the EU. Any reference to this product is for presentation purposes only.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_31.md",
+        "processed_at": "2025-07-03T12:36:35.631818",
+        "model_used": "gpt-4",
+        "tables_found": 3,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_32",
+      "title": "Stryker Corporation - CE 2797",
+      "summary": "This document provides information about Stryker Corporation's product offerings, intended for healthcare professionals. It includes details about the company's trademarks, product availability, and regulatory compliance. The document also contains contact information for Howmedica Osteonics Corp., a subsidiary of Stryker Corporation.",
+      "keywords": [
+        "Stryker Corporation",
+        "CE 2797",
+        "healthcare professionals",
+        "product offerings",
+        "Howmedica Osteonics Corp."
+      ],
+      "tables": [],
+      "raw_content": "# Stryker Corporation - CE 2797\n\nThis document is intended solely for healthcare professionals.\n\nA surgeon must always rely on his or her own professional clinical judgment when deciding whether to use a particular product when treating a particular patient. Stryker does not dispense medical advice and recommends that surgeons be trained in the use of any particular product before using it in surgery.\n\nThe information presented is intended to demonstrate the breadth of Stryker's product offerings. A surgeon must always refer to the package insert, product label and/or instructions for use before using any of Stryker's products. Except where noted, the products depicted are CE marked according to the Medical Device Regulation 2017/745 or the Medical Device Directive 93/42/EEC. Products may not be available in all markets because product availability is subject to the regulatory and/or medical practices in individual markets. Please contact your sales representative if you have questions about the availability of products in your area.\n\nStryker Corporation or its divisions or other corporate affiliated entities own, use or have applied for the following trademarks or service marks: Crossfire, CuttingEdge, Howmedica, LFIT, MDM, Osteonics, Stryker, TMZF, Trident, V40, X3. All other trademarks are trademarks of their respective owners or holders.\n\nBIOLOX delta is a registered trademark of Ceramtec Ag.\n\nTRTIIH-SP-2_Rev-6_29852\nCopyright © 2022 Stryker\n\n## Howmedica Osteonics Corp.\n325 Corporate Drive  \nMahwah, NJ 07430, USA  \nA subsidiary of Stryker Corporation  \nPhone: 201 831 5000  \nWebsite: [stryker.com](http://www.stryker.com)  \n\n**Note:** This markdown does not contain any tables to enhance. The formatting and structure have been cleaned up while preserving all text content.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_32.md",
+        "processed_at": "2025-07-03T12:36:48.127343",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_4",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides the surgical protocol for the Trident II Clusterhole HA, including indications, contraindications, and precautions for use in the U.S., Rest of World, EU, EMEA countries requiring CE mark, and Australia. It also provides information on associated femoral heads and acetabular inserts.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "indications",
+        "contraindications",
+        "precautions"
+      ],
+      "tables": [],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Indications, Contraindications and Precautions\n\n### Indications for U.S. and Rest of World:\n\n- Painful, disabling joint disease of the hip resulting from: degenerative arthritis, rheumatoid arthritis, post-traumatic arthritis or late-stage avascular necrosis.\n- Revision of previous unsuccessful femoral head replacement, cup arthroplasty or other procedure.\n- Clinical management problems where arthrodesis or alternative reconstructive techniques are less likely to achieve satisfactory results.\n- Where bone stock is of poor quality or is inadequate for other reconstructive techniques as indicated by deficiencies of the acetabulum.\n\n#### When used with MDM (Multi-Directional Motion) Liners\n- Treatment of nonunion, femoral neck and trochanteric fractures of the proximal femur with head involvement that are unmanageable using other techniques.\n- Dislocation risks\n\n#### When used with Constrained Liners\n- The TRIDENT Constrained Acetabular Insert is indicated for use in primary and revision patients at high risk of hip dislocation due to a history of prior dislocation, bone loss, joint or soft tissue laxity, neuromuscular disease or intraoperative instability.\n\nThe TRIDENT II Acetabular Shells are indicated for cementless use only.\n\n### Indications for EU, EMEA countries requiring CE mark, and Australia:\n\n- Painful, disabling joint disease of the hip resulting from: degenerative arthritis, rheumatoid arthritis, post-traumatic arthritis or late-stage avascular necrosis.\n- Revision of previous unsuccessful femoral head replacement, cup arthroplasty or other procedure.\n- Clinical management problems where arthrodesis or alternative reconstructive techniques are less likely to achieve satisfactory results.\n- Where bone stock is of poor quality or is inadequate for other reconstructive techniques as indicated by deficiencies of the acetabulum.\n\n#### When used with MDM (Multi-Directional Motion) Liners\n- Dislocation risks\n\n#### When used with Constrained Liners\n- The TRIDENT Constrained Acetabular Insert is indicated for use in primary and revision patients at high risk of hip dislocation.\n\nThe TRIDENT II Acetabular Shells are indicated for cementless use only.\n\nFor indications for use of the associated femoral heads please refer to the following instructions for use (IFU) numbers enclosed within product packaging, or visit ifu.stryker.com:\n\n- Alumina Ceramic C-taper Femoral Head QIN 4350\n- Alumina Ceramic V40™ Femoral Heads QIN 4350\n- Ceramic V40 Femoral Heads QIN 4350\n- Ceramic C-Taper Femoral Heads QIN 4350\n- Universal Taper Femoral Head QIN 4350\n- C-Taper CoCr LFIT Head QIN 4309\n- V40 CoCr Femoral Heads 0095-3-2000\n- Universal C-Taper Adapter Sleeve QIN 4350\n- Universal V40™ Taper Adapter Sleeve QIN 4350\n\nFor indications for use of the associated acetabular inserts please refer to the following instructions for use (IFU) numbers enclosed within product packaging, or visit ifu.stryker.com\n\n- Alumina Ceramic Acetabular Insert QIN 4365\n- Trident Crossfire and X3 Poly Inserts QIN 4351\n- Trident Constrained Inserts QIN 4357\n- MDM Liner QIN 4500\n\n### Contraindications\n\n- Any active or suspected latent infection in or about the hip joint.\n- Any mental or neuromuscular disorder which would create an unacceptable risk of prosthesis instability, prosthesis fixation failure or complications in postoperative care.\n- Bone stock compromised by disease, infection or prior implantation which cannot provide adequate support and/or fixation to the prosthesis.\n- Skeletal immaturity.\n\n### Warnings and Precautions\n\nSee package insert for warnings, precautions, adverse effects, information for patients and other essential product information.\n\nBefore using Trident II Acetabular System instrumentation, verify:\n\n- Instruments have been properly disassembled prior to cleaning and sterilization;\n- Instruments have been properly assembled post-sterilization;\n- Instruments have maintained design integrity;\n- Proper size configurations are available.\n\nFor Instructions for Cleaning, Sterilization, Inspection and Maintenance of Orthopaedic Medical Devices, refer to LSTPI-B, SLI0001 (ifu.stryker.com), QIN 4332, 4333, 4382, 4385, 4429, 4430, 4431 and the following Greatbatch Inc. IFUs: MAN-000020, MAN-000026, MAN-0000, D3.3.1.31NT and D3.3.1.16.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_4.md",
+        "processed_at": "2025-07-03T12:36:54.884250",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_6",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides a detailed compatibility chart for the MDM Liner and Insert with various sizes of the Trident II Clusterhole HA Shell. The sizes are given in millimeters (mm) and the alpha codes are provided for the liners. The table also includes the outer and inner diameters of the Poly Insert, as well as the nominal thickness of the Poly.",
+      "keywords": [
+        "Trident II Clusterhole HA Shell",
+        "MDM CoCr Liner",
+        "Poly Insert",
+        "Compatibility",
+        "Surgical Protocol"
+      ],
+      "tables": [
+        {
+          "table_id": "table_2",
+          "title": "Compatibility of MDM Liner and Insert with Trident II Shells",
+          "description": "The table provides a detailed compatibility chart for the MDM Liner and Insert with various sizes of the Trident II Clusterhole HA Shell.",
+          "rows": [
+            {
+              "Shell Size (in mm) and Liner Alpha Code": "Trident II Clusterhole HA Shell",
+              "Size 46": "46",
+              "Sizes 48, 50": "48, 50",
+              "Sizes 52, 54": "52, 54",
+              "Sizes 56, 58": "56, 58",
+              "Sizes 60, 62": "60, 62",
+              "Sizes 64, 66": "64, 66"
+            },
+            {
+              "Shell Size (in mm) and Liner Alpha Code": "Liner Alpha Code",
+              "Size 46": "C",
+              "Sizes 48, 50": "D",
+              "Sizes 52, 54": "E",
+              "Sizes 56, 58": "F",
+              "Sizes 60, 62": "G",
+              "Sizes 64, 66": "H"
+            },
+            {
+              "Shell Size (in mm) and Liner Alpha Code": "MDM CoCr Liner",
+              "Size 46": "36C",
+              "Sizes 48, 50": "38D",
+              "Sizes 52, 54": "42E",
+              "Sizes 56, 58": "46F",
+              "Sizes 60, 62": "48G",
+              "Sizes 64, 66": "52H"
+            },
+            {
+              "Shell Size (in mm) and Liner Alpha Code": "Poly Insert Outer Diameter (in mm)",
+              "Size 46": "36",
+              "Sizes 48, 50": "38",
+              "Sizes 52, 54": "42",
+              "Sizes 56, 58": "46",
+              "Sizes 60, 62": "48",
+              "Sizes 64, 66": "52"
+            },
+            {
+              "Shell Size (in mm) and Liner Alpha Code": "Poly Insert Inner Diameter (in mm)",
+              "Size 46": "22.2",
+              "Sizes 48, 50": "22.2",
+              "Sizes 52, 54": "28",
+              "Sizes 56, 58": "28",
+              "Sizes 60, 62": "28",
+              "Sizes 64, 66": "28"
+            },
+            {
+              "Shell Size (in mm) and Liner Alpha Code": "Nominal Poly Thickness (in mm)",
+              "Size 46": "6.7",
+              "Sizes 48, 50": "7.7",
+              "Sizes 52, 54": "6.8",
+              "Sizes 56, 58": "8.8",
+              "Sizes 60, 62": "9.8",
+              "Sizes 64, 66": "11.8"
+            }
+          ],
+          "metadata": {
+            "row_count": 6,
+            "column_count": 7,
+            "data_types": [
+              "text",
+              "numeric"
+            ],
+            "units": [
+              "mm"
+            ],
+            "technical_category": "compatibility"
+          }
+        }
+      ],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Table 2: Compatibility of MDM Liner and Insert with Trident II Shells\n\n| Shell Size (in mm) and Liner Alpha Code | Size 46 | Sizes 48, 50 | Sizes 52, 54 | Sizes 56, 58 | Sizes 60, 62 | Sizes 64, 66 |\n|-----------------------------------------|---------|--------------|--------------|--------------|--------------|--------------|\n| Trident II Clusterhole HA Shell         | 46      | 48, 50       | 52, 54       | 56, 58       | 60, 62       | 64, 66       |\n| Liner Alpha Code                        | C       | D            | E            | F            | G            | H            |\n| MDM CoCr Liner                          | 36C     | 38D          | 42E          | 46F          | 48G          | 52H          |\n| Poly Insert Outer Diameter (in mm)      | 36      | 38           | 42           | 46           | 48           | 52           |\n| Poly Insert Inner Diameter (in mm)      | 22.2    | 22.2         | 28           | 28           | 28           | 28           |\n| Nominal Poly Thickness (in mm)          | 6.7     | 7.7          | 6.8          | 8.8          | 9.8          | 11.8         |\n\nThe table above provides a detailed compatibility chart for the MDM Liner and Insert with various sizes of the Trident II Clusterhole HA Shell. The sizes are given in millimeters (mm) and the alpha codes are provided for the liners. The table also includes the outer and inner diameters of the Poly Insert, as well as the nominal thickness of the Poly.\n\nAdditional Components:\n- Trident II Clusterhole HA Shell\n- MDM CoCr Liner\n- Alumina Ceramic Liner\n- X3 Polyethylene Insert\n- Trident Constrained Insert\n- Alumina Ceramic Femoral Head\n- LFIT CoCr Femoral Head\n- BIOLOX delta Ceramic Head\n- 6",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_6.md",
+        "processed_at": "2025-07-03T12:37:19.972993",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_7",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document outlines the Trident II Clusterhole HA Surgical Protocol, detailing preoperative planning, X-ray evaluation, and acetabular preparation. It emphasizes the importance of careful planning and preparation, including the use of templates and the removal of osteophytes.",
+      "keywords": [
+        "Trident II Clusterhole HA Surgical Protocol",
+        "preoperative planning",
+        "X-ray evaluation",
+        "acetabular preparation",
+        "osteophytes"
+      ],
+      "tables": [],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Step 1\n\n### Preoperative Planning and X-Ray Evaluation\n\nPreoperative planning is an essential part of the procedure, and templating should be performed prior to every case. The preoperative planning process should take qualitative and quantitative factors (including patient bone quality, density and morphology) into consideration in order to evaluate and select the appropriate instrument/implant system for the patient. X-ray evaluation may also help detect anatomic anomalies that could prevent the intraoperative achievement of the established preoperative goals. Selecting potential implant style and sizes can facilitate operating room preparation and assure availability of an appropriate selection. When it is done using X-rays that have been suitably scaled for magnification, templating allows the surgeon to predict the style, size and position of the implant that may help restore the correct anatomy of the individual patient.\n\nTemplate planning can be done using acetate templates for printed X-rays or preoperative planning software for digital studies.\n\nUse the template overlay LTEM116 available through your Stryker representative.\n\n## Step 2\n\n### Acetabular Preparation\n\nThe acetabulum is prepared using the surgeon's preferred technique to gain adequate exposure for reaming. Excision of the labrum and osteophytes allows for proper visualization of the bony anatomy and improves ease of reaming.\n\nStryker's femoral and wing retractors can be utilized to help gain acetabular exposure. (Figure 1)\n\nWith the acetabulum exposed, bony defects can be identified. If necessary, bone grafting options may be considered prior to reaming.\n\n### Note\n\nCareful identification and removal of osteophytes can help reduce the possibility of bone-to-bone or component-to-bone impingement.\n\nFigure 1.\n\n(Note: The provided markdown does not contain any tables to enhance. The text has been formatted for better readability.)",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_7.md",
+        "processed_at": "2025-07-03T12:37:26.852260",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_8",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document details the reaming process in the Trident II Clusterhole HA Surgical Protocol. It provides guidelines on the use of CuttingEdge Reamers, considerations for reaming size, and potential challenges during the implantation of acetabular shells.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "surgical protocol",
+        "reaming process",
+        "CuttingEdge Reamers",
+        "acetabular shells"
+      ],
+      "tables": [
+        {
+          "table_id": "table_1",
+          "title": "Reaming Process Guidelines",
+          "description": "This table provides guidelines on the reaming process, including the use of CuttingEdge Reamers, considerations for reaming size, and potential challenges during the implantation of acetabular shells.",
+          "rows": [
+            {
+              "Procedure": "Use of CuttingEdge Reamers",
+              "Guidelines": "Handles are available in straight and offset configurations. It is recommended to begin reaming at least 4mm smaller than the template size after removing medial osteophyte. Progressive reaming should proceed in 1mm to 2mm increments until the final size is achieved."
+            },
+            {
+              "Procedure": "Considerations for Reaming Size",
+              "Guidelines": "The Trident II Clusterhole HA shell diameter is oversized by approximately 0.8mm of the labeled size. The surgeon should consider the acetabular bone quality and assess bone stock, amount of interference fit, and desired amount of reaming when preparing the interference fit."
+            },
+            {
+              "Procedure": "Potential Challenges",
+              "Guidelines": "Potential challenges when implanting acetabular shells may include: acetabular fracture, incomplete seating of the implant in the prepared cavity or slight deformation of the titanium shell, making the insert more difficult to seat."
+            }
+          ],
+          "metadata": {
+            "row_count": 3,
+            "column_count": 2,
+            "data_types": [
+              "text",
+              "text"
+            ],
+            "units": [
+              "N/A",
+              "N/A"
+            ],
+            "technical_category": "surgical protocol"
+          }
+        }
+      ],
+      "raw_content": "## Trident II Clusterhole HA Surgical Protocol\n\n### Step 3\n\n#### Reaming Process\n\nHandles are available in straight and offset configurations to connect to CuttingEdge Reamers (Figures 2a, 2b, 3). It is recommended to begin reaming at least 4mm smaller than the template size after removing medial osteophyte. Progressive reaming should proceed in 1mm to 2mm increments until the final size is achieved.\n\nThe Trident II Clusterhole HA shell diameter is oversized by approximately 0.8mm of the labeled size (e.g., 52mm= 52.8mm). The surgeon should consider the acetabular bone quality and assess bone stock, amount of interference fit, and desired amount of reaming when preparing the interference fit. It is recommended to ream line-to-line with the labeled shell size, however the surgeon may choose to under-ream by 1mm based on his/her assessment of the bone quality. Start rotating the reamer prior to engaging bone to reduce initial torque upon contact.\n\nThe profile of the reamer necessitates reaming to the full depth. The reamer should be driven to the point where the rim contacts the acetabular wall at the peripheral lunate region. If bone stock allows, reaming should optimize bone contact against both the posterior and anterior walls.\n\nCare should be taken to prevent enlarging or distorting the prepared cavity by eccentric reaming. Ideally, final reaming provides mechanical support for the acetabular shell directly on viable host bone.\n\nMany surgeons prefer to target a zone of 40±10° of inclination and 15±10° of anteversion depending on patient anatomy and biomechanics.\n\n#### Notes\n\n- Changes in pelvic tilt and pelvic flexion caused by patient positioning on the table, as well as disease in the contralateral hip, spine and pelvis, may impact a surgeon's ability to attain the desired component placement from preoperative planning.\n\n- The amount of interference fit should be determined intraoperatively based upon the patient's bone quality and acetabular size. When osteoporotic bone is encountered, it is recommended to under-ream by 1mm of the labeled shell size. When sclerotic bone is encountered, it may be difficult to fully seat the shell. In this situation, it is recommended to ream line-to-line to reduce the potential for problems that may typically occur in dense bone.\n\n- Potential challenges when implanting acetabular shells may include: acetabular fracture, incomplete seating of the implant in the prepared cavity or slight deformation of the titanium shell, making the insert more difficult to seat.\n\n- Following reaming, the surgeon should ensure that soft tissues are clear and osteophytes are removed from the prepared site.\n\n- The reamers perform best when sharp. Care should be taken to protect the reamer from unnecessary handling, as dull or damaged cutting teeth may cause improper reaming. Dull cutting teeth may deflect to cut softer bone and resist hard bone. This situation may result in an irregularly shaped or enlarged acetabular preparation.\n\n8",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_8.md",
+        "processed_at": "2025-07-03T12:37:47.825373",
+        "model_used": "gpt-4",
+        "tables_found": 1,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    },
+    {
+      "page_id": "page_9",
+      "title": "Trident II Clusterhole HA Surgical Protocol",
+      "summary": "This document provides instructions for using the CuttingEdge Reamer Handle in the Trident II Clusterhole HA Surgical Protocol. It includes details on attaching and removing the reamer from the handle.",
+      "keywords": [
+        "Trident II Clusterhole HA",
+        "Surgical Protocol",
+        "CuttingEdge Reamer Handle",
+        "Straight Reamer Handle",
+        "Offset Reamer Handle"
+      ],
+      "tables": [],
+      "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\nFigure 2a. Straight Reamer Handle (2102-0410)\n\nFigure 2b. Offset Reamer Handle (T6320)\n\nFigure 3. CuttingEdge Reamer Basket (2102-04xx)\n\n## Instructions for Using the CuttingEdge Reamer Handle\n\nFigure 4.\n\nFigure 4.\nThe reamer is attached to the reamer handle by pushing down and applying a quarter-turn to lock in place.\n\nFigure 5.\n\nFigure 5.\nRemoval of the reamer from the handle is performed by pulling back on the locking sleeve and rotating the reamer head a quarter-turn in a clockwise direction.\n\n**Note:** The markdown provided does not contain any tables to enhance. The text content has been preserved and the formatting has been cleaned up for better readability.",
+      "processing_metadata": {
+        "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_9.md",
+        "processed_at": "2025-07-03T12:38:05.983321",
+        "model_used": "gpt-4",
+        "tables_found": 0,
+        "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+        "stage": "03_cleaned_json"
+      }
+    }
+  ],
+  "toast_info": {
+    "converted_at": "2025-07-03T12:38:05.991750",
+    "converter": "PB&J Toast",
+    "format": "row-based dictionaries",
+    "original_format": "column-based arrays"
+  }
+}

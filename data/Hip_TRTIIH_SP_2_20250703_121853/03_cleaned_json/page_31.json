@@ -1,0 +1,155 @@
+{
+  "page_id": "page_31",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides catalog information for the Trident II Clusterhole HA Surgical Protocol, including details on instruments, single-use instruments, and auxiliary instruments.",
+  "keywords": [
+    "Trident II Clusterhole HA",
+    "surgical protocol",
+    "instruments",
+    "single-use instruments",
+    "auxiliary instruments"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Instruments",
+      "description": "This table lists the catalog number and description of the instruments used in the Trident II Clusterhole HA Surgical Protocol.",
+      "columns": [
+        "Catalog Number",
+        "Instrument Description"
+      ],
+      "rows": [
+        [
+          "T6320",
+          "Offset Reamer Handle"
+        ]
+      ],
+      "metadata": {
+        "row_count": 1,
+        "column_count": 2,
+        "data_types": [
+          "text",
+          "text"
+        ],
+        "units": [
+          "N/A",
+          "N/A"
+        ],
+        "technical_category": "instruments"
+      }
+    },
+    {
+      "table_id": "table_2",
+      "title": "Single-Use Instruments",
+      "description": "This table lists the catalog number and description (including diameter and length) of the single-use instruments used in the Trident II Clusterhole HA Surgical Protocol.",
+      "columns": [
+        "Catalog Number",
+        "Instrument Description (Diameter x Length)"
+      ],
+      "rows": [
+        [
+          "7005-3315S",
+          "Single Use Drill Bit (3.3mm x 15mm)"
+        ],
+        [
+          "7005-3325S",
+          "Single Use Drill Bit (3.3mm x 25mm)"
+        ],
+        [
+          "7005-3340S",
+          "Single Use Drill Bit (3.3mm x 40mm)"
+        ],
+        [
+          "7005-3360S",
+          "Single Use Drill Bit (3.3mm x 60mm)"
+        ],
+        [
+          "7005-4015S",
+          "Single Use Drill Bit (4.0mm x 15mm)"
+        ],
+        [
+          "7005-4025S",
+          "Single Use Drill Bit (4.0mm x 25mm)"
+        ],
+        [
+          "7005-4040S",
+          "Single Use Drill Bit (4.0mm x 40mm)"
+        ],
+        [
+          "7005-4060S",
+          "Single Use Drill Bit (4.0mm x 60mm)"
+        ]
+      ],
+      "metadata": {
+        "row_count": 8,
+        "column_count": 2,
+        "data_types": [
+          "text",
+          "text"
+        ],
+        "units": [
+          "N/A",
+          "mm"
+        ],
+        "technical_category": "single-use instruments"
+      }
+    },
+    {
+      "table_id": "table_3",
+      "title": "Auxiliary Instruments",
+      "description": "This table lists the catalog number and description of the auxiliary instruments used in the Trident II Clusterhole HA Surgical Protocol.",
+      "columns": [
+        "Catalog Number",
+        "Instrument Description"
+      ],
+      "rows": [
+        [
+          "6147-0-100",
+          "Replacement Universal Lid"
+        ],
+        [
+          "LTEM116",
+          "Trident II Clusterhole HA Acetabular System Templates"
+        ],
+        [
+          "6059-9-505",
+          "Head Disassembly Instrument"
+        ],
+        [
+          "1118-1005*",
+          "Ceramic Head Sleeve Disassembly Adapter"
+        ],
+        [
+          "1101-2100",
+          "T-Handle"
+        ],
+        [
+          "1118-6000",
+          "Head Disassembly Instrument"
+        ]
+      ],
+      "metadata": {
+        "row_count": 6,
+        "column_count": 2,
+        "data_types": [
+          "text",
+          "text"
+        ],
+        "units": [
+          "N/A",
+          "N/A"
+        ],
+        "technical_category": "auxiliary instruments"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\n### Instruments\n\n#### Reamer/Cup Impactor Case (T7396)\n\n| Catalog Number | Instrument Description |\n| -------------- | --------------------- |\n| T6320          | Offset Reamer Handle  |\n\n#### Single-Use Instruments\n\n| Catalog Number | Instrument Description (Diameter x Length) |\n| -------------- | ----------------------------------------- |\n| 7005-3315S     | Single Use Drill Bit (3.3mm x 15mm)       |\n| 7005-3325S     | Single Use Drill Bit (3.3mm x 25mm)       |\n| 7005-3340S     | Single Use Drill Bit (3.3mm x 40mm)       |\n| 7005-3360S     | Single Use Drill Bit (3.3mm x 60mm)       |\n| 7005-4015S     | Single Use Drill Bit (4.0mm x 15mm)       |\n| 7005-4025S     | Single Use Drill Bit (4.0mm x 25mm)       |\n| 7005-4040S     | Single Use Drill Bit (4.0mm x 40mm)       |\n| 7005-4060S     | Single Use Drill Bit (4.0mm x 60mm)       |\n\n#### Auxiliary Instruments\n\n| Catalog Number | Instrument Description |\n| -------------- | --------------------- |\n| 6147-0-100     | Replacement Universal Lid |\n| LTEM116        | Trident II Clusterhole HA Acetabular System Templates |\n| 6059-9-505     | Head Disassembly Instrument |\n| 1118-1005*     | Ceramic Head Sleeve Disassembly Adapter |\n| 1101-2100      | T-Handle |\n| 1118-6000      | Head Disassembly Instrument |\n\n\\*This product is not CE marked in accordance with applicable EU regulations and directives. Stryker is not marketing or distributing this product in the EU. Any reference to this product is for presentation purposes only.",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_31.md",
+    "processed_at": "2025-07-03T12:36:35.631818",
+    "model_used": "gpt-4",
+    "tables_found": 3,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

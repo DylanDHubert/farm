@@ -1,0 +1,160 @@
+{
+  "page_id": "page_22",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides catalog numbers and sizes for the Trident II Clusterhole HA Shell, 6.5mm Low Profile Hex Screws, and Hex Dome Hole Plug.",
+  "keywords": [
+    "Trident II Clusterhole HA Shell",
+    "6.5mm Low Profile Hex Screws",
+    "Hex Dome Hole Plug",
+    "Catalog Number",
+    "Size"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Catalog Information",
+      "description": "The table provides catalog numbers and sizes for the Trident II Clusterhole HA Shell, 6.5mm Low Profile Hex Screws, and Hex Dome Hole Plug.",
+      "columns": [
+        "Trident II Clusterhole HA Shell Catalog Number",
+        "Trident II Clusterhole HA Shell Size (mm)",
+        "6.5mm Low Profile Hex Screws Catalog Number",
+        "6.5mm Low Profile Hex Screws Size (mm)",
+        "Hex Dome Hole Plug Catalog Number",
+        "Hex Dome Hole Plug Size (mm)"
+      ],
+      "rows": [
+        [
+          "702-11-42A",
+          42,
+          "7030-6515",
+          15,
+          "7060-0000",
+          "Hex Dome Hole Plug"
+        ],
+        [
+          "702-11-44B",
+          44,
+          "7030-6520",
+          20,
+          null,
+          null
+        ],
+        [
+          "702-11-46C",
+          46,
+          "7030-6525",
+          25,
+          null,
+          null
+        ],
+        [
+          "702-11-48D",
+          48,
+          "7030-6530",
+          30,
+          null,
+          null
+        ],
+        [
+          "702-11-50D",
+          50,
+          "7030-6535",
+          35,
+          null,
+          null
+        ],
+        [
+          "702-11-52E",
+          52,
+          "7030-6540",
+          40,
+          null,
+          null
+        ],
+        [
+          "702-11-54E",
+          54,
+          "7030-6545",
+          45,
+          null,
+          null
+        ],
+        [
+          "702-11-56F",
+          56,
+          "7030-6550",
+          50,
+          null,
+          null
+        ],
+        [
+          "702-11-58F",
+          58,
+          "7030-6555",
+          55,
+          null,
+          null
+        ],
+        [
+          "702-11-60G",
+          60,
+          "7030-6560",
+          60,
+          null,
+          null
+        ],
+        [
+          "702-11-62G",
+          62,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "702-11-64H",
+          64,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "702-11-66H",
+          66,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "metadata": {
+        "row_count": 13,
+        "column_count": 6,
+        "data_types": [
+          "text",
+          "numeric",
+          "text",
+          "numeric",
+          "text",
+          "text"
+        ],
+        "units": [
+          "mm",
+          "mm",
+          "mm"
+        ],
+        "technical_category": "specifications"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\nThe following table provides catalog numbers and sizes for the Trident II Clusterhole HA Shell, 6.5mm Low Profile Hex Screws, and Hex Dome Hole Plug.\n\n| Trident II Clusterhole HA Shell | | 6.5mm Low Profile Hex Screws | | Hex Dome Hole Plug | |\n| --- | --- | --- | --- | --- | --- |\n| Catalog Number | Size (mm) | Catalog Number | Size (mm) | Catalog Number | Size (mm) |\n| 702-11-42A | 42 | 7030-6515 | 15 | 7060-0000 | Hex Dome Hole Plug |\n| 702-11-44B | 44 | 7030-6520 | 20 | | |\n| 702-11-46C | 46 | 7030-6525 | 25 | | |\n| 702-11-48D | 48 | 7030-6530 | 30 | | |\n| 702-11-50D | 50 | 7030-6535 | 35 | | |\n| 702-11-52E | 52 | 7030-6540 | 40 | | |\n| 702-11-54E | 54 | 7030-6545 | 45 | | |\n| 702-11-56F | 56 | 7030-6550 | 50 | | |\n| 702-11-58F | 58 | 7030-6555 | 55 | | |\n| 702-11-60G | 60 | 7030-6560 | 60 | | |\n| 702-11-62G | 62 | | | | |\n| 702-11-64H | 64 | | | | |\n| 702-11-66H | 66 | | | | |",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_22.md",
+    "processed_at": "2025-07-03T12:33:46.874744",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

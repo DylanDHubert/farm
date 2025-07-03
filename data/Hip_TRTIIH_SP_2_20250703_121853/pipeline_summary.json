@@ -1,0 +1,74 @@
+{
+  "pipeline_info": {
+    "completed_at": "2025-07-03T12:38:05.996592",
+    "total_processing_time_seconds": 1181.656554,
+    "pdf_source": "./Hip_TRTIIH_SP_2.pdf",
+    "document_folder": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853",
+    "llamaparse_mode": "premium",
+    "openai_model": "gpt-4",
+    "output_base_dir": "processed_documents"
+  },
+  "stage_results": {
+    "stage_1_peanut_parse": {
+      "pages_parsed": 32,
+      "folder": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown"
+    },
+    "stage_2_butter_better": {
+      "documents_enhanced": 26,
+      "folder": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown"
+    },
+    "stage_3_jelly_json": {
+      "pages_processed": 26,
+      "individual_json_folder": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/03_cleaned_json",
+      "final_output": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/final_output.json"
+    },
+    "stage_4_toast_format": {
+      "format_converted": "column-based to row-based",
+      "final_output": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/final_output.json"
+    }
+  },
+  "data_summary": {
+    "total_pages": 26,
+    "total_tables": 24,
+    "unique_keywords": 98,
+    "page_titles": [
+      "Trident® II Clusterhole HA Acetabular System Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Step 5A: Optional Ancillary Screw Fixation",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Step 6: Trial Insert Reduction",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Appendix A (Continued): Head Assembly and Universal Adapter Sleeves",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Appendix C: Removal of the Insert and Shell",
+      "Trident II Clusterhole High Availability Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA surgical protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Stryker Corporation - CE 2797",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol",
+      "Trident II Clusterhole HA Surgical Protocol"
+    ]
+  },
+  "folder_structure": {
+    "main_folder": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853",
+    "original_pdf": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/Hip_TRTIIH_SP_2.pdf",
+    "metadata": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/document_metadata.json",
+    "final_output": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/final_output.json",
+    "subfolders": {
+      "parsed_markdown": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/01_parsed_markdown",
+      "enhanced_markdown": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown",
+      "cleaned_json": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/03_cleaned_json"
+    }
+  }
+}

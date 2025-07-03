@@ -1,0 +1,110 @@
+{
+  "page_id": "page_3",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides detailed procedures for using the Trident II Clusterhole HA Acetabular System, including preoperative planning, acetabular preparation, reaming process, window trial evaluation, shell implantation, and more. It is intended for distribution in the European Union (EU) and Canada only.",
+  "keywords": [
+    "Trident II Clusterhole HA",
+    "surgical protocol",
+    "acetabular system",
+    "preoperative planning",
+    "shell implantation"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Table of Contents",
+      "description": "This table outlines the steps involved in the Trident II Clusterhole HA Surgical Protocol, including detailed descriptions and corresponding page numbers.",
+      "columns": [
+        "Step Number",
+        "Detailed Description",
+        "Page Number"
+      ],
+      "rows": [
+        [
+          "Step 1",
+          "Preoperative Planning and X-Ray Evaluation",
+          "7"
+        ],
+        [
+          "Step 2",
+          "Acetabular Preparation",
+          "7"
+        ],
+        [
+          "Step 3",
+          "Reaming Process",
+          "8"
+        ],
+        [
+          "Step 4",
+          "Window Trial Evaluation",
+          "10"
+        ],
+        [
+          "Step 5",
+          "Shell Implantation",
+          "11"
+        ],
+        [
+          "Step 5A",
+          "Optional Ancillary Screw Fixation",
+          "13"
+        ],
+        [
+          "Step 6",
+          "Trial Insert Reduction",
+          "15"
+        ],
+        [
+          "",
+          "Appendix A: Insert Implantation",
+          "16"
+        ],
+        [
+          "",
+          "Appendix B: Modular Dual Mobility (MDM) Liner Implantation",
+          "18"
+        ],
+        [
+          "",
+          "Appendix C: Removal of the Insert and Shell",
+          "19"
+        ],
+        [
+          "Step 7",
+          "Head Disassembly",
+          "20"
+        ],
+        [
+          "Catalog Information",
+          "",
+          "22"
+        ]
+      ],
+      "metadata": {
+        "row_count": 12,
+        "column_count": 3,
+        "data_types": [
+          "text",
+          "text",
+          "numeric"
+        ],
+        "units": [
+          "",
+          "",
+          "page number"
+        ],
+        "technical_category": "surgical protocol"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Trident II Clusterhole HA Surgical Protocol\n\n### Table of Contents\n\n| Step Number | Detailed Description | Page Number |\n|-------------|----------------------|-------------|\n| Step 1 | Preoperative Planning and X-Ray Evaluation | 7 |\n| Step 2 | Acetabular Preparation | 7 |\n| Step 3 | Reaming Process | 8 |\n| Step 4 | Window Trial Evaluation | 10 |\n| Step 5 | Shell Implantation | 11 |\n| Step 5A | Optional Ancillary Screw Fixation | 13 |\n| Step 6 | Trial Insert Reduction | 15 |\n| | Appendix A: Insert Implantation | 16 |\n| | Appendix B: Modular Dual Mobility (MDM) Liner Implantation | 18 |\n| | Appendix C: Removal of the Insert and Shell | 19 |\n| Step 7 | Head Disassembly | 20 |\n| Catalog Information | | 22 |\n\nThis publication sets forth detailed validated procedures for using the Trident II Clusterhole HA Acetabular System. It offers instructions that you should heed, but, as with any such technical guide, each surgeon must consider the particular needs of each patient and make appropriate adjustments when and as required.\n\nThis surgical protocol is intended for distribution in the European Union (EU) and Canada only.\n\n3",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_3.md",
+    "processed_at": "2025-07-03T12:35:14.436600",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "page_id": "page_10",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides a detailed surgical protocol for the Trident II Clusterhole HA, focusing on the evaluation of Window Trial in Step 4. It includes instructions for attaching the Window Trial and important notes for successful implementation.",
+  "keywords": [
+    "Trident II Clusterhole HA",
+    "surgical protocol",
+    "Window Trial",
+    "acetabular reamer",
+    "Shell Impactor"
+  ],
+  "tables": [],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Step 4\n\n### Evaluation of Window Trial\n\nSelect a Window Trial of equal diameter or 1mm smaller than the last acetabular reamer used. Attach the Window Trial onto the Shell Impactor to evaluate the fit within the reamed acetabulum (Figure 6). The trial is windowed for visualization and assessment of depth, position, bone contact and congruency within the acetabulum. Impact gently into the acetabulum to avoid damage to the surrounding bone or press-fit.\n\nFigure 6.\n\n### Instructions\n\n#### Window Trial Attachment\nTo attach, insert the tip of the impactor flush with the square recess in the dome of the trial. Turn the knob clock-wise until the trial is attached. For the straight impactor, it may be required to apply light pressure on the knob in the direction of the trial to initially engage the threads.\n\nFailure to completely thread the components together may result in damage to the threads upon impaction and lead to difficulty in detaching the components. Do not overtighten.\n\n> **Note**\n> \n> It is recommended to use a Window Trial that is line-to-line or 1mm smaller than the last reamer.\n\n10\n\n**Note:** The provided markdown does not contain any tables to enhance. The text has been formatted for better readability and structure while preserving all the original content.",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_10.md",
+    "processed_at": "2025-07-03T12:29:32.844048",
+    "model_used": "gpt-4",
+    "tables_found": 0,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

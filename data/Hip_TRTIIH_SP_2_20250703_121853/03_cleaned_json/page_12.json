@@ -1,0 +1,83 @@
+{
+  "page_id": "page_12",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides detailed surgical protocol for the Trident II Clusterhole HA, including specific angles and views, notes on the procedure, and cautions regarding the alignment guide.",
+  "keywords": [
+    "Trident II Clusterhole HA",
+    "surgical protocol",
+    "angles and views",
+    "alignment guide",
+    "acetabular shell"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Angles and Views in Trident II Surgical Protocol",
+      "description": "This table illustrates the angles and views used in the Trident II Surgical Protocol.",
+      "columns": [
+        "Angle (°)",
+        "View"
+      ],
+      "rows": [
+        [
+          "45",
+          "90°"
+        ],
+        [
+          "90",
+          "A/P view"
+        ]
+      ],
+      "metadata": {
+        "row_count": 2,
+        "column_count": 2,
+        "data_types": [
+          "numeric",
+          "text"
+        ],
+        "units": [
+          "°",
+          "N/A"
+        ],
+        "technical_category": "angles and views"
+      }
+    },
+    {
+      "table_id": "table_2",
+      "title": "Lateral View Angle in Trident II Surgical Protocol",
+      "description": "This table illustrates the lateral view angle used in the Trident II Surgical Protocol.",
+      "columns": [
+        "Angle (°)",
+        "View"
+      ],
+      "rows": [
+        [
+          "20",
+          "Lateral view"
+        ]
+      ],
+      "metadata": {
+        "row_count": 1,
+        "column_count": 2,
+        "data_types": [
+          "numeric",
+          "text"
+        ],
+        "units": [
+          "°",
+          "N/A"
+        ],
+        "technical_category": "angles and views"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Figure 10. Angles and Views in Trident II Surgical Protocol\n\n```mermaid\ngraph TD\n    A[45°] --> B[90°]\n    B --> C[A/P view]\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#bbf,stroke:#333,stroke-width:2px\n    style C fill:#bfb,stroke:#333,stroke-width:2px\n```\n\n## Figure 11. Lateral View Angle in Trident II Surgical Protocol\n\n```mermaid\ngraph LR\n    A[20°] --> B[Lateral view]\n    style A fill:#f9f,stroke:#333,stroke-width:2px\n    style B fill:#bfb,stroke:#333,stroke-width:2px\n```\n\n### Notes on Trident II Surgical Protocol\n\n- Avoid catching soft tissue debris onto the frictional shell surface during implantation.\n\n- Shell positioning must be carefully considered when selecting certain inserts as hooded options are not available in all sizes to adjust joint stability. Proper positioning of the Trident II Acetabular Shell may minimize potential impingement and promote stability and articulation between the insert and head. As with any acetabular system, excessive vertical orientation and/or anteversion of the shell should be avoided, as this may lead to premature wear and/or noise of the components' surfaces.\n\n- While the alignment guides offer some assistance in shell placement, it is important to critically evaluate anatomic landmarks before shell implantation. These anatomic landmarks include the anterior and posterior walls of the acetabulum, the sciatic notch, the transacetabular ligament (TAL), the floor and/or acetabular fossa of the acetabulum.\n\n### Caution Regarding Trident II Surgical Protocol\n\nThe Alignment Guide's utility may be diminished if the pelvis has moved from the original position during intraoperative manipulation. Small changes in pelvic flexion will greatly affect anteversion. The Alignment Guide is only one aid to assist with proper implant positioning. The surgeon must also rely on anatomic landmarks to avoid improper positioning of components.",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_12.md",
+    "processed_at": "2025-07-03T12:29:56.088738",
+    "model_used": "gpt-4",
+    "tables_found": 2,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

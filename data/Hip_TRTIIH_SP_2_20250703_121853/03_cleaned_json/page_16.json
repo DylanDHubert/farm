@@ -1,0 +1,60 @@
+{
+  "page_id": "page_16",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides a detailed surgical protocol for the implantation of Trident Polyethylene and Alumina Ceramic Inserts. It includes step-by-step instructions, notes, and images for each stage of the process.",
+  "keywords": [
+    "Trident Polyethylene Insert",
+    "Trident Alumina Ceramic Inserts",
+    "surgical protocol",
+    "implantation",
+    "acetabulum"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Insertion Stages and Images",
+      "description": "This table provides images of the ceramic and polyethylene inserts before and after insertion.",
+      "columns": [
+        "Insertion Stage",
+        "Ceramic Insert (Images)",
+        "Polyethylene Insert (Images)"
+      ],
+      "rows": [
+        [
+          "Before Insertion",
+          "ceramic_before.jpg, ceramic_before_closeup.jpg",
+          "polyethylene_before.jpg, polyethylene_before_closeup.jpg"
+        ],
+        [
+          "After Insertion",
+          "ceramic_after.jpg, ceramic_after_closeup.jpg",
+          "polyethylene_after.jpg, polyethylene_after_closeup.jpg"
+        ]
+      ],
+      "metadata": {
+        "row_count": 2,
+        "column_count": 3,
+        "data_types": [
+          "text",
+          "image",
+          "image"
+        ],
+        "units": [
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "technical_category": "surgical protocol"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Appendix A\n\n### Insert Implantation\n\nThe Trident Polyethylene Insert is designed to lock into the shell by means of a circumferential ring that engages the mating groove within the shell. Rotational stability can be achieved when the anti-rotational barbs of the shell interlock with the insert scallops. Trident Alumina Ceramic Inserts are designed to gain fixation within the shell by means of mating tapers. Rotational stability between the components is achieved when the shell's anti-rotational barbs interlock with the insert scallops.\n\n> **Note**\n> \n> Having a clear view of the rim of the acetabulum will allow easier visualization of the shell slots and indexing barbs for proper positioning and seating of the liner.\n\n> **Note**\n> \n> Use caution handling ceramic components during assembly because of the brittle nature of the ceramic material. All components are pre-sterilized and cannot be sterilized after opening.\n\n1. Ensure that the inside of the shell and periphery are clean and free of soft tissue or any other debris which can cause eccentric positioning of the insert and improper seating in the shell.\n\n2. Gently introduce the ceramic or polyethylene insert, making sure that the insert flange scallops are aligned with the slots at the rim of the shell. This orientation will allow the insert to rest on the four indexing barbs and will ensure that the insert is parallel with the shell. Once the insert is seated at the initial position, slowly turn and drop the insert into the final pre-locked position.\n\n3. Select the appropriately sized Plastic Insert Impactor Tip and load onto Insert Positioner/Impactor Handle (Figure 18).\n\n4. Position Insert Positioner/Impactor Handle into the inner diameter of the insert. Take care to align the handle with the axis of the shell. Strike the handle with approximately four firm mallet blows to fully seat the insert (Figure 19).\n\nFigure 18. Image shows a long surgical instrument with a handle on one end and a rounded tip on the other. Purple arrows indicate a specific part of the instrument.\n\nFigure 19. Image shows a cross-section of a hip joint implant. A surgical instrument is shown inserting a component into the acetabular shell. A purple arrow indicates the direction of insertion.\n\n| Insertion Stage | Ceramic Insert (Images) | Polyethylene Insert (Images) |\n|-----------------|-------------------------|------------------------------|\n| Before Insertion| ![Ceramic insert before insertion](ceramic_before.jpg)<br>![Closeup of ceramic insert before insertion](ceramic_before_closeup.jpg) | ![Polyethylene insert before insertion](polyethylene_before.jpg)<br>![Closeup of polyethylene insert before insertion](polyethylene_before_closeup.jpg) |\n| After Insertion | ![Ceramic insert after insertion](ceramic_after.jpg)<br>![Closeup of ceramic insert after insertion](ceramic_after_closeup.jpg) | ![Polyethylene insert after insertion](polyethylene_after.jpg)<br>![Closeup of polyethylene insert after insertion](polyethylene_after_closeup.jpg) |",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_16.md",
+    "processed_at": "2025-07-03T12:31:36.112640",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

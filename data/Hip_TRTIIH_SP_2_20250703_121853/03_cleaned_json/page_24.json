@@ -1,0 +1,98 @@
+{
+  "page_id": "page_24",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides the catalog numbers for the Trident 0° and 10° Crossfire Inserts, which are essential components in the Trident II Clusterhole HA surgical protocol.",
+  "keywords": [
+    "Trident II Clusterhole HA",
+    "surgical protocol",
+    "Crossfire Inserts",
+    "catalog numbers",
+    "Trident 0°",
+    "Trident 10°"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Catalog Numbers for Trident 0° and 10° Crossfire Inserts",
+      "description": "The table lists the catalog numbers for the Trident 0° and 10° Crossfire Inserts used in the Trident II Clusterhole HA surgical protocol.",
+      "columns": [
+        "Trident 0° Crossfire Inserts (Catalog Number)",
+        "Trident 10° Crossfire Inserts (Catalog Number)"
+      ],
+      "rows": [
+        [
+          "621-00-22A",
+          "621-10-22A"
+        ],
+        [
+          "621-00-22B",
+          "621-10-22B"
+        ],
+        [
+          "621-00-28C",
+          "621-10-28C"
+        ],
+        [
+          "621-00-28D",
+          "621-10-28D"
+        ],
+        [
+          "621-00-32D",
+          "621-10-32D"
+        ],
+        [
+          "621-00-32E",
+          "621-10-32E"
+        ],
+        [
+          "621-00-32F",
+          "621-10-32F"
+        ],
+        [
+          "621-00-32G",
+          "621-10-32G"
+        ],
+        [
+          "621-00-32H",
+          "621-10-32H"
+        ],
+        [
+          "621-00-36E",
+          "621-10-36E"
+        ],
+        [
+          "621-00-36F",
+          "621-10-36F"
+        ],
+        [
+          "621-00-36G",
+          "621-10-36G"
+        ],
+        [
+          "621-00-36H",
+          "621-10-36H"
+        ]
+      ],
+      "metadata": {
+        "row_count": 13,
+        "column_count": 2,
+        "data_types": [
+          "text"
+        ],
+        "units": [
+          "catalog number"
+        ],
+        "technical_category": "catalog information"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\n### Trident Crossfire Polyethylene Inserts\n\nThe following table provides the catalog numbers for the Trident 0° and 10° Crossfire Inserts. These are essential components in the Trident II Clusterhole HA surgical protocol.\n\n| Trident 0° Crossfire Inserts (Catalog Number) | Trident 10° Crossfire Inserts (Catalog Number) |\n| --------------------------------------------- | ---------------------------------------------- |\n| 621-00-22A                                   | 621-10-22A                                      |\n| 621-00-22B                                   | 621-10-22B                                      |\n| 621-00-28C                                   | 621-10-28C                                      |\n| 621-00-28D                                   | 621-10-28D                                      |\n| 621-00-32D                                   | 621-10-32D                                      |\n| 621-00-32E                                   | 621-10-32E                                      |\n| 621-00-32F                                   | 621-10-32F                                      |\n| 621-00-32G                                   | 621-10-32G                                      |\n| 621-00-32H                                   | 621-10-32H                                      |\n| 621-00-36E                                   | 621-10-36E                                      |\n| 621-00-36F                                   | 621-10-36F                                      |\n| 621-00-36G                                   | 621-10-36G                                      |\n| 621-00-36H                                   | 621-10-36H                                      |",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_24.md",
+    "processed_at": "2025-07-03T12:34:01.928545",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

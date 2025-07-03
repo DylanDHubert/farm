@@ -8,7 +8,8 @@ and organization capabilities across multiple documents.
 
 from typing import Dict, List, Optional, Any, Union
 from silo import Silo
-from models.table import TableInfo, TableRow
+from src.models.table import TableInfo, TableRow
+from src.models.search import SearchResult
 
 
 class Pitchfork:
@@ -247,17 +248,9 @@ class Pitchfork:
             if any(data_type_lower in dt.lower() for dt in info.data_types)
         ]
     
-    def get_compatibility_tables(self) -> List[TableInfo]:
-        """Get all compatibility-related tables."""
-        return self.get_tables_by_category("compatibility")
+    # Removed domain-specific compatibility tables method
     
-    def get_measurement_tables(self) -> List[TableInfo]:
-        """Get all measurement-related tables."""
-        return self.get_tables_by_category("measurement")
-    
-    def get_nutrition_tables(self) -> List[TableInfo]:
-        """Get all nutrition-related tables."""
-        return self.get_tables_by_category("nutrition")
+    # Removed domain-specific table methods - use get_tables_by_category() instead
     
     def get_table_rows(self, table_id: str, criteria: Optional[Dict[str, Any]] = None, 
                       doc_id: Optional[str] = None) -> List[TableRow]:

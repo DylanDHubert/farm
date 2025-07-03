@@ -12,8 +12,8 @@ and semantic similarity matching.
 from typing import Dict, List, Optional, Any, Union
 from dataclasses import dataclass, field
 import warnings
-from silo import Silo
-from models.search import SemanticSearchResult
+from src.silo import Silo
+from src.models.search import SemanticSearchResult
 
 
 class Scythe:

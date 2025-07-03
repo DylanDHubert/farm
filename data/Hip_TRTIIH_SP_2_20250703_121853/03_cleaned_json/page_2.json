@@ -1,0 +1,89 @@
+{
+  "page_id": "page_2",
+  "title": "Trident II Clusterhole High Availability Surgical Protocol",
+  "summary": "This document outlines the key steps and parameters involved in the Trident II Clusterhole High Availability surgical protocol, including step descriptions, average durations, and required equipment.",
+  "keywords": [
+    "Trident II Clusterhole",
+    "surgical protocol",
+    "step duration",
+    "equipment required",
+    "surgical steps"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Trident II Clusterhole High Availability Surgical Protocol Steps",
+      "description": "This table outlines the key steps, average durations, and equipment required for the Trident II Clusterhole High Availability surgical protocol.",
+      "columns": [
+        "Step Number",
+        "Description of Step",
+        "Duration (minutes)",
+        "Equipment Required"
+      ],
+      "rows": [
+        [
+          "1",
+          "Initial Incision",
+          "15",
+          "Scalpel"
+        ],
+        [
+          "2",
+          "Hemostasis",
+          "10",
+          "Electrocautery"
+        ],
+        [
+          "3",
+          "Dissection",
+          "30",
+          "Scalpel, Forceps"
+        ],
+        [
+          "4",
+          "Clusterhole Creation",
+          "45",
+          "Trident II Device"
+        ],
+        [
+          "5",
+          "Suturing",
+          "20",
+          "Suture Kit"
+        ],
+        [
+          "6",
+          "Dressing",
+          "5",
+          "Bandages"
+        ]
+      ],
+      "metadata": {
+        "row_count": 6,
+        "column_count": 4,
+        "data_types": [
+          "numeric",
+          "text",
+          "numeric",
+          "text"
+        ],
+        "units": [
+          "step number",
+          "description",
+          "minutes",
+          "equipment"
+        ],
+        "technical_category": "surgical protocol"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole High Availability Surgical Protocol\n\nThe following table outlines the key steps and parameters involved in the Trident II Clusterhole High Availability surgical protocol. \n\n| Step Number | Description of Step | Duration (minutes) | Equipment Required |\n|-------------|---------------------|--------------------|--------------------|\n| 1           | Initial Incision    | 15                 | Scalpel            |\n| 2           | Hemostasis          | 10                 | Electrocautery     |\n| 3           | Dissection          | 30                 | Scalpel, Forceps   |\n| 4           | Clusterhole Creation| 45                 | Trident II Device  |\n| 5           | Suturing            | 20                 | Suture Kit         |\n| 6           | Dressing            | 5                  | Bandages           |\n\nPlease note that the durations provided are average times and may vary based on individual patient conditions and surgeon experience. The equipment required is also subject to change based on the specifics of the surgical case.",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_2.md",
+    "processed_at": "2025-07-03T12:32:30.104154",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

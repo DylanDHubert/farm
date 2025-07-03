@@ -1,0 +1,59 @@
+{
+  "page_id": "page_8",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document details the reaming process in the Trident II Clusterhole HA Surgical Protocol. It provides guidelines on the use of CuttingEdge Reamers, considerations for reaming size, and potential challenges during the implantation of acetabular shells.",
+  "keywords": [
+    "Trident II Clusterhole HA",
+    "surgical protocol",
+    "reaming process",
+    "CuttingEdge Reamers",
+    "acetabular shells"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Reaming Process Guidelines",
+      "description": "This table provides guidelines on the reaming process, including the use of CuttingEdge Reamers, considerations for reaming size, and potential challenges during the implantation of acetabular shells.",
+      "columns": [
+        "Procedure",
+        "Guidelines"
+      ],
+      "rows": [
+        [
+          "Use of CuttingEdge Reamers",
+          "Handles are available in straight and offset configurations. It is recommended to begin reaming at least 4mm smaller than the template size after removing medial osteophyte. Progressive reaming should proceed in 1mm to 2mm increments until the final size is achieved."
+        ],
+        [
+          "Considerations for Reaming Size",
+          "The Trident II Clusterhole HA shell diameter is oversized by approximately 0.8mm of the labeled size. The surgeon should consider the acetabular bone quality and assess bone stock, amount of interference fit, and desired amount of reaming when preparing the interference fit."
+        ],
+        [
+          "Potential Challenges",
+          "Potential challenges when implanting acetabular shells may include: acetabular fracture, incomplete seating of the implant in the prepared cavity or slight deformation of the titanium shell, making the insert more difficult to seat."
+        ]
+      ],
+      "metadata": {
+        "row_count": 3,
+        "column_count": 2,
+        "data_types": [
+          "text",
+          "text"
+        ],
+        "units": [
+          "N/A",
+          "N/A"
+        ],
+        "technical_category": "surgical protocol"
+      }
+    }
+  ],
+  "raw_content": "## Trident II Clusterhole HA Surgical Protocol\n\n### Step 3\n\n#### Reaming Process\n\nHandles are available in straight and offset configurations to connect to CuttingEdge Reamers (Figures 2a, 2b, 3). It is recommended to begin reaming at least 4mm smaller than the template size after removing medial osteophyte. Progressive reaming should proceed in 1mm to 2mm increments until the final size is achieved.\n\nThe Trident II Clusterhole HA shell diameter is oversized by approximately 0.8mm of the labeled size (e.g., 52mm= 52.8mm). The surgeon should consider the acetabular bone quality and assess bone stock, amount of interference fit, and desired amount of reaming when preparing the interference fit. It is recommended to ream line-to-line with the labeled shell size, however the surgeon may choose to under-ream by 1mm based on his/her assessment of the bone quality. Start rotating the reamer prior to engaging bone to reduce initial torque upon contact.\n\nThe profile of the reamer necessitates reaming to the full depth. The reamer should be driven to the point where the rim contacts the acetabular wall at the peripheral lunate region. If bone stock allows, reaming should optimize bone contact against both the posterior and anterior walls.\n\nCare should be taken to prevent enlarging or distorting the prepared cavity by eccentric reaming. Ideally, final reaming provides mechanical support for the acetabular shell directly on viable host bone.\n\nMany surgeons prefer to target a zone of 40±10° of inclination and 15±10° of anteversion depending on patient anatomy and biomechanics.\n\n#### Notes\n\n- Changes in pelvic tilt and pelvic flexion caused by patient positioning on the table, as well as disease in the contralateral hip, spine and pelvis, may impact a surgeon's ability to attain the desired component placement from preoperative planning.\n\n- The amount of interference fit should be determined intraoperatively based upon the patient's bone quality and acetabular size. When osteoporotic bone is encountered, it is recommended to under-ream by 1mm of the labeled shell size. When sclerotic bone is encountered, it may be difficult to fully seat the shell. In this situation, it is recommended to ream line-to-line to reduce the potential for problems that may typically occur in dense bone.\n\n- Potential challenges when implanting acetabular shells may include: acetabular fracture, incomplete seating of the implant in the prepared cavity or slight deformation of the titanium shell, making the insert more difficult to seat.\n\n- Following reaming, the surgeon should ensure that soft tissues are clear and osteophytes are removed from the prepared site.\n\n- The reamers perform best when sharp. Care should be taken to protect the reamer from unnecessary handling, as dull or damaged cutting teeth may cause improper reaming. Dull cutting teeth may deflect to cut softer bone and resist hard bone. This situation may result in an irregularly shaped or enlarged acetabular preparation.\n\n8",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_8.md",
+    "processed_at": "2025-07-03T12:37:47.825373",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

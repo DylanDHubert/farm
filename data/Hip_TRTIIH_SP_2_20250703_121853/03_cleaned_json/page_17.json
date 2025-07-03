@@ -1,0 +1,60 @@
+{
+  "page_id": "page_17",
+  "title": "Appendix A (Continued): Head Assembly and Universal Adapter Sleeves",
+  "summary": "This document provides instructions for head assembly to the implanted femoral stem, including the use of Universal Adapter Sleeves. It also includes a table of part numbers, taper types, and compatible stem materials.",
+  "keywords": [
+    "head assembly",
+    "femoral stem",
+    "Universal Adapter Sleeves",
+    "part numbers",
+    "compatible stem materials"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Universal Adapter Sleeves",
+      "description": "This table lists the part numbers, taper types, and compatible stem materials for Universal Adapter Sleeves.",
+      "columns": [
+        "Part Numbers",
+        "Taper Type",
+        "Compatible Stem Materials"
+      ],
+      "rows": [
+        [
+          "19-0XXXT",
+          "C-Taper",
+          "TMZF, Ti-6Al-4V, CoCr"
+        ],
+        [
+          "6519-T-XXX",
+          "V40",
+          "TMZF, Ti-6Al-4V, CoCr, stainless steel"
+        ]
+      ],
+      "metadata": {
+        "row_count": 2,
+        "column_count": 3,
+        "data_types": [
+          "text",
+          "text",
+          "text"
+        ],
+        "units": [
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "technical_category": "compatibility"
+      }
+    }
+  ],
+  "raw_content": "## Appendix A (Continued)\n\n### Head Assembly\n\nPrior to head assembly to the implanted femoral stem, neck length selection may be reevaluated using Stryker's V40 or C-Taper head trial. Place the head trial onto the stem neck taper and reduce the hip to verify that the mechanics have not been altered due to shell seating.\n\nRemove the head trial and dry the implant trunnion with a laparatomy sponge or sterile towel.\n\nSelect the appropriate corresponding V40 or C-Taper femoral head size and place it onto the dry trunnion of the femoral stem with a slight twist. Impact the head with moderate impactions in line with the neck using the Stem Head Impactor (1104-1000) (Figure 20). Care should be taken to prevent scratching of the femoral head against the acetabular component rim during final reduction.\n\nWith the final selected femoral, head and acetabular implants in place, reduce the components and perform a final joint mechanics evaluation of the patient.\n\n### Optional Step\n\n#### Universal Adapter Sleeves\n\n| Part Numbers | Taper Type | Compatible Stem Materials |\n|--------------|------------|---------------------------|\n| 19-0XXXT     | C-Taper    | TMZF, Ti-6Al-4V, CoCr    |\n| 6519-T-XXX   | V40        | TMZF, Ti-6Al-4V, CoCr, stainless steel |\n\nAfter completing the trialing process, assemble the Universal Adapter Sleeve to the femoral stem manually. The Universal Adapter Sleeve must be fully seated on the stem taper before the head is assembled. Intraoperatively assemble the BIOLOX delta Universal Taper Ceramic Head onto the sleeved femoral stem and set with moderate impactions in line with the neck using the Stem Head Impactor (1104-1000). Care must be taken to avoid excessive impact forces when assembling the BIOLOX delta Ceramic Head to the sleeved femoral component.\n\n### Notes\n\n- When selecting a BIOLOX delta Universal Taper Ceramic Head for implantation, use of a Universal Adapter Sleeve is necessary.\n\n- In no instance should any attempt be made to preassemble the Universal Adapter Sleeve inside the BIOLOX delta Universal Ceramic Head.",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_17.md",
+    "processed_at": "2025-07-03T12:31:50.240281",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

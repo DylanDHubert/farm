@@ -8,8 +8,10 @@ and provides a unified interface for working with PB&J pipeline data.
 from typing import Dict, List, Optional, Any, Union
 from dataclasses import dataclass
 
-from silo import Silo
-from toolshed import Sickle, Pitchfork, Scythe
+from src.silo import Silo
+from src.toolshed.pitchfork import Pitchfork
+from src.toolshed.sickle import Sickle
+from src.toolshed.scythe import Scythe
 from models.table import TableInfo, TableRow
 from models.search import SearchResult, SemanticSearchResult
 
@@ -268,26 +270,9 @@ class Farmer:
     
     # ==================== CONVENIENCE METHODS ====================
     
-    def get_compatibility_tables(self) -> List[TableInfo]:
-        """Get all compatibility-related tables."""
-        if not self.is_ready() or self.pitchfork is None:
-            return []
-        
-        return self.pitchfork.get_compatibility_tables()
+    # Removed domain-specific compatibility tables method
     
-    def get_measurement_tables(self) -> List[TableInfo]:
-        """Get all measurement-related tables."""
-        if not self.is_ready() or self.pitchfork is None:
-            return []
-        
-        return self.pitchfork.get_measurement_tables()
-    
-    def get_nutrition_tables(self) -> List[TableInfo]:
-        """Get all nutrition-related tables."""
-        if not self.is_ready() or self.pitchfork is None:
-            return []
-        
-        return self.pitchfork.get_nutrition_tables()
+    # Removed domain-specific table methods - use get_tables_by_category() instead
     
     def get_document_info(self, doc_id: Optional[str] = None) -> Union[Dict[str, Any], None]:
         """

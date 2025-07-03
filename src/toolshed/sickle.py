@@ -29,7 +29,7 @@ Example Usage:
     sickle.build_index()
     
     # Search for content
-    results = sickle.search("compatibility", search_type="all", limit=5)
+            results = sickle.search("technical data", search_type="all", limit=5)
     
     # Search by specific keywords
     results = sickle.search_by_keywords(["jelly", "jam"], search_type="tables")
@@ -41,8 +41,8 @@ Example Usage:
 from typing import Dict, List, Optional, Any, Set
 import re
 from collections import defaultdict
-from silo import Silo
-from models.search import SearchResult
+from src.silo import Silo
+from src.models.search import SearchResult
 
 
 class Sickle:
@@ -152,7 +152,7 @@ class Sickle:
             
         Example:
             # Search across all content
-            results = sickle.search("peanut butter compatibility", search_type="all", limit=5)
+            results = sickle.search("document analysis", search_type="all", limit=5)
             
             # Search only in titles
             results = sickle.search("bread", search_type="titles", limit=3)
@@ -209,7 +209,7 @@ class Sickle:
             results = sickle.search_by_keywords(["jelly", "jam", "preserves"], search_type="all")
             
             # Search for technical terms
-            results = sickle.search_by_keywords(["compatibility", "measurement"], search_type="tables")
+            results = sickle.search_by_keywords(["technical", "data"], search_type="tables")
         """
         if not self.is_indexed:
             raise ValueError("Index not built. Call build_index() first.")

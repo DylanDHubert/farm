@@ -1,0 +1,22 @@
+{
+  "page_id": "page_9",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides instructions for using the CuttingEdge Reamer Handle in the Trident II Clusterhole HA Surgical Protocol. It includes details on attaching and removing the reamer from the handle.",
+  "keywords": [
+    "Trident II Clusterhole HA",
+    "Surgical Protocol",
+    "CuttingEdge Reamer Handle",
+    "Straight Reamer Handle",
+    "Offset Reamer Handle"
+  ],
+  "tables": [],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\nFigure 2a. Straight Reamer Handle (2102-0410)\n\nFigure 2b. Offset Reamer Handle (T6320)\n\nFigure 3. CuttingEdge Reamer Basket (2102-04xx)\n\n## Instructions for Using the CuttingEdge Reamer Handle\n\nFigure 4.\n\nFigure 4.\nThe reamer is attached to the reamer handle by pushing down and applying a quarter-turn to lock in place.\n\nFigure 5.\n\nFigure 5.\nRemoval of the reamer from the handle is performed by pulling back on the locking sleeve and rotating the reamer head a quarter-turn in a clockwise direction.\n\n**Note:** The markdown provided does not contain any tables to enhance. The text content has been preserved and the formatting has been cleaned up for better readability.",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_9.md",
+    "processed_at": "2025-07-03T12:38:05.983321",
+    "model_used": "gpt-4",
+    "tables_found": 0,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

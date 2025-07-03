@@ -1,0 +1,71 @@
+{
+  "page_id": "page_20",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides a detailed surgical protocol for the disassembly of impacted heads using the Head Disassembly Instrument. It also includes a revision procedure for BIOLOX Delta Ceramic Heads assembled with an adapter sleeve.",
+  "keywords": [
+    "Trident II Clusterhole",
+    "HA Surgical Protocol",
+    "Head Disassembly Instrument",
+    "BIOLOX Delta Ceramic Heads",
+    "Adapter Sleeve"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Disassembly of Impacted Head",
+      "description": "This section provides instructions on how to use the Head Disassembly Instrument to extract an impacted head and how to inspect the stem neck trunnion for any damage.",
+      "columns": [
+        "Procedure",
+        "Instrument",
+        "Catalog No.",
+        "Compatibility"
+      ],
+      "rows": [
+        [
+          "Disassembly of Impacted Head",
+          "Head Disassembly Instrument",
+          "1118-6000*",
+          "Not compatible with heads of sizes 36mm, 40mm, and 44mm"
+        ],
+        [
+          "Revision Procedure for BIOLOX Delta Ceramic Heads Assembled with an Adapter Sleeve",
+          "Head Disassembly Instrument",
+          "1118-6000* or 6059-9-505",
+          "Depends on the size of the femoral head"
+        ],
+        [
+          "Removal of Adapter Sleeve",
+          "Ceramic Head Sleeve Disassembly Adapter",
+          "1118-1005* and 1118-6000*",
+          "N/A"
+        ]
+      ],
+      "metadata": {
+        "row_count": 3,
+        "column_count": 4,
+        "data_types": [
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "units": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "technical_category": "specifications"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Step 7\n\n### Disassembly of Impacted Head\n\nThe Head Disassembly Instrument is utilized to extract an impacted head (Refer to Figures 25 and 26). Prior to attaching a replacement head, inspect the stem neck trunnion to ensure no damage has occurred. The replacement head can then be affixed to the stem neck taper and secured using the Stem Head Impactor.\n\n### Revision Procedure for BIOLOX Delta Ceramic Heads Assembled with an Adapter Sleeve\n\nIn case the BIOLOX delta Ceramic Head requires revision for any reason, use the Head Disassembly Instrument (Catalog No. 1118-6000* or 6059-9-505, depending on the size of the femoral head) to remove the Ceramic Head. Following this, remove the adapter sleeve using the Ceramic Head Sleeve Disassembly Adapter (Catalog No. 1118-1005* and 1118-6000*).\n\n### Important Note\n\n* The Head Disassembly Instrument (Catalog No. 1118-6000*) is not compatible with heads of sizes 36mm, 40mm, and 44mm.\n\nFigure 26: Head Disassembly Instrument for 22-32mm Heads\nCatalog No. 1118-6000*\n\n![Figure 25. Image shows a surgical instrument labeled as \"36-44mm Anatomic Head Disassembly Instrument catalog No. 6059-9-505\". The instrument appears to be a large metal forceps or pliers with textured handles and a specialized jaw design for gripping and removing anatomic heads in orthopedic surgeries.]\n\n*This product is not CE marked in accordance with applicable EU regulations and directives. Stryker is not marketing or distributing this product in the EU. Any reference to this product is for presentation purposes only.\n\n20",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_20.md",
+    "processed_at": "2025-07-03T12:32:50.594825",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "page_id": "page_30",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides the catalog numbers and descriptions of the instruments included in the Trident II Auxiliary Trials Tray (7000-0103).",
+  "keywords": [
+    "Trident II",
+    "Auxiliary Trials Tray",
+    "Catalog Number",
+    "Description",
+    "Surgical Protocol"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Instruments in Trident II Auxiliary Trials Tray (7000-0103)",
+      "description": "The table provides the catalog numbers and descriptions of the instruments included in the Trident II Auxiliary Trials Tray (7000-0103).",
+      "columns": [
+        "Catalog Number (Left Column)",
+        "Description (Left Column)",
+        "Catalog Number (Right Column)",
+        "Description (Right Column)"
+      ],
+      "rows": [
+        [
+          "6264-8-040R",
+          "40mm V40 Femoral Head Trial; -4mm",
+          "2240-36F",
+          "F Insert Trial: 36 0º Eccentric"
+        ],
+        [
+          "6264-8-940R",
+          "40mm V40 Femoral Head Trial; -2.5mm",
+          "2250-36F",
+          "F Insert Trial: 36 10º Eccentric"
+        ],
+        [
+          "6264-8-140R",
+          "40mm V40 Femoral Head Trial; 0mm",
+          "2200-40G",
+          "G Insert Trial: 40 0º"
+        ],
+        [
+          "6264-8-240R",
+          "40mm V40 Femoral Head Trial; +4mm",
+          "2260-36G",
+          "G Insert Trial: 36 Elevated"
+        ],
+        [
+          "6264-8-340R",
+          "40mm V40 Femoral Head Trial; +8mm",
+          "2240-36G",
+          "G Insert Trial: 36 0º Eccentric"
+        ],
+        [
+          "6264-8-440R",
+          "40mm V40 Femoral Head Trial; +12mm",
+          "2250-36G",
+          "G Insert Trial: 36 10º Eccentric"
+        ],
+        [
+          "2200-28B",
+          "B Insert Trial: 28 0º Eccentric",
+          "2200-40H",
+          "H Insert Trial: 40 0º"
+        ],
+        [
+          "2260-28C",
+          "C Insert Trial: 28 Elevated",
+          "2200-36H",
+          "H Insert Trial: 36 0º"
+        ],
+        [
+          "2240-28C",
+          "C Insert Trial: 28 0º Eccentric",
+          "2210-36H",
+          "H Insert Trial: 36 10º"
+        ],
+        [
+          "2250-28C",
+          "C Insert Trial: 28 10º Eccentric",
+          "2250-36H",
+          "H Insert Trial: 36 10º Eccentric"
+        ],
+        [
+          "2260-28D",
+          "D Insert Trial: 28 Elevated",
+          "2240-36H",
+          "H Insert Trial: 36 0º Eccentric"
+        ],
+        [
+          "2240-32D",
+          "D Insert Trial: 32 0º Eccentric",
+          "7002-0163",
+          "Window Trial: 63mm"
+        ],
+        [
+          "2250-32D",
+          "D Insert Trial: 32 10º Eccentric",
+          "7002-0164",
+          "Window Trial: 64mm"
+        ],
+        [
+          "2200-40E",
+          "E Insert Trial: 40 0º",
+          "7002-0165",
+          "Window Trial: 65mm"
+        ],
+        [
+          "2260-36E",
+          "E Insert Trial: 36 Elevated",
+          "7002-0166",
+          "Window Trial: 66mm"
+        ],
+        [
+          "2240-36E",
+          "E Insert Trial: 36 0º Eccentric",
+          "Optional",
+          ""
+        ],
+        [
+          "2250-36E",
+          "E Insert Trial: 36 10º Eccentric",
+          "7003-0000",
+          "Trial Insert Hex Containment Screw Kit (10 per pack)"
+        ],
+        [
+          "2200-40F",
+          "F insert Trial: 40 0º",
+          "",
+          ""
+        ],
+        [
+          "2260-36F",
+          "F Insert Trial: 36 Elevated",
+          "",
+          ""
+        ]
+      ],
+      "metadata": {
+        "row_count": 19,
+        "column_count": 4,
+        "data_types": [
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "units": [
+          "Catalog Number",
+          "Description",
+          "Catalog Number",
+          "Description"
+        ],
+        "technical_category": "specifications"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Catalog Information\n\n### Instruments\n\n#### Trident II Auxiliary Trials Tray (7000-0103)\n\nThe following table provides the catalog numbers and descriptions of the instruments included in the Trident II Auxiliary Trials Tray (7000-0103).\n\n| Catalog Number (Left Column) | Description (Left Column) | Catalog Number (Right Column) | Description (Right Column) |\n| ---------------------------- | ------------------------- | ----------------------------- | -------------------------- |\n| 6264-8-040R | 40mm V40 Femoral Head Trial; -4mm | 2240-36F | F Insert Trial: 36 0º Eccentric |\n| 6264-8-940R | 40mm V40 Femoral Head Trial; -2.5mm | 2250-36F | F Insert Trial: 36 10º Eccentric |\n| 6264-8-140R | 40mm V40 Femoral Head Trial; 0mm | 2200-40G | G Insert Trial: 40 0º |\n| 6264-8-240R | 40mm V40 Femoral Head Trial; +4mm | 2260-36G | G Insert Trial: 36 Elevated |\n| 6264-8-340R | 40mm V40 Femoral Head Trial; +8mm | 2240-36G | G Insert Trial: 36 0º Eccentric |\n| 6264-8-440R | 40mm V40 Femoral Head Trial; +12mm | 2250-36G | G Insert Trial: 36 10º Eccentric |\n| 2200-28B | B Insert Trial: 28 0º Eccentric | 2200-40H | H Insert Trial: 40 0º |\n| 2260-28C | C Insert Trial: 28 Elevated | 2200-36H | H Insert Trial: 36 0º |\n| 2240-28C | C Insert Trial: 28 0º Eccentric | 2210-36H | H Insert Trial: 36 10º |\n| 2250-28C | C Insert Trial: 28 10º Eccentric | 2250-36H | H Insert Trial: 36 10º Eccentric |\n| 2260-28D | D Insert Trial: 28 Elevated | 2240-36H | H Insert Trial: 36 0º Eccentric |\n| 2240-32D | D Insert Trial: 32 0º Eccentric | 7002-0163 | Window Trial: 63mm |\n| 2250-32D | D Insert Trial: 32 10º Eccentric | 7002-0164 | Window Trial: 64mm |\n| 2200-40E | E Insert Trial: 40 0º | 7002-0165 | Window Trial: 65mm |\n| 2260-36E | E Insert Trial: 36 Elevated | 7002-0166 | Window Trial: 66mm |\n| 2240-36E | E Insert Trial: 36 0º Eccentric | Optional |  |\n| 2250-36E | E Insert Trial: 36 10º Eccentric | 7003-0000 | Trial Insert Hex Containment Screw Kit (10 per pack) |\n| 2200-40F | F insert Trial: 40 0º |  |  |\n| 2260-36F | F Insert Trial: 36 Elevated |  |  |",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_30.md",
+    "processed_at": "2025-07-03T12:35:58.562073",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

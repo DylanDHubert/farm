@@ -1,0 +1,79 @@
+{
+  "page_id": "page_19",
+  "title": "Appendix C: Removal of the Insert and Shell",
+  "summary": "This document provides detailed instructions for the removal of various components of a medical device, including the Polyethylene Insert, MDM Liner, Ceramic Insert, and Trident II Shell. It also provides guidance on revising the Trident II Shell with a Trident Insert.",
+  "keywords": [
+    "Polyethylene Insert Removal",
+    "MDM Liner Removal",
+    "Ceramic Insert Removal",
+    "Trident II Shell Removal",
+    "Trident Insert Revision"
+  ],
+  "tables": [
+    {
+      "table_id": "table_1",
+      "title": "Figures 21 and 22",
+      "description": "Visual representation of the Polyethylene Insert Removal process.",
+      "columns": [
+        "Figure 21",
+        "Figure 22"
+      ],
+      "rows": [
+        [
+          "Figure 21.",
+          "Figure 22."
+        ]
+      ],
+      "metadata": {
+        "row_count": 1,
+        "column_count": 2,
+        "data_types": [
+          "text",
+          "text"
+        ],
+        "units": [
+          "NA",
+          "NA"
+        ],
+        "technical_category": "visual_representation"
+      }
+    },
+    {
+      "table_id": "table_2",
+      "title": "Figures 23 and 24",
+      "description": "Visual representation of the Ceramic Insert Removal process.",
+      "columns": [
+        "Figure 23",
+        "Figure 24"
+      ],
+      "rows": [
+        [
+          "Figure 23.",
+          "Figure 24."
+        ]
+      ],
+      "metadata": {
+        "row_count": 1,
+        "column_count": 2,
+        "data_types": [
+          "text",
+          "text"
+        ],
+        "units": [
+          "NA",
+          "NA"
+        ],
+        "technical_category": "visual_representation"
+      }
+    }
+  ],
+  "raw_content": "## Appendix C\n\n### Removal of the Insert and Shell\n\n#### Polyethylene Insert Removal\nUse a 3.3mm Drill Bit to create an off-center hole in the polyethylene insert. Care must be taken to avoid drilling through an unused screw hole and into the wall of the acetabulum. Use the T-Handle (1101-2100) to thread the Polyethylene Insert Removal Tool (2112-0010) into the insert, and advance the tool to the medial wall of the shell to dislodge the insert (Figures 21 and 22). If the Polyethylene Insert Removal Tool is not available, then a 6.5mm Cancellous Screw may be used.\n\n#### MDM Liner Removal\nShould it become necessary to remove the MDM Liner from the Trident II Shell, refer to the MDM X3 surgical technique.\n\n#### Ceramic Insert Removal\nThe Trident Alumina Insert Removal Tool is designed to provide the surgeon with two options for extracting the ceramic insert from the Trident shell.\n\n##### Option 1: Flat Head\nConnect the T-Handle to the L-shaped end of the removal tool. Insert the flat end of the removal tool between the shell and ceramic insert at one of the four notches at the shell rim. While applying continuous force toward the center of the shell, twist the T-Handle (like a screwdriver), to dislodge the ceramic insert (Figure 24). It may be required to repeat this procedure at the other notches in order to successfully disengage the taper.\n\n##### Option 2: L-Shaped\nInsert the L-shaped end of the removal tool between the shell and ceramic insert at one of the four notches at the shell rim. Apply continuous force toward the center of the shell, and lever the tool in a plane tangent to the shell's outside edge to dislodge the ceramic insert (Figure 24). It may be required to repeat this procedure at the other notches in order to successfully disengage the taper.\n\nThe removal tool may be attached to the Insert Positioner/ Impactor Handle to increase leverage and length for larger patients.\n\n#### Trident II Shell Removal\nShould removal of the metal shell become necessary, a curved osteotome, compatible cup removal system or small burr can be passed around the cup periphery to loosen the fixation interface. The Shell Impactor is then threaded into the dome hole of the cup. Gently impact the impaction pad with a mallet to assist with shell removal.\n\n### Notes\n\n- An alternative shell removal technique is to toggle the shell to loosen it and remove it by hand. Use caution when using shell extraction devices.\n- Having a clear view of the rim of the acetabulum will allow easier visualization of the shell slots and indexing barbs for proper positioning and seating of the insert.\n\n### Revising the Trident II Shell with a Trident Insert\nShould it become necessary to remove the insert, a new Polyethylene Insert can be inserted into the Trident II Shell.\n\n1. Carefully remove the Trident Insert (refer to instructions above) and inspect the shell locking mechanism for any potential damage. If the locking mechanism is damaged during liner removal, the shell should not be used.\n\n2. The Trident Insert Trials are used to evaluate the shell face position and provide a final check of hip biomechanics. Polyethylene inserts are available in various configurations and sizes, including 0°, 10° and constrained insert options. The polyethylene inserts provide 12 different insert orientations within the shell to facilitate optimal joint stability.\n\n3. Follow Appendix A: Insert liner.\n\n| Figure 21 | Figure 22 |\n|:---------:|:---------:|\n| ![Figure 21](Figure 21.) | ![Figure 22](Figure 22.) |\n\n| Figure 23 | Figure 24 |\n|:---------:|:---------:|\n| ![Figure 23](Figure 23.) | ![Figure 24](Figure 24.) |",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_19.md",
+    "processed_at": "2025-07-03T12:32:13.293210",
+    "model_used": "gpt-4",
+    "tables_found": 2,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "page_id": "page_6",
+  "title": "Trident II Clusterhole HA Surgical Protocol",
+  "summary": "This document provides a detailed compatibility chart for the MDM Liner and Insert with various sizes of the Trident II Clusterhole HA Shell. The sizes are given in millimeters (mm) and the alpha codes are provided for the liners. The table also includes the outer and inner diameters of the Poly Insert, as well as the nominal thickness of the Poly.",
+  "keywords": [
+    "Trident II Clusterhole HA Shell",
+    "MDM CoCr Liner",
+    "Poly Insert",
+    "Compatibility",
+    "Surgical Protocol"
+  ],
+  "tables": [
+    {
+      "table_id": "table_2",
+      "title": "Compatibility of MDM Liner and Insert with Trident II Shells",
+      "description": "The table provides a detailed compatibility chart for the MDM Liner and Insert with various sizes of the Trident II Clusterhole HA Shell.",
+      "columns": [
+        "Shell Size (in mm) and Liner Alpha Code",
+        "Size 46",
+        "Sizes 48, 50",
+        "Sizes 52, 54",
+        "Sizes 56, 58",
+        "Sizes 60, 62",
+        "Sizes 64, 66"
+      ],
+      "rows": [
+        [
+          "Trident II Clusterhole HA Shell",
+          "46",
+          "48, 50",
+          "52, 54",
+          "56, 58",
+          "60, 62",
+          "64, 66"
+        ],
+        [
+          "Liner Alpha Code",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        [
+          "MDM CoCr Liner",
+          "36C",
+          "38D",
+          "42E",
+          "46F",
+          "48G",
+          "52H"
+        ],
+        [
+          "Poly Insert Outer Diameter (in mm)",
+          "36",
+          "38",
+          "42",
+          "46",
+          "48",
+          "52"
+        ],
+        [
+          "Poly Insert Inner Diameter (in mm)",
+          "22.2",
+          "22.2",
+          "28",
+          "28",
+          "28",
+          "28"
+        ],
+        [
+          "Nominal Poly Thickness (in mm)",
+          "6.7",
+          "7.7",
+          "6.8",
+          "8.8",
+          "9.8",
+          "11.8"
+        ]
+      ],
+      "metadata": {
+        "row_count": 6,
+        "column_count": 7,
+        "data_types": [
+          "text",
+          "numeric"
+        ],
+        "units": [
+          "mm"
+        ],
+        "technical_category": "compatibility"
+      }
+    }
+  ],
+  "raw_content": "# Trident II Clusterhole HA Surgical Protocol\n\n## Table 2: Compatibility of MDM Liner and Insert with Trident II Shells\n\n| Shell Size (in mm) and Liner Alpha Code | Size 46 | Sizes 48, 50 | Sizes 52, 54 | Sizes 56, 58 | Sizes 60, 62 | Sizes 64, 66 |\n|-----------------------------------------|---------|--------------|--------------|--------------|--------------|--------------|\n| Trident II Clusterhole HA Shell         | 46      | 48, 50       | 52, 54       | 56, 58       | 60, 62       | 64, 66       |\n| Liner Alpha Code                        | C       | D            | E            | F            | G            | H            |\n| MDM CoCr Liner                          | 36C     | 38D          | 42E          | 46F          | 48G          | 52H          |\n| Poly Insert Outer Diameter (in mm)      | 36      | 38           | 42           | 46           | 48           | 52           |\n| Poly Insert Inner Diameter (in mm)      | 22.2    | 22.2         | 28           | 28           | 28           | 28           |\n| Nominal Poly Thickness (in mm)          | 6.7     | 7.7          | 6.8          | 8.8          | 9.8          | 11.8         |\n\nThe table above provides a detailed compatibility chart for the MDM Liner and Insert with various sizes of the Trident II Clusterhole HA Shell. The sizes are given in millimeters (mm) and the alpha codes are provided for the liners. The table also includes the outer and inner diameters of the Poly Insert, as well as the nominal thickness of the Poly.\n\nAdditional Components:\n- Trident II Clusterhole HA Shell\n- MDM CoCr Liner\n- Alumina Ceramic Liner\n- X3 Polyethylene Insert\n- Trident Constrained Insert\n- Alumina Ceramic Femoral Head\n- LFIT CoCr Femoral Head\n- BIOLOX delta Ceramic Head\n- 6",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_6.md",
+    "processed_at": "2025-07-03T12:37:19.972993",
+    "model_used": "gpt-4",
+    "tables_found": 1,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}

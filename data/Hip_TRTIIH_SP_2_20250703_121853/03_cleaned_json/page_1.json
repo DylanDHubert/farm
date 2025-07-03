@@ -1,0 +1,22 @@
+{
+  "page_id": "page_1",
+  "title": "Trident® II Clusterhole HA Acetabular System Surgical Protocol",
+  "summary": "This document provides a detailed overview of the Trident® II Clusterhole HA Acetabular System, focusing on the hemispherical implant component. The component features a textured surface and multiple circular holes distributed across its dome.",
+  "keywords": [
+    "Trident® II Clusterhole HA",
+    "Acetabular System",
+    "Surgical Protocol",
+    "hemispherical implant component",
+    "textured surface"
+  ],
+  "tables": [],
+  "raw_content": "# Trident® II Clusterhole HA\n\n## Acetabular System\n\n### Surgical Protocol\n\nThe following image illustrates a hemispherical implant component that is part of the Trident® II Clusterhole HA Acetabular System. The component features a textured surface and multiple circular holes distributed across its dome.\n\n[The image shows a hemispherical implant component with a textured surface and multiple circular holes distributed across its dome.]",
+  "processing_metadata": {
+    "source_file": "processed_documents/Hip_TRTIIH_SP_2_20250703_121853/02_enhanced_markdown/page_1.md",
+    "processed_at": "2025-07-03T12:29:27.318484",
+    "model_used": "gpt-4",
+    "tables_found": 0,
+    "document_id": "Hip_TRTIIH_SP_2_20250703_121853",
+    "stage": "03_cleaned_json"
+  }
+}
