@@ -1,32 +1,40 @@
 """
 Toolshed - Collection of RAG Tools
 
-The toolshed contains all the specialized tools for the PB&J RAG system:
-- Pitchfork: Table data access and manipulation
-- Sickle: Keyword-based content search
-- Scythe: Semantic/embedding-based search (future)
+The toolshed contains all the specialized tools for the PB&J RAG system,
+organized by phase: Discovery, Exploration, and Retrieval.
 
-Each tool is designed to handle specific types of data access patterns,
+Each phase contains tools designed for specific data access patterns,
 enabling the Barn to intelligently orchestrate them based on user queries.
 """
 
-from src.toolshed.pitchfork import Pitchfork
-from src.toolshed.sickle import Sickle
-from src.toolshed.scythe import Scythe
-from models.table import TableInfo, TableRow
-from models.search import SearchResult, SemanticSearchResult
+# Import all tool classes from each phase
+from src.toolshed.discovery import PageDiscovery, KeywordDiscovery, TableDiscovery
+from src.toolshed.exploration import TableExplorer, RelevanceFinder
+from src.toolshed.retrieval import TableRetriever, RowRetriever, PageRetriever
+
+# Import models
+from src.models.table import TableInfo, TableRow
+from src.models.search import SearchResult, SemanticSearchResult
 
 __all__ = [
-    # Pitchfork tools
-    "Pitchfork",
+    # Discovery tools
+    "PageDiscovery",
+    "KeywordDiscovery", 
+    "TableDiscovery",
+    
+    # Exploration tools
+    "TableExplorer",
+    "RelevanceFinder",
+    
+    # Retrieval tools
+    "TableRetriever",
+    "RowRetriever",
+    "PageRetriever",
+    
+    # Models
     "TableInfo", 
     "TableRow",
-    
-    # Sickle tools
-    "Sickle",
     "SearchResult",
-    
-    # Scythe tools
-    "Scythe",
     "SemanticSearchResult",
 ] 

@@ -1,64 +1,96 @@
-# 🌾 Farm-Themed PB&J Data Tools
+# 🌾 Farm-Themed PB&J RAG System
 
-A modular, farm-themed architecture for managing and querying structured document data from PB&J pipeline outputs. Built with separation of concerns and extensibility in mind.
+A modular, farm-themed RAG (Retrieval-Augmented Generation) system for intelligent document data retrieval and analysis. Built with a 3-phase approach and clean separation of concerns.
 
 ## 🏗️ Architecture Overview
 
-The system is organized around a farm metaphor:
+The system implements a **3-phase approach** for intelligent data retrieval:
 
-- **🌾 Silo**: Base data storage and organization
-- **🔪 Sickle**: Fast keyword search (cuts through data like a sickle through wheat)
-- **🍴 Pitchfork**: Table access and filtering (organizes data like a pitchfork organizes hay)
-- **🌾 Scythe**: Semantic search (future implementation)
-- **👨‍🌾 Farmer**: Manager and orchestrator
-- **🏠 Barn**: RAG agent for conversational queries
+- **🔍 Discovery**: Understanding what data is available
+- **🔎 Exploration**: Finding relevant data for a query  
+- **📥 Retrieval**: Getting specific data for analysis
+
+### Core Components
+
+- **🌾 Silo**: Data foundation and storage
+- **🏠 Barn**: Main RAG agent with 3-phase orchestration
+- **👨‍🌾 Farmer**: Unified access layer for external applications
+- **🛠️ Toolshed**: Phase-based tools organized by functionality
 
 ## 📁 File Structure
 
 ```
-├── silo.py              # Base data storage class
-├── sickle.py            # Keyword search engine
-├── pitchfork.py         # Table access and filtering
-├── scythe.py            # Semantic search (stub)
-├── farmer.py            # Manager and orchestrator
-├── barn.py              # RAG agent for conversational queries
-├── demo_farm.py         # Comprehensive demo script
-├── demo_barn.py         # Barn RAG agent demo
-└── README.md            # This documentation
+├── src/
+│   ├── silo.py                    # Data foundation and storage
+│   ├── barn.py                    # Main RAG agent (3-phase orchestration)
+│   ├── farmer.py                  # Unified access layer
+│   ├── toolshed/                  # Phase-based tools
+│   │   ├── discovery/             # Phase 1: Discovery tools
+│   │   │   ├── page_discovery.py
+│   │   │   ├── keyword_discovery.py
+│   │   │   └── table_discovery.py
+│   │   ├── exploration/           # Phase 2: Exploration tools
+│   │   │   ├── table_explorer.py
+│   │   │   └── relevance_finder.py
+│   │   └── retrieval/             # Phase 3: Retrieval tools
+│   │       ├── table_retriever.py
+│   │       ├── row_retriever.py
+│   │       └── page_retriever.py
+│   └── models/                    # Data models
+├── devtools/
+│   └── streamlit_app.py          # Streamlit demo application
+├── data/                         # Sample data
+├── docs.md                       # Detailed documentation
+├── toolkit.md                    # Tool reference
+└── README.md                     # This documentation
 ```
 
 ## 🚀 Quick Start
 
+### Basic Usage (Recommended)
+
 ```python
-from farmer import Farmer
+from src.farmer import Farmer
 
-# Initialize the farmer
-farmer = Farmer()
+# Initialize with data
+farmer = Farmer(data_path="data/final_output.json")
 
-# Load a document
-farmer.load_document("doc_id", "path/to/final_output.json")
+# Ask questions
+response = farmer.ask("What are the nutritional values of peanut butter?")
+print(response.answer)
 
-# Search for content
-results = farmer.search("peanut butter", search_type="all", limit=5)
+# Get just the answer
+answer = farmer.get_answer("How many calories are in a serving?")
+print(answer)
+```
 
-# Get table catalog
-tables = farmer.get_table_catalog()
+### Advanced Usage
 
-# Get specific table
-table_data = farmer.get_table_by_id("table_1")
+```python
+from src.barn import Barn
+
+# Initialize with LLM
+barn = Barn(
+    data_path="data/final_output.json",
+    llm_client=openai_client
+)
+
+# Direct tool calling
+pages = barn.call_tool("view_pages")
+relevant_tables = barn.call_tool("find_relevant_tables", search_query="nutrition")
 ```
 
 ## 📚 Detailed Documentation
 
-### 🌾 Silo - Base Data Storage
+### 🌾 Silo - Data Foundation
 
-**Purpose**: Standalone data container that loads and organizes structured data from multiple PB&J pipeline outputs.
+**Purpose**: Standalone data container that loads and organizes structured data from PB&J pipeline outputs.
 
 **Key Features**:
 - Multi-document support
 - Unified data access
 - Document metadata tracking
-- No search or retrieval logic (pure data storage)
+- Pure data storage (no search logic)
 
 **Main Methods**:
 - `load_document(doc_id, data_path)` - Load single document
@@ -69,7 +101,7 @@ table_data = farmer.get_table_by_id("table_1")
 
 **Usage**:
 ```python
-from silo import Silo
+from src.silo import Silo
 
 silo = Silo()
 silo.load_document("doc1", "path/to/data.json")
@@ -77,303 +109,348 @@ pages = silo.get_all_pages()
 tables = silo.get_all_tables()
 ```
 
-### 🔪 Sickle - Keyword Search Engine
+### 🏠 Barn - Main RAG Agent
 
-**Purpose**: Fast, efficient keyword-based search across pages, tables, and metadata with support for page-level results and future PDF highlighting.
-
-**Key Features**:
-- Fast keyword indexing
-- Multiple search types (all, pages, tables, titles)
-- Page number support for PDF highlighting
-- Keyword-based scoring and ranking
-- Context-aware results
-
-**Main Methods**:
-- `build_index()` - Build search index from silo data
-- `search(query, search_type, limit)` - Search with natural language query
-- `search_by_keywords(keywords, search_type, limit)` - Search with specific keywords
-- `get_page_by_number(page_number)` - Get page by number for PDF highlighting
-- `get_available_keywords()` - Get all indexed keywords
-
-**Usage**:
-```python
-from sickle import Sickle
-from silo import Silo
-
-silo = Silo()
-silo.load_document("doc1", "path/to/data.json")
-
-sickle = Sickle(silo)
-sickle.build_index()
-
-# Search for content
-results = sickle.search("compatibility", search_type="all", limit=5)
-
-# Search by specific keywords
-results = sickle.search_by_keywords(["jelly", "jam"], search_type="tables")
-```
-
-### 🍴 Pitchfork - Table Access Tool
-
-**Purpose**: Comprehensive table access, filtering, and organization capabilities across multiple documents.
+**Purpose**: Intelligent RAG agent that orchestrates the 3-phase approach for document data retrieval and analysis.
 
 **Key Features**:
-- Table cataloging and metadata
-- Category-based filtering
-- Row-level filtering and search
-- Table statistics and analysis
-- Document and page context
-
-**Main Methods**:
-- `build_catalog()` - Build comprehensive table catalog
-- `get_table_catalog()` - Get all available tables
-- `get_tables_by_category(category)` - Filter by technical category
-- `get_table_rows(table_id, criteria)` - Get rows with optional filtering
-- `search_table_values(table_id, search_term)` - Search within table values
-- `get_table_statistics(table_id)` - Get comprehensive table statistics
-
-**Usage**:
-```python
-from pitchfork import Pitchfork
-from silo import Silo
-
-silo = Silo()
-silo.load_document("doc1", "path/to/data.json")
-
-pitchfork = Pitchfork(silo)
-pitchfork.build_catalog()
-
-# Get all compatibility tables
-compatibility_tables = pitchfork.get_compatibility_tables()
-
-# Get table rows with filtering
-rows = pitchfork.get_table_rows("table_1", {"category": "small"})
-
-# Search within table
-matches = pitchfork.search_table_values("table_1", "bread")
-```
-
-### 🌾 Scythe - Semantic Search (Stub)
-
-**Purpose**: Future semantic/embedding-based search that understands meaning, not just keywords.
-
-**Status**: Stub implementation - ready for future development
-
-**Planned Features**:
-- Embedding-based search
-- Semantic similarity matching
-- Meaning-aware ranking
-- Integration with language models
-
-**Usage** (future):
-```python
-from scythe import Scythe
-from silo import Silo
-
-silo = Silo()
-silo.load_document("doc1", "path/to/data.json")
-
-scythe = Scythe(silo)
-scythe.build_embeddings()
-
-# Semantic search
-results = scythe.semantic_search("What are the nutritional benefits?")
-```
-
-### 👨‍🌾 Farmer - Manager and Orchestrator
-
-**Purpose**: Unified interface that orchestrates all farm tools and provides a comprehensive API for working with PB&J data.
-
-**Key Features**:
-- Automatic tool initialization
-- Unified search interface
-- Comprehensive data overview
-- Document management
-- Statistics and monitoring
-
-**Main Methods**:
-- `load_document(doc_id, data_path)` - Load document and initialize tools
-- `search(query, search_type, limit)` - Unified search interface
-- `get_table_catalog()` - Get all available tables
-- `get_data_overview()` - Get comprehensive data overview
-- `get_farm_stats()` - Get statistics about all tools
-
-**Usage**:
-```python
-from farmer import Farmer
-
-farmer = Farmer()
-farmer.load_document("doc1", "path/to/data.json")
-
-# Search for content
-results = farmer.search("peanut butter", search_type="all", limit=5)
-
-# Get table catalog
-tables = farmer.get_table_catalog()
-
-# Get data overview
-overview = farmer.get_data_overview()
-```
-
-### 🏠 Barn - RAG Agent
-
-**Purpose**: Conversational interface for PB&J data that provides intelligent responses based on retrieved context from the Farmer.
-
-**Key Features**:
-- Conversational query interface
-- Context-aware response generation
-- Integration with Farmer for data access
-- Configurable LLM backends
+- 3-phase processing (Discovery, Exploration, Retrieval)
+- LLM integration for response generation
+- Tool registry and function-calling support
 - Structured response formatting
-- Source attribution and confidence scoring
+- Context-aware query processing
 
 **Main Methods**:
-- `query(question, search_type)` - Process conversational query
-- `set_llm_client(llm_client)` - Set LLM client for response generation
-- `set_prompt_template(template)` - Set custom prompt template
-- `get_data_overview()` - Get overview of available data
-- `get_available_documents()` - Get list of available document IDs
+- `query(question)` - Process natural language queries
+- `call_tool(tool_name, **kwargs)` - Call specific tools
+- `get_tools_for_function_calling()` - Get tools for LLM integration
+- `set_llm_client(api_key, model)` - Configure LLM
 
 **Usage**:
 ```python
-from barn import Barn
+from src.barn import Barn
 
-# Initialize Barn with data
-barn = Barn("path/to/pb&j_data")
+barn = Barn(data_path="data/final_output.json")
 
-# Set up LLM client (optional)
-# barn.set_llm_client(your_llm_client)
+# Process queries
+response = barn.query("What are the compatibility issues?")
 
-# Ask questions conversationally
-response = barn.query("What are the main ingredients in peanut butter?")
-
-print(f"Answer: {response.answer}")
-print(f"Sources: {len(response.sources)}")
-print(f"Confidence: {response.context.confidence_score}")
-
-# Customize prompt template
-custom_prompt = """You are a helpful cooking assistant.
-
-Context Information:
-{context}
-
-User Question: {question}
-
-Please provide a clear, helpful answer based on the context.
-
-Answer:"""
-
-barn.set_prompt_template(custom_prompt)
+# Direct tool access
+pages = barn.call_tool("view_pages")
+tables = barn.call_tool("view_tables")
 ```
 
-**Response Structure**:
+### 👨‍🌾 Farmer - Unified Access Layer
+
+**Purpose**: Simple, clean interface for external applications that abstracts away the complexity of the 3-phase approach.
+
+**Key Features**:
+- Easy-to-use methods for common operations
+- Automatic 3-phase processing
+- LLM configuration
+- Comprehensive data access
+
+**Main Methods**:
+- `ask(question)` - Ask questions and get comprehensive responses
+- `get_answer(question)` - Get just the answer text
+- `get_sources(question)` - Get sources used to answer
+- `get_pages()` - Get overview of available pages
+- `get_tables()` - Get overview of available tables
+- `find_tables(search_query)` - Find relevant tables
+- `get_table_data(table_name)` - Get table data
+
+**Usage**:
+```python
+from src.farmer import Farmer
+
+farmer = Farmer(data_path="data/final_output.json")
+
+# Ask questions
+response = farmer.ask("What are the nutritional values?")
+print(response.answer)
+
+# Discovery operations
+pages = farmer.get_pages()
+keywords = farmer.get_keywords()
+tables = farmer.get_tables()
+
+# Exploration operations
+relevant_tables = farmer.find_tables("nutrition")
+table_summary = farmer.get_table_summary("Nutrition Information")
+
+# Retrieval operations
+table_data = farmer.get_table_data("Nutrition Information")
+rows = farmer.get_rows("Nutrition Information", "Item", "Peanut Butter")
+```
+
+### 🛠️ Toolshed - Phase-Based Tools
+
+The toolshed contains specialized tools organized by the 3-phase approach:
+
+#### Phase 1: Discovery Tools
+- **PageDiscovery**: Overview of available pages
+- **KeywordDiscovery**: Overview of available keywords  
+- **TableDiscovery**: Overview of available tables
+
+#### Phase 2: Exploration Tools
+- **TableExplorer**: Detailed table analysis and summaries
+- **RelevanceFinder**: Finding relevant tables and pages for queries
+
+#### Phase 3: Retrieval Tools
+- **TableRetriever**: Getting table data with filtering
+- **RowRetriever**: Getting specific table rows
+- **PageRetriever**: Getting page content
+
+## 🔧 3-Phase Processing
+
+### Phase 1: Discovery
+Understanding what data is available in the system.
+
+```python
+# Get overview of available data
+pages = farmer.get_pages()      # All pages with titles and numbers
+keywords = farmer.get_keywords() # All available keywords
+tables = farmer.get_tables()    # All tables with categories
+```
+
+### Phase 2: Exploration
+Finding relevant data for a specific query.
+
+```python
+# Find relevant data
+relevant_tables = farmer.find_tables("nutrition")
+relevant_pages = farmer.find_pages("peanut butter")
+
+# Get detailed summaries
+table_summary = farmer.get_table_summary("Nutrition Information")
+```
+
+### Phase 3: Retrieval
+Getting specific data for analysis.
+
+```python
+# Get table data
+table_data = farmer.get_table_data("Nutrition Information")
+rows = farmer.get_rows("Nutrition Information", "Item", "Peanut Butter")
+page_content = farmer.get_page_content("Page 1")
+```
+
+## 🤖 LLM Integration
+
+### Configuration
+
+```python
+# Configure LLM for better responses
+farmer.configure_llm(api_key="your-openai-api-key", model="gpt-3.5-turbo")
+
+# Or configure during initialization
+farmer = Farmer(
+    data_path="data/final_output.json",
+    llm_api_key="your-openai-api-key",
+    llm_model="gpt-4"
+)
+```
+
+### Function-Calling Support
+
+```python
+# Get tools for LLM integration
+tools = barn.get_tools_for_function_calling()
+
+# Use with OpenAI function calling
+response = client.chat.completions.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": "What are the nutritional values?"}],
+    tools=tools,
+    tool_choice="auto"
+)
+```
+
+## 📊 Response Structure
+
+The system returns structured responses with comprehensive context:
+
 ```python
 @dataclass
 class RAGResponse:
-    answer: str                    # Generated response
-    context: QueryContext         # Query context information
-    sources: List[Dict[str, Any]] # Source attribution
-    metadata: Dict[str, Any]      # Additional metadata
+    answer: str                    # Generated answer
+    context: QueryContext          # Query context and metadata
+    sources: List[Dict[str, Any]]  # Source information
+    metadata: Dict[str, Any]       # Additional metadata
 
 @dataclass
 class QueryContext:
-    question: str                 # Original question
-    retrieved_data: Dict[str, Any] # Retrieved context data
-    document_ids: List[str]       # Relevant document IDs
-    confidence_score: float       # Confidence in response
-    search_method: str           # Search method used
+    question: str                  # Original question
+    retrieved_data: Dict[str, Any] # Retrieved data from all phases
+    document_ids: List[str]        # Document IDs used
+    confidence_score: float        # Confidence in the answer
+    search_method: str             # Method used ("3-phase")
+    tools_used: List[str]          # Tools used in processing
 ```
 
-## 🔧 Installation and Setup
+## 🎯 Usage Examples
 
-1. **Requirements**: Python 3.7+
-2. **Dependencies**: Standard library only (no external dependencies)
-3. **Data Format**: Expects PB&J pipeline `final_output.json` files
+### Basic Query Processing
 
-## 📊 Data Structure
+```python
+from src.farmer import Farmer
 
-The system expects PB&J pipeline output with the following structure:
+farmer = Farmer(data_path="data/final_output.json")
+
+# Simple question answering
+response = farmer.ask("What are the nutritional values of peanut butter?")
+print(f"Answer: {response.answer}")
+print(f"Sources: {len(response.sources)} sources found")
+print(f"Tools used: {response.context.tools_used}")
+```
+
+### Data Exploration
+
+```python
+# Get system overview
+stats = farmer.get_stats()
+print(f"Documents: {stats.total_documents}")
+print(f"Pages: {stats.total_pages}")
+print(f"Tables: {stats.total_tables}")
+print(f"Keywords: {stats.total_keywords}")
+
+# Explore available data
+pages = farmer.get_pages()
+for page in pages[:3]:
+    print(f"Page {page['page_number']}: {page['page_title']}")
+
+tables = farmer.get_tables()
+for table in tables[:3]:
+    print(f"Table: {table['table_title']} (Category: {table['category']})")
+```
+
+### Advanced Table Operations
+
+```python
+# Find relevant tables
+relevant_tables = farmer.find_tables("nutrition")
+for table in relevant_tables:
+    print(f"Relevant: {table['table_name']} (Score: {table['relevance_score']:.2f})")
+
+# Get table data
+table_data = farmer.get_table_data("Nutrition Information")
+print(f"Table has {table_data['row_count']} rows and {table_data['column_count']} columns")
+
+# Get specific rows
+rows = farmer.get_rows("Nutrition Information", "Item", "Peanut Butter")
+for row in rows['rows']:
+    print(f"Row: {row}")
+```
+
+### LLM-Enhanced Responses
+
+```python
+# Configure LLM
+farmer.configure_llm(api_key="your-openai-api-key", model="gpt-4")
+
+# Get enhanced responses
+response = farmer.ask("Compare the nutritional values of peanut butter and jelly")
+print(response.answer)
+
+# Get sources
+sources = farmer.get_sources("What are the main ingredients?")
+for source in sources:
+    print(f"Source: {source['type']} - {source['title']}")
+```
+
+## 🚀 Installation and Setup
+
+### Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+### Environment Variables
+
+Create a `.env` file for LLM configuration:
+
+```env
+OPENAI_API_KEY=your-openai-api-key-here
+OPENAI_MODEL=gpt-3.5-turbo
+```
+
+### Data Format
+
+The system expects PB&J pipeline output in JSON format:
 
 ```json
 {
-  "document_info": {...},
-  "document_summary": {
-    "combined_keywords": [...]
-  },
-  "pages": [
-    {
-      "page_id": "page_1",
-      "title": "...",
-      "summary": "...",
-      "keywords": [...],
-      "tables": [...]
-    }
-  ]
+  "pages": [...],
+  "tables": [...],
+  "keywords": [...],
+  "metadata": {...}
 }
 ```
 
-## 🎯 Use Cases
+## 🔍 Error Handling
 
-### RAG Systems
-- **Document Retrieval**: Use Sickle for fast keyword-based document retrieval
-- **Table Access**: Use Pitchfork for structured data queries
-- **Context Building**: Combine search results for context generation
+The system includes comprehensive error handling:
 
-### Data Analysis
-- **Table Statistics**: Use Pitchfork for comprehensive table analysis
-- **Data Filtering**: Filter tables and rows by various criteria
-- **Cross-Document Analysis**: Analyze data across multiple documents
-
-### PDF Integration
-- **Page Highlighting**: Use page numbers for PDF annotation
-- **Content Mapping**: Map search results to specific PDF pages
-- **Document Navigation**: Navigate between documents and pages
-
-## 🔄 Extending the System
-
-### Adding New Tools
-1. Create a new tool class that accepts a `Silo` instance
-2. Implement the tool's functionality
-3. Add the tool to the `Farmer` class
-4. Update the `Farmer.is_ready()` method
-
-### Adding New Search Types
-1. Extend the `Sickle` class with new search methods
-2. Add corresponding methods to the `Farmer` class
-3. Update documentation and demos
-
-### Adding New Table Operations
-1. Extend the `Pitchfork` class with new table operations
-2. Add corresponding methods to the `Farmer` class
-3. Update documentation and demos
-
-## 🧪 Testing
-
-Run the comprehensive demo:
-```bash
-python3 demo_farm.py
+```python
+try:
+    response = farmer.ask("What is the nutritional content?")
+    print(response.answer)
+except ValueError as e:
+    print(f"System not ready: {e}")
+except Exception as e:
+    print(f"Error processing query: {e}")
 ```
 
-The demo showcases:
-- Document loading and statistics
-- Keyword search across different types
-- Table access and filtering
-- Page-level access
-- Advanced queries
-- Document management
+## 📈 Performance Considerations
+
+### Caching
+- Discovery results are cached during the session
+- Tool results are not cached by default for fresh data
+
+### LLM Optimization
+- Context is formatted efficiently for LLM consumption
+- Fallback responses available when LLM is not configured
+- Configurable context length limits
+
+### Tool Efficiency
+- Tools designed for minimal computational overhead
+- Relevance scoring uses efficient string matching
+- Table operations optimized for structured data
+
+## 🔮 Future Enhancements
+
+### Semantic Search
+- Integration with embedding-based search
+- Vector similarity for better relevance
+
+### Advanced Caching
+- Persistent caching of discovery and exploration results
+- Intelligent cache invalidation
+
+### Multi-Document Support
+- Enhanced support for multiple document types
+- Cross-document relationship mapping
+
+### Streaming Responses
+- Real-time response generation
+- Progressive disclosure of information
+
+## 📖 Additional Documentation
+
+- **[docs.md](docs.md)** - Detailed technical documentation
+- **[toolkit.md](toolkit.md)** - Complete tool reference
+- **[devtools/streamlit_app.py](devtools/streamlit_app.py)** - Interactive demo application
 
 ## 🤝 Contributing
 
-1. Follow the farm theme for naming
-2. Maintain separation of concerns
-3. Add comprehensive documentation
-4. Include demo examples
-5. Ensure type safety
+The system is designed for extensibility. Key areas for contribution:
 
-## 📝 License
+1. **New Tools**: Add tools to the appropriate phase in the toolshed
+2. **LLM Integration**: Enhance LLM response generation
+3. **Performance**: Optimize tool efficiency and caching
+4. **Documentation**: Improve examples and guides
 
-This project is part of the PB&J pipeline ecosystem.
+## 📄 License
 
----
-
-*Built with 🌾 farm tools for better data harvesting!* 
+This project is part of the PB&J pipeline ecosystem for intelligent document processing and analysis. 

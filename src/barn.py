@@ -1,14 +1,14 @@
 """
-Barn - The RAG Agent for Document Data
+Barn - The Main RAG Agent for Document Data
 
 The Barn serves as the main interface for conversational queries against processed
-document data. It intelligently orchestrates different tools (Pitchfork for tables,
-Sickle for content, Scythe for semantic search) based on the question type.
+document data. It intelligently orchestrates different tools based on the 3-phase
+approach: Discovery, Exploration, and Retrieval.
 
 Key Features:
 - Intelligent tool selection based on question analysis
 - Context-aware response generation
-- Integration with Farmer for data access
+- Integration with new phase-based tools
 - Configurable LLM backends
 - Structured response formatting
 - Function-calling support for tool orchestration
@@ -19,7 +19,11 @@ import logging
 import os
 from typing import Dict, List, Optional, Any, Union, Callable
 from dataclasses import dataclass
-from src.farmer import Farmer
+
+from src.silo import Silo
+from src.toolshed.discovery import PageDiscovery, KeywordDiscovery, TableDiscovery
+from src.toolshed.exploration import TableExplorer, RelevanceFinder
+from src.toolshed.retrieval import TableRetriever, RowRetriever, PageRetriever
 from src.models.table import TableInfo, TableRow
 from src.models.search import SearchResult, SemanticSearchResult
 
@@ -40,6 +44,7 @@ except ImportError:
                     os.environ[key] = value
     except FileNotFoundError:
         pass  # .env file doesn't exist, that's okay
+
 
 @dataclass
 class QueryContext:
@@ -70,22 +75,39 @@ class ToolDefinition:
     parameters: Dict[str, Any]  # JSON Schema for parameters
 
 
+@dataclass
+class FarmStats:
+    """Statistics about the farm's data and tools."""
+    total_documents: int
+    total_pages: int
+    total_tables: int
+    total_keywords: int
+    discovery_tools: int
+    exploration_tools: int
+    retrieval_tools: int
+
+
 class Barn:
     """
-    The RAG Agent for Document Data.
+    The Main RAG Agent for Document Data.
     
-    The Barn intelligently orchestrates different tools based on question analysis:
-    - Pitchfork: For table-specific queries and data extraction
-    - Sickle: For keyword-based content search
-    - Scythe: For semantic/embedding-based search (future)
+    The Barn intelligently orchestrates different tools based on the 3-phase approach:
+    - Discovery: Understanding what data is available
+    - Exploration: Finding relevant data for a query
+    - Retrieval: Getting specific data for analysis
     
     Attributes:
-        farmer (Farmer): The farmer instance for data access
+        silo (Silo): The silo instance for data storage
         llm_client: The LLM client for response generation
         prompt_template (str): Template for LLM prompts
         max_context_length (int): Maximum context length for LLM
         confidence_threshold (float): Minimum confidence for responses
         tools (Dict[str, ToolDefinition]): Registry of available tools
+        
+        # Phase-based tools
+        discovery_tools: Discovery phase tools
+        exploration_tools: Exploration phase tools
+        retrieval_tools: Retrieval phase tools
     """
     
     def __init__(self, 
@@ -104,17 +126,22 @@ class Barn:
             max_context_length: Maximum context length for LLM
             confidence_threshold: Minimum confidence for responses
         """
-        self.farmer = Farmer()
+        # Initialize data storage
+        self.silo = Silo()
         if data_path:
             # Load the document with a default ID
-            self.farmer.load_document("default", data_path)
+            self.load_document("default", data_path)
         
+        # Initialize LLM components
         self.llm_client = llm_client
         self.max_context_length = max_context_length
         self.confidence_threshold = confidence_threshold
         
         # Default prompt template
         self.prompt_template = prompt_template or self._get_default_prompt()
+        
+        # Initialize phase-based tools
+        self._initialize_tools()
         
         # Initialize tool registry
         self.tools: Dict[str, ToolDefinition] = {}
@@ -131,16 +158,31 @@ class Barn:
                 except Exception as e:
                     logger.warning(f"Failed to auto-configure LLM client: {e}")
     
+    def _initialize_tools(self):
+        """Initialize all phase-based tools."""
+        # Discovery tools
+        self.page_discovery = PageDiscovery(self.silo)
+        self.keyword_discovery = KeywordDiscovery(self.silo)
+        self.table_discovery = TableDiscovery(self.silo)
+        
+        # Exploration tools
+        self.table_explorer = TableExplorer(self.silo)
+        self.relevance_finder = RelevanceFinder(self.silo)
+        
+        # Retrieval tools
+        self.table_retriever = TableRetriever(self.silo)
+        self.row_retriever = RowRetriever(self.silo)
+        self.page_retriever = PageRetriever(self.silo)
+    
     def _register_tools(self):
-        """Register all available tools from Pitchfork and Sickle."""
+        """Register all available tools from the 3 phases."""
         
-        # ==================== PITCHFORK TOOLS (Table Operations) ====================
+        # ==================== DISCOVERY TOOLS (Phase 1) ====================
         
-        # Table Discovery Tools
-        self.tools["get_table_catalog"] = ToolDefinition(
-            name="get_table_catalog",
-            description="Get a list of all available tables with their metadata",
-            function=self.farmer.get_table_catalog if self.farmer.is_ready() else lambda: [],
+        self.tools["view_pages"] = ToolDefinition(
+            name="view_pages",
+            description="Get overview of all available pages with titles and numbers",
+            function=self.page_discovery.view_pages,
             parameters={
                 "type": "object",
                 "properties": {},
@@ -148,131 +190,10 @@ class Barn:
             }
         )
         
-        self.tools["get_table_by_name"] = ToolDefinition(
-            name="get_table_by_name",
-            description="Get complete table data by table title/name. Use this to access specific tables by their readable names.",
-            function=self.farmer.pitchfork.get_table_by_title if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda title, doc_id=None: None,
-            parameters={
-                "type": "object",
-                "properties": {
-                    "title": {
-                        "type": "string",
-                        "description": "The title/name of the table (e.g., 'Nutrition Information', 'Surgical Protocol')"
-                    },
-                    "doc_id": {
-                        "type": "string",
-                        "description": "Optional document ID for disambiguation"
-                    }
-                },
-                "required": ["title"]
-            }
-        )
-        
-        self.tools["get_table_info"] = ToolDefinition(
-            name="get_table_info",
-            description="Get metadata information about a specific table by title",
-            function=self.farmer.pitchfork.get_table_info if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda title: None,
-            parameters={
-                "type": "object",
-                "properties": {
-                    "title": {
-                        "type": "string",
-                        "description": "The title/name of the table"
-                    }
-                },
-                "required": ["title"]
-            }
-        )
-        
-        # Table Filtering Tools
-        self.tools["get_tables_by_category"] = ToolDefinition(
-            name="get_tables_by_category",
-            description="Get all tables that match a specific technical category",
-            function=self.farmer.pitchfork.get_tables_by_category if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda category: [],
-            parameters={
-                "type": "object",
-                "properties": {
-                    "category": {
-                        "type": "string",
-                        "description": "The technical category to filter by (e.g., 'technical', 'measurement', 'analysis')"
-                    }
-                },
-                "required": ["category"]
-            }
-        )
-        
-        self.tools["get_tables_by_keyword"] = ToolDefinition(
-            name="get_tables_by_keyword",
-            description="Find tables whose title or description contains a specific keyword",
-            function=self.farmer.pitchfork.get_tables_by_keyword if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda keyword: [],
-            parameters={
-                "type": "object",
-                "properties": {
-                    "keyword": {
-                        "type": "string",
-                        "description": "The keyword to search for in table titles and descriptions"
-                    }
-                },
-                "required": ["keyword"]
-            }
-        )
-        
-        # Table Data Access Tools
-        self.tools["get_table_rows"] = ToolDefinition(
-            name="get_table_rows",
-            description="Get specific rows from a table with optional filtering criteria",
-            function=self.farmer.pitchfork.get_table_rows if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda title, criteria=None, doc_id=None: [],
-            parameters={
-                "type": "object",
-                "properties": {
-                    "title": {
-                        "type": "string",
-                        "description": "The title/name of the table"
-                    },
-                    "criteria": {
-                        "type": "object",
-                        "description": "Optional filtering criteria (e.g., {'column_name': 'value'})"
-                    },
-                    "doc_id": {
-                        "type": "string",
-                        "description": "Optional document ID for disambiguation"
-                    }
-                },
-                "required": ["title"]
-            }
-        )
-        
-        self.tools["search_table_values"] = ToolDefinition(
-            name="search_table_values",
-            description="Search for specific values within a table's data",
-            function=self.farmer.pitchfork.search_table_values if (self.farmer.is_ready() and self.farmer.pitchfork) else lambda title, search_term, doc_id=None: [],
-            parameters={
-                "type": "object",
-                "properties": {
-                    "title": {
-                        "type": "string",
-                        "description": "The title/name of the table"
-                    },
-                    "search_term": {
-                        "type": "string",
-                        "description": "The term to search for in the table data"
-                    },
-                    "doc_id": {
-                        "type": "string",
-                        "description": "Optional document ID for disambiguation"
-                    }
-                },
-                "required": ["title", "search_term"]
-            }
-        )
-        
-        
-        # Removed domain-specific measurement tables tool
-        
-        self.tools["get_table_overview"] = ToolDefinition(
-            name="get_table_overview",
-            description="Get a clear overview of all available tables with titles, descriptions, and categories. Use this when keyword searches fail to see what tables are available.",
-            function=self._get_table_overview,
+        self.tools["view_keywords"] = ToolDefinition(
+            name="view_keywords",
+            description="Get overview of all available keywords in the dataset",
+            function=self.keyword_discovery.view_keywords,
             parameters={
                 "type": "object",
                 "properties": {},
@@ -280,87 +201,10 @@ class Barn:
             }
         )
         
-        # ==================== SICKLE TOOLS (Content Search) ====================
-        
-        self.tools["search_content"] = ToolDefinition(
-            name="search_content",
-            description="Search for content across all pages using a natural language query string. Use this for general content searches.",
-            function=self.farmer.search if self.farmer.is_ready() else lambda query, search_type="all", limit=10: [],
-            parameters={
-                "type": "object",
-                "properties": {
-                    "query": {
-                        "type": "string",
-                        "description": "The search query as a single string (e.g., 'B.L.T. sandwich' or 'nutritional information')"
-                    },
-                    "search_type": {
-                        "type": "string",
-                        "enum": ["all", "pages", "tables", "titles"],
-                        "description": "Type of search to perform"
-                    },
-                    "limit": {
-                        "type": "integer",
-                        "description": "Maximum number of results to return",
-                        "default": 10
-                    }
-                },
-                "required": ["query"]
-            }
-        )
-        
-        self.tools["search_by_keywords"] = ToolDefinition(
-            name="search_by_keywords",
-            description="Search using a specific list of keywords as an array. Use this when you have exact keywords to search for.",
-            function=self.farmer.sickle.search_by_keywords if (self.farmer.is_ready() and self.farmer.sickle) else lambda keywords, search_type="all", limit=10: [],
-            parameters={
-                "type": "object",
-                "properties": {
-                    "keywords": {
-                        "type": "array",
-                        "items": {"type": "string"},
-                        "description": "List of specific keywords as array (e.g., ['B.L.T.', 'sandwich', 'bacon'])"
-                    },
-                    "search_type": {
-                        "type": "string",
-                        "enum": ["all", "pages", "tables", "titles"],
-                        "description": "Type of search to perform"
-                    },
-                    "limit": {
-                        "type": "integer",
-                        "description": "Maximum number of results to return",
-                        "default": 10
-                    }
-                },
-                "required": ["keywords"]
-            }
-        )
-        
-        self.tools["get_page_by_number"] = ToolDefinition(
-            name="get_page_by_number",
-            description="Get a specific page by its page number",
-            function=self.farmer.get_page_by_number if self.farmer.is_ready() else lambda page_number, doc_id=None: None,
-            parameters={
-                "type": "object",
-                "properties": {
-                    "page_number": {
-                        "type": "integer",
-                        "description": "The page number to retrieve (1-based)"
-                    },
-                    "doc_id": {
-                        "type": "string",
-                        "description": "Optional document ID for disambiguation"
-                    }
-                },
-                "required": ["page_number"]
-            }
-        )
-        
-        # ==================== UTILITY TOOLS ====================
-        
-        self.tools["get_available_keywords"] = ToolDefinition(
-            name="get_available_keywords",
-            description="Get all available keywords that can be searched",
-            function=self.farmer.get_all_keywords if self.farmer.is_ready() else lambda: [],
+        self.tools["view_tables"] = ToolDefinition(
+            name="view_tables",
+            description="Get overview of all available tables with categories and metadata",
+            function=self.table_discovery.view_tables,
             parameters={
                 "type": "object",
                 "properties": {},
@@ -368,43 +212,286 @@ class Barn:
             }
         )
         
-        self.tools["get_data_overview"] = ToolDefinition(
-            name="get_data_overview",
-            description="Get an overview of all available data",
-            function=self.farmer.get_data_overview if self.farmer.is_ready() else lambda: {},
+        # ==================== EXPLORATION TOOLS (Phase 2) ====================
+        
+        self.tools["table_summary"] = ToolDefinition(
+            name="table_summary",
+            description="Get detailed summary of a specific table including metadata, columns, and sample data",
+            function=self.table_explorer.table_summary,
             parameters={
                 "type": "object",
-                "properties": {},
-                "required": []
+                "properties": {
+                    "table_name": {
+                        "type": "string",
+                        "description": "Name/title of the table to explore"
+                    }
+                },
+                "required": ["table_name"]
+            }
+        )
+        
+        self.tools["find_relevant_tables"] = ToolDefinition(
+            name="find_relevant_tables",
+            description="Find tables relevant to the search query using multiple criteria",
+            function=self.relevance_finder.find_relevant_tables,
+            parameters={
+                "type": "object",
+                "properties": {
+                    "search_query": {
+                        "type": "string",
+                        "description": "Search query to find relevant tables for"
+                    }
+                },
+                "required": ["search_query"]
+            }
+        )
+        
+        self.tools["find_relevant_pages"] = ToolDefinition(
+            name="find_relevant_pages",
+            description="Find pages relevant to the search query using multiple criteria",
+            function=self.relevance_finder.find_relevant_pages,
+            parameters={
+                "type": "object",
+                "properties": {
+                    "search_query": {
+                        "type": "string",
+                        "description": "Search query to find relevant pages for"
+                    }
+                },
+                "required": ["search_query"]
+            }
+        )
+        
+        # ==================== RETRIEVAL TOOLS (Phase 3) ====================
+        
+        self.tools["get_table_data"] = ToolDefinition(
+            name="get_table_data",
+            description="Get table data with optional column filtering",
+            function=self.table_retriever.get_table_data,
+            parameters={
+                "type": "object",
+                "properties": {
+                    "table_name": {
+                        "type": "string",
+                        "description": "Name/title of the table to retrieve"
+                    },
+                    "columns": {
+                        "type": ["string", "array"],
+                        "description": "'all' or list of column names to include",
+                        "default": "all"
+                    }
+                },
+                "required": ["table_name"]
+            }
+        )
+        
+        self.tools["get_row_data"] = ToolDefinition(
+            name="get_row_data",
+            description="Get rows where the specified column matches the target value",
+            function=self.row_retriever.get_row_data,
+            parameters={
+                "type": "object",
+                "properties": {
+                    "table_name": {
+                        "type": "string",
+                        "description": "Name/title of the table to search"
+                    },
+                    "column": {
+                        "type": "string",
+                        "description": "Column name to match against"
+                    },
+                    "target": {
+                        "type": "string",
+                        "description": "Target value to match (case-insensitive)"
+                    }
+                },
+                "required": ["table_name", "column", "target"]
+            }
+        )
+        
+        self.tools["get_page_content"] = ToolDefinition(
+            name="get_page_content",
+            description="Get page content by title or number",
+            function=self.page_retriever.get_page_content,
+            parameters={
+                "type": "object",
+                "properties": {
+                    "page_identifier": {
+                        "type": ["string", "integer"],
+                        "description": "Page title (string) or page number (integer)"
+                    }
+                },
+                "required": ["page_identifier"]
             }
         )
     
-    def _get_default_prompt(self) -> str:
-        """Get the default prompt template for LLM queries."""
-        return """You are a helpful assistant that answers questions about document data.
-
-You have access to the following tools:
-- Table tools (Pitchfork): get_table_catalog, get_table_by_id, get_table_rows, search_table_values, etc.
-- Content tools (Sickle): search_content, search_by_keywords, get_page_by_number, etc.
-- Utility tools: get_available_keywords, get_data_overview, etc.
-
-Use these tools to find the information needed to answer the user's question. You can call multiple tools in sequence if needed.
-
-Context Information:
-{context}
-
-User Question: {question}
-
-Please provide a clear, accurate answer based on the context provided. If the context doesn't contain enough information to answer the question, say so. If you're referencing specific data, include relevant details like page numbers, table names, or document IDs.
-
-Answer:"""
+    def load_document(self, doc_id: str, data_path: str) -> bool:
+        """
+        Load a document into the silo.
+        
+        Args:
+            doc_id: Unique identifier for the document
+            data_path: Path to the final_output.json file
+            
+        Returns:
+            True if loaded successfully, False otherwise
+        """
+        return self.silo.load_document(doc_id, data_path)
+    
+    def load_documents(self, doc_mappings: Dict[str, str]) -> Dict[str, bool]:
+        """
+        Load multiple documents at once.
+        
+        Args:
+            doc_mappings: {doc_id: data_path} mapping
+            
+        Returns:
+            {doc_id: success_status} mapping
+        """
+        return self.silo.load_documents(doc_mappings)
+    
+    def is_ready(self) -> bool:
+        """Check if the farm is ready (has data loaded)."""
+        return self.silo.is_loaded()
+    
+    def query(self, question: str) -> RAGResponse:
+        """
+        Process a natural language query using the 3-phase approach.
+        
+        Args:
+            question: Natural language question to answer
+            
+        Returns:
+            RAGResponse with answer, context, and sources
+        """
+        if not self.is_ready():
+            raise ValueError("Farm not ready. Load documents first.")
+        
+        # Initialize context
+        context_data = {
+            "question": question,
+            "discovery_data": {},
+            "exploration_data": {},
+            "retrieval_data": {},
+            "tools_used": []
+        }
+        
+        # Phase 1: Discovery - Understand what data is available
+        logger.info("Phase 1: Discovery")
+        try:
+            context_data["discovery_data"] = {
+                "pages": self.page_discovery.view_pages(),
+                "keywords": self.keyword_discovery.view_keywords(),
+                "tables": self.table_discovery.view_tables()
+            }
+            context_data["tools_used"].append("discovery")
+        except Exception as e:
+            logger.error(f"Discovery phase failed: {e}")
+        
+        # Phase 2: Exploration - Find relevant data
+        logger.info("Phase 2: Exploration")
+        try:
+            relevant_tables = self.relevance_finder.find_relevant_tables(question)
+            relevant_pages = self.relevance_finder.find_relevant_pages(question)
+            
+            context_data["exploration_data"] = {
+                "relevant_tables": relevant_tables,
+                "relevant_pages": relevant_pages
+            }
+            context_data["tools_used"].append("exploration")
+        except Exception as e:
+            logger.error(f"Exploration phase failed: {e}")
+        
+        # Phase 3: Retrieval - Get specific data
+        logger.info("Phase 3: Retrieval")
+        try:
+            retrieval_data = {}
+            
+            # Get data from most relevant table if available
+            if context_data["exploration_data"].get("relevant_tables"):
+                top_table = context_data["exploration_data"]["relevant_tables"][0]
+                table_name = top_table["table_name"]
+                
+                # Get table summary
+                table_summary = self.table_explorer.table_summary(table_name)
+                if table_summary:
+                    retrieval_data["table_summary"] = table_summary
+                
+                # Get full table data
+                table_data = self.table_retriever.get_table_data(table_name)
+                if table_data:
+                    retrieval_data["table_data"] = table_data
+            
+            # Get data from most relevant page if available
+            if context_data["exploration_data"].get("relevant_pages"):
+                top_page = context_data["exploration_data"]["relevant_pages"][0]
+                page_title = top_page["page_title"]
+                
+                page_content = self.page_retriever.get_page_content(page_title)
+                if page_content:
+                    retrieval_data["page_content"] = page_content
+            
+            context_data["retrieval_data"] = retrieval_data
+            context_data["tools_used"].append("retrieval")
+        except Exception as e:
+            logger.error(f"Retrieval phase failed: {e}")
+        
+        # Generate response using LLM if available
+        if self.llm_client:
+            try:
+                answer = self._generate_llm_response(question, context_data)
+            except Exception as e:
+                logger.error(f"LLM response generation failed: {e}")
+                answer = self._generate_fallback_response(question, context_data)
+        else:
+            answer = self._generate_fallback_response(question, context_data)
+        
+        # Create response
+        response = RAGResponse(
+            answer=answer,
+            context=QueryContext(
+                question=question,
+                retrieved_data=context_data,
+                document_ids=self.silo.get_document_ids(),
+                confidence_score=0.8,  # TODO: Calculate actual confidence
+                search_method="3-phase",
+                tools_used=context_data["tools_used"]
+            ),
+            sources=self._extract_sources(context_data),
+            metadata={
+                "phases_completed": len(context_data["tools_used"]),
+                "total_pages": len(context_data["discovery_data"].get("pages", [])),
+                "total_tables": len(context_data["discovery_data"].get("tables", [])),
+                "relevant_tables_found": len(context_data["exploration_data"].get("relevant_tables", [])),
+                "relevant_pages_found": len(context_data["exploration_data"].get("relevant_pages", []))
+            }
+        )
+        
+        return response
+    
+    def call_tool(self, tool_name: str, **kwargs) -> Any:
+        """
+        Call a specific tool by name.
+        
+        Args:
+            tool_name: Name of the tool to call
+            **kwargs: Arguments to pass to the tool
+            
+        Returns:
+            Tool result
+        """
+        if tool_name not in self.tools:
+            raise ValueError(f"Unknown tool: {tool_name}")
+        
+        tool = self.tools[tool_name]
+        return tool.function(**kwargs)
     
     def get_tools_for_function_calling(self) -> List[Dict[str, Any]]:
         """
-        Get tools formatted for function-calling APIs (OpenAI, Anthropic, etc.).
+        Get tool definitions for function calling.
         
         Returns:
-            List of tool definitions in the format expected by function-calling APIs
+            List of tool definitions in OpenAI function calling format
         """
         tools = []
         for tool_name, tool_def in self.tools.items():
@@ -418,599 +505,42 @@ Answer:"""
             })
         return tools
     
-    def call_tool(self, tool_name: str, **kwargs) -> Any:
-        """
-        Call a specific tool by name.
+    def get_farm_stats(self) -> FarmStats:
+        """Get comprehensive statistics about the farm."""
+        if not self.is_ready():
+            return FarmStats(0, 0, 0, 0, 0, 0, 0)
         
-        Args:
-            tool_name: Name of the tool to call
-            **kwargs: Arguments to pass to the tool
-            
-        Returns:
-            Result from the tool call
-            
-        Raises:
-            KeyError: If tool name doesn't exist
-        """
-        if tool_name not in self.tools:
-            raise KeyError(f"Tool '{tool_name}' not found. Available tools: {list(self.tools.keys())}")
-        
-        tool_def = self.tools[tool_name]
-        return tool_def.function(**kwargs)
-    
-    def query(self, question: str) -> RAGResponse:
-        """
-        Process a conversational query using intelligent multi-step function calling.
-        
-        The system automatically starts with table overview and keywords overview,
-        then lets the LLM intelligently choose between Pitchfork (semantic search) 
-        and Sickle (keyword search) based on the query context.
-        
-        Args:
-            question: The user's question
-            
-        Returns:
-            RAGResponse with answer and context information
-        """
-        logger.info(f"Starting multi-step query processing for: {question}")
-        
-        if not self.llm_client:
-            raise ValueError("LLM client not configured. Please set up an LLM client before making queries.")
-        
-        # Initialize context and tracking
-        context_data = {
-            "question": question,
-            "tool_calls": [],
-            "results": {},
-            "document_ids": [],
-            "confidence": 0.0,
-            "step_count": 0
+        discovery_data = {
+            "pages": self.page_discovery.view_pages(),
+            "keywords": self.keyword_discovery.view_keywords(),
+            "tables": self.table_discovery.view_tables()
         }
         
-        # Step 0: Automatically get table overview and keywords overview
-        logger.info("Automatically getting table overview and keywords overview...")
-        
-        # Get table overview
-        try:
-            table_overview = self._get_table_overview()
-            context_data["results"]["table_overview"] = {
-                "parameters": {},
-                "result": table_overview
-            }
-            logger.info("Table overview retrieved successfully")
-        except Exception as e:
-            logger.error(f"Error getting table overview: {e}")
-            context_data["results"]["table_overview"] = {
-                "parameters": {},
-                "error": str(e)
-            }
-        
-        # Get keywords overview
-        try:
-            keywords_overview = self._get_keywords_overview()
-            context_data["results"]["keywords_overview"] = {
-                "parameters": {},
-                "result": keywords_overview
-            }
-            logger.info("Keywords overview retrieved successfully")
-        except Exception as e:
-            logger.error(f"Error getting keywords overview: {e}")
-            context_data["results"]["keywords_overview"] = {
-                "parameters": {},
-                "error": str(e)
-            }
-        
-        max_steps = 5  # Prevent infinite loops
-        
-        # Multi-step agent loop
-        for step in range(max_steps):
-            logger.info(f"Starting step {step + 1}/{max_steps}")
-            context_data["step_count"] = step + 1
-            
-            # Step 1: Let the LLM decide what tool to call next (or if it's done)
-            logger.info("Getting next LLM tool call...")
-            next_action = self._get_next_llm_action(question, context_data)
-            logger.info(f"Next action: {next_action}")
-            
-            if next_action["action"] == "answer":
-                logger.info("LLM decided it has enough information to answer")
-                break
-            elif next_action["action"] == "no_more_tools":
-                logger.info("LLM decided no more tools are needed")
-                break
-            elif next_action["action"] == "tool_call":
-                tool_call = next_action["tool_call"]
-                logger.info(f"LLM chose tool call: {tool_call['tool_name']} with parameters: {tool_call['parameters']}")
-                
-                # DEBUG: Print tool call to terminal
-                print(f"🔧 TOOL CALL: {tool_call['tool_name']} | Params: {tool_call['parameters']}")
-        
-                # Step 2: Execute the chosen tool
-                logger.info("Executing tool call...")
-                try:
-                    result = self.call_tool(tool_call["tool_name"], **tool_call["parameters"])
-                    logger.info(f"Tool {tool_call['tool_name']} executed successfully")
-                    
-                    # Step 3: Update context with the result
-                    context_data["tool_calls"].append(tool_call)
-                    context_data["results"][f"{tool_call['tool_name']}_{step}"] = {
-                        "parameters": tool_call["parameters"],
-                        "result": result
-                    }
-                    
-                    # Continue to next step (don't break)
-                    logger.info(f"Continuing to next step after tool execution")
-                    
-                except Exception as e:
-                    logger.error(f"Error executing tool {tool_call['tool_name']}: {e}")
-                    context_data["results"][f"{tool_call['tool_name']}_{step}"] = {
-                        "parameters": tool_call["parameters"],
-                        "error": str(e)
-                    }
-            else:
-                logger.warning(f"Unknown action from LLM: {next_action}")
-                break
-        
-        # Step 4: Generate final response using LLM with all retrieved context
-        logger.info("Generating final LLM response...")
-        answer = self._generate_llm_response(question, context_data)
-        logger.info("Final LLM response generated")
-        
-        # Step 5: Create structured response
-        response = RAGResponse(
-            answer=answer,
-            context=QueryContext(
-                question=question,
-                retrieved_data=context_data,
-                document_ids=list(context_data.get("document_ids", [])),
-                confidence_score=context_data.get("confidence", 0.0),
-                search_method="multi_step_function_calling",
-                tools_used=[call["tool_name"] for call in context_data["tool_calls"]]
-            ),
-            sources=self._extract_sources(context_data),
-            metadata={
-                "search_type": "multi_step_function_calling",
-                "context_length": len(str(context_data)),
-                "has_llm": True,
-                "tools_used": [call["tool_name"] for call in context_data["tool_calls"]],
-                "tool_calls": context_data["tool_calls"],
-                "available_tools": list(self.tools.keys()),
-                "steps_taken": context_data["step_count"]
-            }
+        return FarmStats(
+            total_documents=len(self.silo.get_document_ids()),
+            total_pages=len(discovery_data["pages"]),
+            total_tables=len(discovery_data["tables"]),
+            total_keywords=len(discovery_data["keywords"]),
+            discovery_tools=3,
+            exploration_tools=2,
+            retrieval_tools=3
         )
-        
-        logger.info(f"Multi-step query processing completed. Steps: {context_data['step_count']}, Confidence: {response.context.confidence_score}")
-        return response
-    
-    def _get_next_llm_action(self, question: str, context_data: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Get the next action using LLM-based intelligent decision making.
-        
-        Args:
-            question: The user's question
-            context_data: Current context data
-            
-        Returns:
-            Dictionary with action and tool call info
-        """
-        tool_calls = context_data.get("tool_calls", [])
-        
-        # Debug: Log past actions
-        logger.info(f"Past tool calls: {[call.get('tool_name') for call in tool_calls]}")
-        
-        # Prevent infinite loops by checking for repeated tool calls
-        if len(tool_calls) >= 2:
-            recent_calls = tool_calls[-2:]
-            if (recent_calls[0]['tool_name'] == recent_calls[1]['tool_name'] and 
-                recent_calls[0]['parameters'] == recent_calls[1]['parameters']):
-                logger.warning("Detected repeated tool call - stopping to prevent infinite loop")
-                return {"action": "answer"}
-        
-        # Use LLM to decide next action
-        try:
-            # Format context for LLM
-            context_str = self._format_context_for_llm(context_data)
-            
-            # Create decision prompt
-            decision_prompt = f"""
-You are an intelligent agent that decides what tools to use to answer questions about document data.
-
-AVAILABLE TOOLS:
-{self._format_tools_for_llm()}
-
-CURRENT CONTEXT:
-{context_str}
-
-USER QUESTION: {question}
-
-TOOL SELECTION STRATEGY:
-You have access to two main search approaches:
-
-1. **PITCHFORK (Table Operations)**: Use for questions about:
-   - Specific data in tables (numbers, values, measurements)
-   - Table structure and metadata
-   - Technical categories and descriptions
-   - Structured data queries
-   - Tools: get_table_catalog, get_table_by_id, get_table_info, get_tables_by_category, etc.
-
-2. **SICKLE (Content Search)**: Use for questions about:
-   - General content and concepts
-   - Natural language queries
-   - Keyword-based searches
-   - Page-level information
-   - Tools: search_content, search_by_keywords, etc.
-
-INSTRUCTIONS:
-1. Analyze the question type and choose the appropriate search approach
-2. For table-specific questions (data, measurements, categories), use PITCHFORK tools
-3. For content/concept questions, use SICKLE tools
-4. You MUST use at least one search tool (Pitchfork or Sickle) to retrieve relevant data before answering, unless the answer is trivially obvious from the overviews.
-5. Decide what action to take next:
-   - "tool_call": Call a specific tool with parameters
-   - "answer": Generate final answer (if you have enough information)
-   - "no_more_tools": Stop searching (if no more tools would help)
-
-6. If choosing "tool_call", specify:
-   - tool_name: The exact name of the tool to call
-   - parameters: A JSON object with the tool's parameters
-
-7. IMPORTANT: Do not repeat the same tool call with the same parameters
-8. If you've gathered enough information to answer, choose "answer"
-
-RESPONSE FORMAT:
-Return a JSON object with:
-- "action": "tool_call" | "answer" | "no_more_tools"
-- "tool_call": {{"tool_name": "...", "parameters": {{...}}}} (only if action is "tool_call")
-
-What should I do next?
-"""
-            
-            # Get LLM decision
-            if hasattr(self.llm_client, 'chat'):
-                # OpenAI client format
-                response = self.llm_client.chat.completions.create(
-                    model="gpt-4",
-                    messages=[
-                        {"role": "system", "content": "You are an intelligent agent that decides what tools to use. Respond with valid JSON only."},
-                        {"role": "user", "content": decision_prompt}
-                    ],
-                    max_tokens=500,
-                    temperature=0.1
-                )
-                decision_text = response.choices[0].message.content
-            elif isinstance(self.llm_client, dict) and "client" in self.llm_client:
-                # Dictionary format with client key
-                client = self.llm_client["client"]
-                if hasattr(client, 'chat'):
-                    response = client.chat.completions.create(
-                        model=self.llm_client.get("model", "gpt-4"),
-                        messages=[
-                            {"role": "system", "content": "You are an intelligent agent that decides what tools to use. Respond with valid JSON only."},
-                            {"role": "user", "content": decision_prompt}
-                        ],
-                        max_tokens=500,
-                        temperature=0.1
-                    )
-                    decision_text = response.choices[0].message.content
-                else:
-                    raise ValueError("LLM client format not supported")
-            else:
-                raise ValueError("LLM client format not supported")
-            
-            # Parse LLM response
-            import json
-            try:
-                decision = json.loads(decision_text.strip())
-                logger.info(f"LLM decision: {decision}")
-                return decision
-            except json.JSONDecodeError:
-                logger.error(f"Failed to parse LLM response as JSON: {decision_text}")
-                # Fallback to simple logic
-                return self._fallback_action_logic(question, context_data)
-                
-        except Exception as e:
-            logger.error(f"Error getting LLM action: {e}")
-            # Fallback to simple logic
-            return self._fallback_action_logic(question, context_data)
-    
-    def _fallback_action_logic(self, question: str, context_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Fallback logic when LLM decision fails."""
-        tool_calls = context_data.get("tool_calls", [])
-        
-        # If no tools used yet, start with table overview
-        if not tool_calls:
-            return {
-                "action": "tool_call",
-                "tool_call": {
-                    "tool_name": "get_table_overview",
-                    "parameters": {}
-                }
-            }
-        
-        # If we have some data, try to answer
-        if len(tool_calls) >= 1:
-            return {"action": "answer"}
-        
-        # Default to content search
-        return {
-            "action": "tool_call",
-            "tool_call": {
-                "tool_name": "search_content",
-                "parameters": {
-                    "query": question,
-                    "search_type": "all"
-                }
-            }
-        }
-    
-    def _format_tools_for_llm(self) -> str:
-        """Format available tools for LLM consumption."""
-        tools_info = []
-        for tool_name, tool_def in self.tools.items():
-            tools_info.append(f"- {tool_name}: {tool_def.description}")
-        return "\n".join(tools_info)
-    
-    def _generate_llm_response(self, question: str, context_data: Dict[str, Any]) -> str:
-        """
-        Generate response using LLM.
-        
-        Args:
-            question: The user's question
-            context_data: Retrieved context data
-            
-        Returns:
-            Generated response string
-        """
-        if not self.llm_client:
-            raise ValueError("LLM client not configured. Please set up an LLM client before making queries.")
-        
-        # Format context for LLM
-        context_str = self._format_context_for_llm(context_data)
-        
-        # Create enhanced prompt with reasoning guidance
-        enhanced_prompt = f"""
-You are a helpful assistant that answers questions about document data.
-
-CONTEXT INFORMATION:
-{context_str}
-
-USER QUESTION: {question}
-
-INSTRUCTIONS:
-1. **Carefully examine table data**: Look at the actual values in the table rows
-2. **Interpret TRUE/FALSE values**: In data tables, 'TRUE' means available/positive/yes, 'FALSE' means not available/negative/no
-3. **Match column headers**: Look for the specific column that matches the question
-4. **Provide exact answers**: If you find 'TRUE' for a specific item, say it IS available/positive/yes
-5. **Be specific about what you found**: Quote the exact data you found
-6. **Use appropriate terminology**: Use language that matches the document's domain
-
-TABLE INTERPRETATION GUIDE:
-- If you see: {{'Item': 'Value', 'Category': 'TRUE'}}
-- This means: The item IS available/positive/yes for that category
-- If you see: {{'Item': 'Value', 'Category': 'FALSE'}}
-- This means: The item is NOT available/positive/yes for that category
-- Answer format: "Yes, [item] is [available/positive/yes] for [category]" or "No, [item] is not [available/positive/yes] for [category]"
-
-Please provide a clear, accurate answer based on the context provided.
-"""
-        
-        try:
-            # Handle different LLM client formats
-            if hasattr(self.llm_client, 'chat'):
-                # OpenAI client format
-                response = self.llm_client.chat.completions.create(
-                    model="gpt-4",
-                    messages=[
-                        {"role": "system", "content": "You are a helpful assistant that answers questions about document data."},
-                        {"role": "user", "content": enhanced_prompt}
-                    ],
-                    max_tokens=1000,
-                    temperature=0.3
-                )
-                return response.choices[0].message.content
-            elif isinstance(self.llm_client, dict) and "client" in self.llm_client:
-                # Dictionary format with client key
-                client = self.llm_client["client"]
-                if hasattr(client, 'chat'):
-                    response = client.chat.completions.create(
-                        model=self.llm_client.get("model", "gpt-4"),
-                        messages=[
-                            {"role": "system", "content": "You are a helpful assistant that answers questions about document data."},
-                            {"role": "user", "content": enhanced_prompt}
-                        ],
-                        max_tokens=1000,
-                        temperature=0.3
-                    )
-                    return response.choices[0].message.content
-                else:
-                    return "LLM client in dictionary format but client object doesn't have chat attribute"
-            else:
-                # Fallback for unknown client format
-                return f"LLM client format not supported: {type(self.llm_client)}"
-        except Exception as e:
-            return f"Error generating response: {str(e)}"
-    
-    def _format_context_for_llm(self, context_data: Dict[str, Any]) -> str:
-        """
-        Format context data for LLM consumption.
-        
-        Args:
-            context_data: Retrieved context data
-            
-        Returns:
-            Formatted context string
-        """
-        parts = []
-        
-        # Add overview
-        overview = context_data.get("overview", {})
-        if overview and "error" not in overview:
-            parts.append("Data Overview:")
-            parts.append(f"- Documents: {overview.get('document_count', 'Unknown')}")
-            parts.append(f"- Tables: {overview.get('table_count', 'Unknown')}")
-            parts.append(f"- Pages: {overview.get('page_count', 'Unknown')}")
-        
-        # Add search results with reasoning context
-        results = context_data.get("results", {})
-        tool_calls = context_data.get("tool_calls", [])
-        
-        # Show the reasoning process
-        if tool_calls:
-            parts.append("\nREASONING PROCESS:")
-            for i, call in enumerate(tool_calls):
-                parts.append(f"Step {i+1}: {call['tool_name']} with parameters: {call['parameters']}")
-        
-        # Show results organized by tool type
-        discovery_results = []
-        extraction_results = []
-        fallback_results = []
-        
-        for tool_name, result in results.items():
-            # Handle new format: result is a dict with "result" key
-            if isinstance(result, dict) and "result" in result:
-                actual_result = result["result"]
-                parameters = result.get("parameters", {})
-                
-                # Categorize results by tool type
-                if tool_name.startswith(("get_tables_by_", "get_table_catalog", "get_measurement_")):
-                    discovery_results.append((tool_name, actual_result, parameters))
-                elif tool_name.startswith(("get_table_rows", "search_table_values", "get_table_by_id")):
-                    extraction_results.append((tool_name, actual_result, parameters))
-                else:
-                    fallback_results.append((tool_name, actual_result, parameters))
-                    
-            # Handle old format: result is directly a list
-            elif isinstance(result, list) and result:
-                if tool_name.startswith(("get_tables_by_", "get_table_catalog", "get_measurement_")):
-                    discovery_results.append((tool_name, result, {}))
-                elif tool_name.startswith(("get_table_rows", "search_table_values", "get_table_by_id")):
-                    extraction_results.append((tool_name, result, {}))
-                else:
-                    fallback_results.append((tool_name, result, {}))
-        
-        # Display discovery results
-        if discovery_results:
-            parts.append("\nDISCOVERY RESULTS:")
-            for tool_name, actual_result, parameters in discovery_results:
-                parts.append(f"\n{tool_name.replace('_', ' ').title()} (Parameters: {parameters}):")
-                if isinstance(actual_result, list) and actual_result:
-                    for item in actual_result[:3]:  # Limit to 3 items per tool
-                        if hasattr(item, 'title'):
-                            parts.append(f"- {item.title}")
-                        elif hasattr(item, 'context'):
-                            parts.append(f"- {item.context[:100]}...")
-                        else:
-                            parts.append(f"- {str(item)[:100]}...")
-                elif isinstance(actual_result, dict) and "error" not in actual_result:
-                    parts.append(f"- {str(actual_result)[:200]}...")
-        
-        # Display extraction results
-        if extraction_results:
-            parts.append("\nEXTRACTION RESULTS:")
-            for tool_name, actual_result, parameters in extraction_results:
-                parts.append(f"\n{tool_name.replace('_', ' ').title()} (Parameters: {parameters}):")
-                if isinstance(actual_result, list) and actual_result:
-                    for item in actual_result[:3]:  # Limit to 3 items per tool
-                        if hasattr(item, 'context'):
-                            parts.append(f"- {item.context}")
-                        elif hasattr(item, 'title'):
-                            parts.append(f"- {item.title}")
-                        else:
-                            parts.append(f"- {str(item)[:100]}...")
-                elif isinstance(actual_result, dict) and "error" not in actual_result:
-                    parts.append(f"- {str(actual_result)[:200]}...")
-        
-        # Display fallback results
-        if fallback_results:
-            parts.append("\nFALLBACK SEARCH RESULTS:")
-            for tool_name, actual_result, parameters in fallback_results:
-                parts.append(f"\n{tool_name.replace('_', ' ').title()} (Parameters: {parameters}):")
-                if isinstance(actual_result, list) and actual_result:
-                    for item in actual_result[:3]:  # Limit to 3 items per tool
-                        if hasattr(item, 'context'):
-                            parts.append(f"- {item.context}")
-                        elif hasattr(item, 'title'):
-                            parts.append(f"- {item.title}")
-                        else:
-                            parts.append(f"- {str(item)[:100]}...")
-                elif isinstance(actual_result, dict) and "error" not in actual_result:
-                    parts.append(f"- {str(actual_result)[:200]}...")
-        
-        return "\n".join(parts)
-    
-    def _extract_sources(self, context_data: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """
-        Extract source information from context data.
-        
-        Args:
-            context_data: Retrieved context data
-            
-        Returns:
-            List of source dictionaries
-        """
-        sources = []
-        results = context_data.get("results", {})
-        
-        for tool_name, result in results.items():
-            # Handle new format: result is a dict with "result" key
-            if isinstance(result, dict) and "result" in result:
-                actual_result = result["result"]
-                if isinstance(actual_result, list):
-                    for item in actual_result:
-                        source = {
-                            "tool": tool_name,
-                            "type": getattr(item, 'match_type', 'unknown'),
-                            "score": getattr(item, 'match_score', 0.0)
-                        }
-                        
-                        if hasattr(item, 'page_number'):
-                            source["page"] = item.page_number
-                        if hasattr(item, 'doc_id'):
-                            source["document"] = item.doc_id
-                        if hasattr(item, 'context'):
-                            source["context"] = item.context
-                        
-                        sources.append(source)
-            # Handle old format: result is directly a list
-            elif isinstance(result, list):
-                for item in result:
-                    source = {
-                        "tool": tool_name,
-                        "type": getattr(item, 'match_type', 'unknown'),
-                        "score": getattr(item, 'match_score', 0.0)
-                    }
-                    
-                    if hasattr(item, 'page_number'):
-                        source["page"] = item.page_number
-                    if hasattr(item, 'doc_id'):
-                        source["document"] = item.doc_id
-                    if hasattr(item, 'context'):
-                        source["context"] = item.context
-                    
-                    sources.append(source)
-        
-        return sources
-    
-    def get_data_overview(self) -> Dict[str, Any]:
-        """
-        Get an overview of available data.
-        
-        Returns:
-            Dictionary with data overview
-        """
-        return self.farmer.get_data_overview()
     
     def set_llm_client(self, api_key: str, model: str = "gpt-3.5-turbo"):
-        """Set the OpenAI client for response generation."""
+        """Set up the LLM client for response generation."""
         try:
-            from openai import OpenAI
-            self.llm_client = {"client": OpenAI(api_key=api_key), "model": model}
+            import openai
+            openai.api_key = api_key
+            self.llm_client = openai
+            self.llm_model = model
+            logger.info(f"LLM client configured with model: {model}")
         except ImportError:
-            raise ImportError("OpenAI library not found. Install with: pip install openai")
+            raise ImportError("OpenAI library not installed. Install with: pip install openai")
     
     def clear_llm_client(self):
         """Clear the LLM client."""
         self.llm_client = None
+        self.llm_model = None
     
     def set_prompt_template(self, template: str):
         """Set a custom prompt template."""
@@ -1018,107 +548,162 @@ Please provide a clear, accurate answer based on the context provided.
     
     def get_available_documents(self) -> List[str]:
         """Get list of available document IDs."""
-        overview = self.farmer.get_data_overview()
-        return list(overview.get("documents", {}).keys())
+        return self.silo.get_document_ids()
     
-    def _get_table_overview(self) -> str:
-        """
-        Get a clear overview of all available tables.
-        
-        Returns:
-            Formatted string with table information
-        """
-        if not self.farmer or not self.farmer.is_ready():
-            return "No data loaded. Please load a document first."
-        
-        tables = self.farmer.get_table_catalog()
-        if not tables:
-            return "No tables found in the loaded documents."
-        
-        overview = "AVAILABLE TABLES:\n\n"
-        for i, table in enumerate(tables, 1):
-            overview += f"{i}. **{table.title}**\n"
-            overview += f"   - Category: {table.technical_category}\n"
-            overview += f"   - Description: {table.description}\n"
-            overview += f"   - Rows: {table.row_count}, Columns: {table.column_count}\n"
-            overview += f"   - Page: {table.page_number}\n\n"
-        
-        return overview
+    def _get_default_prompt(self) -> str:
+        """Get the default prompt template."""
+        return """You are a helpful assistant that answers questions based on document data.
+
+You have access to document data through a 3-phase approach:
+1. Discovery: Understanding what data is available
+2. Exploration: Finding relevant data for the query
+3. Retrieval: Getting specific data for analysis
+
+Use the available data to answer the user's question. If you don't have enough information, say so.
+
+Question: {question}
+
+Available Data:
+{context}
+
+Answer the question based on the available data:"""
     
-    def _get_keywords_overview(self) -> str:
-        """
-        Get a plain list of all available keywords for content search.
+    def _generate_llm_response(self, question: str, context_data: Dict[str, Any]) -> str:
+        """Generate response using LLM."""
+        if not self.llm_client:
+            raise ValueError("LLM client not configured")
         
-        Returns:
-            String with a simple list of keywords
-        """
-        if not self.farmer or not self.farmer.is_ready():
-            return "No data loaded. Please load a document first."
+        # Format context for LLM
+        context_str = self._format_context_for_llm(context_data)
         
-        if not self.farmer.sickle:
-            return "No keyword search tool available."
+        # Create prompt
+        prompt = self.prompt_template.format(
+            question=question,
+            context=context_str
+        )
         
-        try:
-            keywords = self.farmer.sickle.get_available_keywords()
-            if not keywords:
-                return "No keywords found in the loaded documents."
+        # Call LLM
+        if not self.llm_model:
+            raise ValueError("LLM model not configured")
             
-            overview = "AVAILABLE KEYWORDS FOR CONTENT SEARCH:\n"
-            overview += ", ".join(keywords)
-            return overview
-        except Exception as e:
-            logger.error(f"Error getting keywords overview: {e}")
-            return f"Error retrieving keywords: {str(e)}"
+        response = self.llm_client.chat.completions.create(
+            model=self.llm_model,
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant that answers questions based on document data."},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=self.max_context_length,
+            temperature=0.7
+        )
+        
+        content = response.choices[0].message.content
+        if content is None:
+            return "No response generated from LLM"
+        return content
     
-    def _find_best_table_for_search(self, table_overview: str, search_term: str) -> Optional[str]:
-        """
-        Find the best table to search in based on the table overview and search term.
+    def _generate_fallback_response(self, question: str, context_data: Dict[str, Any]) -> str:
+        """Generate a fallback response without LLM."""
+        context_str = self._format_context_for_llm(context_data)
         
-        Args:
-            table_overview: String containing the table overview
-            search_term: Term to search for
+        return f"""Question: {question}
+
+Based on the available data:
+
+{context_str}
+
+Note: This is a fallback response. For better answers, configure an LLM client."""
+    
+    def _format_context_for_llm(self, context_data: Dict[str, Any]) -> str:
+        """Format context data for LLM consumption."""
+        lines = []
+        
+        # Discovery data
+        if context_data.get("discovery_data"):
+            lines.append("=== DISCOVERY DATA ===")
+            discovery = context_data["discovery_data"]
             
-        Returns:
-            Best table title to search in, or None if no good match
-        """
-        if not table_overview:
-            return None
-        
-        # Extract table titles from the overview
-        lines = table_overview.split('\n')
-        table_titles = []
-        
-        for line in lines:
-            if line.strip().startswith('**') and line.strip().endswith('**'):
-                # Extract title from markdown format: **Title**
-                title = line.strip()[2:-2]  # Remove **
-                table_titles.append(title)
-        
-        # Score each table based on relevance to search term
-        best_table = None
-        best_score = 0
-        
-        for title in table_titles:
-            title_lower = title.lower()
-            search_lower = search_term.lower()
+            if discovery.get("pages"):
+                lines.append(f"Pages available: {len(discovery['pages'])}")
+                for page in discovery["pages"][:3]:  # Show first 3
+                    lines.append(f"  - Page {page['page_number']}: {page['page_title']}")
+                if len(discovery["pages"]) > 3:
+                    lines.append(f"  ... and {len(discovery['pages']) - 3} more pages")
             
-            # Simple scoring: exact match = 10, contains = 5, word match = 3
-            score = 0
-            if search_lower in title_lower:
-                score += 5
-            if search_lower == title_lower:
-                score += 10
+            if discovery.get("tables"):
+                lines.append(f"Tables available: {len(discovery['tables'])}")
+                for table in discovery["tables"][:3]:  # Show first 3
+                    lines.append(f"  - {table['table_title']} (Category: {table['category']})")
+                if len(discovery["tables"]) > 3:
+                    lines.append(f"  ... and {len(discovery['tables']) - 3} more tables")
             
-            # Check for word matches
-            search_words = search_lower.split()
-            title_words = title_lower.split()
-            for word in search_words:
-                if word in title_words:
-                    score += 3
-            
-            if score > best_score:
-                best_score = score
-                best_table = title
+            if discovery.get("keywords"):
+                lines.append(f"Keywords available: {len(discovery['keywords'])}")
+                lines.append(f"  Sample: {', '.join(discovery['keywords'][:10])}")
         
-        logger.info(f"Search term '{search_term}' -> best table: '{best_table}' (score: {best_score})")
-        return best_table 
+        # Exploration data
+        if context_data.get("exploration_data"):
+            lines.append("\n=== EXPLORATION DATA ===")
+            exploration = context_data["exploration_data"]
+            
+            if exploration.get("relevant_tables"):
+                lines.append(f"Relevant tables found: {len(exploration['relevant_tables'])}")
+                for table in exploration["relevant_tables"][:3]:  # Show first 3
+                    lines.append(f"  - {table['table_name']} (Score: {table['relevance_score']:.2f}, Relation: {table['relation']})")
+            
+            if exploration.get("relevant_pages"):
+                lines.append(f"Relevant pages found: {len(exploration['relevant_pages'])}")
+                for page in exploration["relevant_pages"][:3]:  # Show first 3
+                    lines.append(f"  - {page['page_title']} (Score: {page['relevance_score']:.2f}, Relation: {page['relation']})")
+        
+        # Retrieval data
+        if context_data.get("retrieval_data"):
+            lines.append("\n=== RETRIEVAL DATA ===")
+            retrieval = context_data["retrieval_data"]
+            
+            if retrieval.get("table_summary"):
+                summary = retrieval["table_summary"]
+                lines.append(f"Table: {summary['table_title']}")
+                lines.append(f"  Category: {summary['category']}")
+                lines.append(f"  Dimensions: {summary['row_count']} rows × {summary['column_count']} columns")
+                lines.append(f"  Columns: {', '.join([col['name'] for col in summary['columns'][:5]])}")
+            
+            if retrieval.get("table_data"):
+                data = retrieval["table_data"]
+                lines.append(f"Table data: {data['row_count']} rows available")
+                if data.get("rows"):
+                    lines.append("  Sample rows:")
+                    for i, row in enumerate(data["rows"][:2]):  # Show first 2 rows
+                        lines.append(f"    Row {i+1}: {row}")
+            
+            if retrieval.get("page_content"):
+                content = retrieval["page_content"]
+                lines.append(f"Page: {content['page_title']}")
+                lines.append(f"  Content length: {len(content['content'])} characters")
+                lines.append(f"  Tables on page: {content['table_count']}")
+        
+        return "\n".join(lines)
+    
+    def _extract_sources(self, context_data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """Extract source information from context data."""
+        sources = []
+        
+        # Add table sources
+        if context_data.get("retrieval_data", {}).get("table_summary"):
+            table = context_data["retrieval_data"]["table_summary"]
+            sources.append({
+                "type": "table",
+                "title": table["table_title"],
+                "page": table["page_number"],
+                "category": table["category"]
+            })
+        
+        # Add page sources
+        if context_data.get("retrieval_data", {}).get("page_content"):
+            page = context_data["retrieval_data"]["page_content"]
+            sources.append({
+                "type": "page",
+                "title": page["page_title"],
+                "page_number": page["page_number"]
+            })
+        
+        return sources 

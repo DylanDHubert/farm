@@ -1,52 +1,49 @@
 """
-Farmer - Manager for PB&J Data Tools
+Farmer - Unified Access Layer for PB&J RAG System
 
-The farmer orchestrates all the farm tools (Silo, Sickle, Pitchfork, Scythe)
-and provides a unified interface for working with PB&J pipeline data.
+The Farmer provides a simple, unified interface to the Barn (main RAG agent).
+It serves as a clean wrapper that abstracts away the complexity of the 3-phase
+approach and provides easy-to-use methods for common operations.
+
+This is the recommended entry point for external applications.
 """
 
 from typing import Dict, List, Optional, Any, Union
-from dataclasses import dataclass
-
-from src.silo import Silo
-from src.toolshed.pitchfork import Pitchfork
-from src.toolshed.sickle import Sickle
-from src.toolshed.scythe import Scythe
-from models.table import TableInfo, TableRow
-from models.search import SearchResult, SemanticSearchResult
-
-
-@dataclass
-class FarmStats:
-    """Statistics about the farm's data and tools."""
-    silo_stats: Dict[str, Any]
-    sickle_stats: Dict[str, Any]
-    pitchfork_stats: Dict[str, Any]
-    total_documents: int
-    total_pages: int
-    total_tables: int
-    total_keywords: int
+from src.barn import Barn, RAGResponse, FarmStats
 
 
 class Farmer:
     """
-    Manager class that orchestrates all farm tools.
+    Unified access layer for the PB&J RAG system.
     
-    Provides a unified interface for working with PB&J pipeline data,
-    coordinating the Silo (data storage), Sickle (keyword search),
-    Pitchfork (table access), and future Scythe (semantic search).
+    The Farmer provides a simple interface to the Barn's capabilities,
+    making it easy to use the RAG system without understanding the
+    internal 3-phase architecture.
+    
+    This is the main entry point for external applications.
     """
     
-    def __init__(self):
-        """Initialize the farmer with all farm tools."""
-        self.silo = Silo()
-        self.sickle = None  # Will be initialized when silo has data
-        self.pitchfork = None  # Will be initialized when silo has data
-        self.scythe = None  # Future semantic search tool
+    def __init__(self, 
+                 data_path: Optional[str] = None,
+                 llm_api_key: Optional[str] = None,
+                 llm_model: str = "gpt-3.5-turbo"):
+        """
+        Initialize the Farmer with data and optional LLM configuration.
+        
+        Args:
+            data_path: Path to document data file
+            llm_api_key: OpenAI API key for LLM responses
+            llm_model: LLM model to use (default: gpt-3.5-turbo)
+        """
+        self.barn = Barn(data_path=data_path)
+        
+        # Configure LLM if API key provided
+        if llm_api_key:
+            self.barn.set_llm_client(llm_api_key, llm_model)
     
     def load_document(self, doc_id: str, data_path: str) -> bool:
         """
-        Load a document into the silo and initialize tools.
+        Load a document into the system.
         
         Args:
             doc_id: Unique identifier for the document
@@ -55,26 +52,7 @@ class Farmer:
         Returns:
             True if loaded successfully, False otherwise
         """
-        success = self.silo.load_document(doc_id, data_path)
-        
-        if success:
-            # Initialize tools if this is the first document
-            if not self.sickle:
-                self.sickle = Sickle(self.silo)
-                self.sickle.build_index()
-            
-            if not self.pitchfork:
-                self.pitchfork = Pitchfork(self.silo)
-                self.pitchfork.build_catalog()
-            
-            # Rebuild indexes if tools already exist
-            elif self.sickle:
-                self.sickle.build_index()
-            
-            if self.pitchfork:
-                self.pitchfork.build_catalog()
-        
-        return success
+        return self.barn.load_document(doc_id, data_path)
     
     def load_documents(self, doc_mappings: Dict[str, str]) -> Dict[str, bool]:
         """
@@ -86,327 +64,199 @@ class Farmer:
         Returns:
             {doc_id: success_status} mapping
         """
-        results = {}
-        for doc_id, data_path in doc_mappings.items():
-            results[doc_id] = self.load_document(doc_id, data_path)
-        return results
+        return self.barn.load_documents(doc_mappings)
+    
+    def ask(self, question: str) -> RAGResponse:
+        """
+        Ask a question and get a comprehensive response.
+        
+        This is the main method for querying the RAG system.
+        It automatically handles the 3-phase approach (Discovery, Exploration, Retrieval)
+        and returns a structured response with answer, context, and sources.
+        
+        Args:
+            question: Natural language question to answer
+            
+        Returns:
+            RAGResponse with answer, context, and sources
+        """
+        return self.barn.query(question)
+    
+    def get_answer(self, question: str) -> str:
+        """
+        Get just the answer text for a question.
+        
+        Args:
+            question: Natural language question to answer
+            
+        Returns:
+            Answer text as string
+        """
+        response = self.barn.query(question)
+        return response.answer
+    
+    def get_sources(self, question: str) -> List[Dict[str, Any]]:
+        """
+        Get sources used to answer a question.
+        
+        Args:
+            question: Natural language question to answer
+            
+        Returns:
+            List of source information
+        """
+        response = self.barn.query(question)
+        return response.sources
+    
+    # ==================== DISCOVERY METHODS ====================
+    
+    def get_pages(self) -> List[Dict[str, Any]]:
+        """
+        Get overview of all available pages.
+        
+        Returns:
+            List of pages with number, title, and doc_id
+        """
+        return self.barn.call_tool("view_pages")
+    
+    def get_keywords(self) -> List[str]:
+        """
+        Get all available keywords.
+        
+        Returns:
+            List of unique keywords
+        """
+        return self.barn.call_tool("view_keywords")
+    
+    def get_tables(self) -> List[Dict[str, Any]]:
+        """
+        Get overview of all available tables.
+        
+        Returns:
+            List of tables with title, category, and metadata
+        """
+        return self.barn.call_tool("view_tables")
+    
+    # ==================== EXPLORATION METHODS ====================
+    
+    def find_tables(self, search_query: str) -> List[Dict[str, Any]]:
+        """
+        Find tables relevant to a search query.
+        
+        Args:
+            search_query: Query to find relevant tables for
+            
+        Returns:
+            List of relevant tables with relevance scores
+        """
+        return self.barn.call_tool("find_relevant_tables", search_query=search_query)
+    
+    def find_pages(self, search_query: str) -> List[Dict[str, Any]]:
+        """
+        Find pages relevant to a search query.
+        
+        Args:
+            search_query: Query to find relevant pages for
+            
+        Returns:
+            List of relevant pages with relevance scores
+        """
+        return self.barn.call_tool("find_relevant_pages", search_query=search_query)
+    
+    def get_table_summary(self, table_name: str) -> Optional[Dict[str, Any]]:
+        """
+        Get detailed summary of a specific table.
+        
+        Args:
+            table_name: Name/title of the table
+            
+        Returns:
+            Table summary with metadata, columns, and sample data
+        """
+        return self.barn.call_tool("table_summary", table_name=table_name)
+    
+    # ==================== RETRIEVAL METHODS ====================
+    
+    def get_table_data(self, table_name: str, columns: Union[str, List[str]] = "all") -> Optional[Dict[str, Any]]:
+        """
+        Get table data with optional column filtering.
+        
+        Args:
+            table_name: Name/title of the table
+            columns: "all" or list of column names to include
+            
+        Returns:
+            Table data with rows, columns, and metadata
+        """
+        return self.barn.call_tool("get_table_data", table_name=table_name, columns=columns)
+    
+    def get_rows(self, table_name: str, column: str, target: str) -> Optional[Dict[str, Any]]:
+        """
+        Get rows where a column matches a target value.
+        
+        Args:
+            table_name: Name/title of the table
+            column: Column name to match against
+            target: Target value to match
+            
+        Returns:
+            Matching rows with metadata
+        """
+        return self.barn.call_tool("get_row_data", table_name=table_name, column=column, target=target)
+    
+    def get_page_content(self, page_identifier: Union[str, int]) -> Optional[Dict[str, Any]]:
+        """
+        Get page content by title or number.
+        
+        Args:
+            page_identifier: Page title (str) or page number (int)
+            
+        Returns:
+            Page content with text, tables, and metadata
+        """
+        return self.barn.call_tool("get_page_content", page_identifier=page_identifier)
+    
+    # ==================== UTILITY METHODS ====================
     
     def is_ready(self) -> bool:
-        """Check if the farm is ready (has data and tools initialized)."""
-        return (self.silo.is_loaded() and 
-                self.sickle is not None and 
-                self.pitchfork is not None)
+        """Check if the system is ready (has data loaded)."""
+        return self.barn.is_ready()
     
-    # ==================== SEARCH METHODS (Sickle) ====================
+    def get_stats(self) -> FarmStats:
+        """Get comprehensive statistics about the system."""
+        return self.barn.get_farm_stats()
     
-    def search(self, query: str, search_type: str = "all", limit: int = 10) -> List[SearchResult]:
+    def get_documents(self) -> List[str]:
+        """Get list of loaded document IDs."""
+        return self.barn.get_available_documents()
+    
+    def configure_llm(self, api_key: str, model: str = "gpt-3.5-turbo"):
         """
-        Search for content using the sickle.
+        Configure LLM for better responses.
         
         Args:
-            query: Search query string
-            search_type: Type of search ("all", "pages", "tables", "titles")
-            limit: Maximum number of results to return
-            
-        Returns:
-            List of SearchResult objects
+            api_key: OpenAI API key
+            model: LLM model to use
         """
-        if not self.is_ready() or self.sickle is None:
-            raise ValueError("Farm not ready. Load documents first.")
-        
-        return self.sickle.search(query, search_type, limit)
+        self.barn.set_llm_client(api_key, model)
     
-    def search_by_keywords(self, keywords: List[str], search_type: str = "all", limit: int = 10) -> List[SearchResult]:
+    def clear_llm(self):
+        """Remove LLM configuration."""
+        self.barn.clear_llm_client()
+    
+    def get_tools(self) -> List[str]:
+        """Get list of available tool names."""
+        return list(self.barn.tools.keys())
+    
+    def call_tool(self, tool_name: str, **kwargs) -> Any:
         """
-        Search using specific keywords.
+        Call a specific tool by name.
         
         Args:
-            keywords: List of keywords to search for
-            search_type: Type of search ("all", "pages", "tables", "titles")
-            limit: Maximum number of results to return
+            tool_name: Name of the tool to call
+            **kwargs: Arguments to pass to the tool
             
         Returns:
-            List of SearchResult objects
+            Tool result
         """
-        if not self.is_ready() or self.sickle is None:
-            raise ValueError("Farm not ready. Load documents first.")
-        
-        return self.sickle.search_by_keywords(keywords, search_type, limit)
-    
-    def get_page_by_number(self, page_number: int, doc_id: Optional[str] = None) -> Optional[SearchResult]:
-        """
-        Get page by page number (for PDF highlighting).
-        
-        Args:
-            page_number: Page number to retrieve
-            doc_id: Optional document ID for disambiguation
-            
-        Returns:
-            SearchResult for the page, or None if not found
-        """
-        if not self.is_ready() or self.sickle is None:
-            raise ValueError("Farm not ready. Load documents first.")
-        
-        return self.sickle.get_page_by_number(page_number, doc_id)
-    
-    def get_available_keywords(self) -> List[str]:
-        """Get all available keywords in the search index."""
-        if not self.is_ready() or self.sickle is None:
-            return []
-        
-        return self.sickle.get_available_keywords()
-    
-    # ==================== TABLE METHODS (Pitchfork) ====================
-    
-    def get_table_catalog(self) -> List[TableInfo]:
-        """
-        Get catalog of all available tables.
-        
-        Returns:
-            List of TableInfo objects
-        """
-        if not self.is_ready() or self.pitchfork is None:
-            return []
-        
-        return self.pitchfork.get_table_catalog()
-    
-    def get_table_by_id(self, table_id: str, doc_id: Optional[str] = None) -> Optional[Dict[str, Any]]:
-        """
-        Get complete table data by ID.
-        
-        Args:
-            table_id: Table identifier
-            doc_id: Optional document ID for disambiguation
-            
-        Returns:
-            Complete table data or None if not found
-        """
-        if not self.is_ready() or self.pitchfork is None:
-            return None
-        
-        return self.pitchfork.get_table_by_id(table_id, doc_id)
-    
-    def get_tables_by_category(self, category: str) -> List[TableInfo]:
-        """
-        Get tables by technical category.
-        
-        Args:
-            category: Technical category to filter by
-            
-        Returns:
-            List of TableInfo objects matching the category
-        """
-        if not self.is_ready() or self.pitchfork is None:
-            return []
-        
-        return self.pitchfork.get_tables_by_category(category)
-    
-    def get_tables_by_document(self, doc_id: str) -> List[TableInfo]:
-        """
-        Get all tables from a specific document.
-        
-        Args:
-            doc_id: Document identifier
-            
-        Returns:
-            List of TableInfo objects from the document
-        """
-        if not self.is_ready() or self.pitchfork is None:
-            return []
-        
-        return self.pitchfork.get_tables_by_document(doc_id)
-    
-    def get_table_rows(self, table_id: str, criteria: Optional[Dict[str, Any]] = None, 
-                      doc_id: Optional[str] = None) -> List[TableRow]:
-        """
-        Get table rows with optional filtering criteria.
-        
-        Args:
-            table_id: Table identifier
-            criteria: Optional filtering criteria
-            doc_id: Optional document ID for disambiguation
-            
-        Returns:
-            List of TableRow objects
-        """
-        if not self.is_ready() or self.pitchfork is None:
-            return []
-        
-        return self.pitchfork.get_table_rows(table_id, criteria, doc_id)
-    
-    def search_table_values(self, table_id: str, search_term: str, 
-                           doc_id: Optional[str] = None) -> List[TableRow]:
-        """
-        Search for specific values within a table.
-        
-        Args:
-            table_id: Table identifier
-            search_term: Term to search for
-            doc_id: Optional document ID for disambiguation
-            
-        Returns:
-            List of TableRow objects containing the search term
-        """
-        if not self.is_ready() or self.pitchfork is None:
-            return []
-        
-        return self.pitchfork.search_table_values(table_id, search_term, doc_id)
-    
-    def get_table_statistics(self, table_id: str, doc_id: Optional[str] = None) -> Optional[Dict[str, Any]]:
-        """
-        Get comprehensive statistics about a table.
-        
-        Args:
-            table_id: Table identifier
-            doc_id: Optional document ID for disambiguation
-            
-        Returns:
-            Table statistics or None if not found
-        """
-        if not self.is_ready() or self.pitchfork is None:
-            return None
-        
-        return self.pitchfork.get_table_statistics(table_id, doc_id)
-    
-    # ==================== CONVENIENCE METHODS ====================
-    
-    # Removed domain-specific compatibility tables method
-    
-    # Removed domain-specific table methods - use get_tables_by_category() instead
-    
-    def get_document_info(self, doc_id: Optional[str] = None) -> Union[Dict[str, Any], None]:
-        """
-        Get document information.
-        
-        Args:
-            doc_id: Specific document ID, or None for all documents
-            
-        Returns:
-            Document information or None if not found
-        """
-        result = self.silo.get_document_info(doc_id)
-        if result is None:
-            return None
-        elif isinstance(result, dict):
-            return result
-        else:
-            # Convert DocumentInfo to dict
-            return {
-                "doc_id": result.doc_id,
-                "title": result.title,
-                "loaded_at": result.loaded_at.isoformat(),
-                "page_count": result.page_count,
-                "table_count": result.table_count,
-                "keywords": result.keywords
-            }
-    
-    def get_document_ids(self) -> List[str]:
-        """Get list of all loaded document IDs."""
-        return self.silo.get_document_ids()
-    
-    def get_all_keywords(self) -> List[str]:
-        """Get all unique keywords across all documents."""
-        return self.silo.get_all_keywords()
-    
-    # ==================== STATISTICS AND OVERVIEW ====================
-    
-    def get_farm_stats(self) -> FarmStats:
-        """
-        Get comprehensive statistics about the farm.
-        
-        Returns:
-            FarmStats object with all statistics
-        """
-        silo_stats = self.silo.get_statistics()
-        sickle_stats = self.sickle.get_index_stats() if self.sickle else {}
-        pitchfork_stats = self.pitchfork.get_catalog_statistics() if self.pitchfork else {}
-        
-        return FarmStats(
-            silo_stats=silo_stats,
-            sickle_stats=sickle_stats,
-            pitchfork_stats=pitchfork_stats,
-            total_documents=silo_stats.get("total_documents", 0),
-            total_pages=silo_stats.get("total_pages", 0),
-            total_tables=silo_stats.get("total_tables", 0),
-            total_keywords=silo_stats.get("total_keywords", 0)
-        )
-    
-    def get_data_overview(self) -> Dict[str, Any]:
-        """
-        Get comprehensive overview of all loaded data.
-        
-        Returns:
-            Dictionary with data overview
-        """
-        if not self.is_ready():
-            return {"error": "Farm not ready. Load documents first."}
-        
-        # Get basic stats
-        farm_stats = self.get_farm_stats()
-        
-        # Get sample data
-        sample_keywords = self.get_available_keywords()[:20]
-        sample_tables = self.get_table_catalog()[:5]
-        
-        # Get document details
-        doc_info = self.get_document_info()
-        
-        return {
-            "statistics": {
-                "total_documents": farm_stats.total_documents,
-                "total_pages": farm_stats.total_pages,
-                "total_tables": farm_stats.total_tables,
-                "total_keywords": farm_stats.total_keywords
-            },
-            "documents": doc_info,
-            "sample_keywords": sample_keywords,
-            "sample_tables": [
-                {
-                    "table_id": table.table_id,
-                    "title": table.title,
-                    "category": table.technical_category,
-                    "doc_id": table.doc_id
-                }
-                for table in sample_tables
-            ],
-            "tools_ready": {
-                "silo": self.silo.is_loaded(),
-                "sickle": self.sickle is not None,
-                "pitchfork": self.pitchfork is not None,
-                "scythe": self.scythe is not None
-            }
-        }
-    
-    # ==================== MAINTENANCE METHODS ====================
-    
-    def refresh_indexes(self):
-        """Rebuild all indexes and catalogs."""
-        if self.sickle:
-            self.sickle.build_index()
-        
-        if self.pitchfork:
-            self.pitchfork.build_catalog()
-    
-    def clear_farm(self):
-        """Clear all data and reset tools."""
-        self.silo.clear()
-        self.sickle = None
-        self.pitchfork = None
-        self.scythe = None
-    
-    def remove_document(self, doc_id: str) -> bool:
-        """
-        Remove a specific document and refresh indexes.
-        
-        Args:
-            doc_id: Document ID to remove
-            
-        Returns:
-            True if removed successfully, False otherwise
-        """
-        success = self.silo.remove_document(doc_id)
-        
-        if success and self.is_ready():
-            self.refresh_indexes()
-        
-        return success 
+        return self.barn.call_tool(tool_name, **kwargs) 
